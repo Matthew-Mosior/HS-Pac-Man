@@ -1,0 +1,192 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hs-pac-man
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/hs-pac-man#readme>
+homepage:       https://github.com/githubuser/hs-pac-man#readme
+bug-reports:    https://github.com/githubuser/hs-pac-man/issues
+author:         Matthew Mosior <mattm.github@gmail.com>
+maintainer:     Matthew Mosior <mattm.github@gmail.com>
+copyright:      2023 Matthew Mosior
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/hs-pac-man
+
+library
+  exposed-modules:
+      Graphics.Map.Dynamic.Cookies.AllCookies
+      Graphics.Map.Dynamic.Cookies.Common
+      Graphics.Map.Dynamic.Pacman.Pacman
+      Graphics.Map.Map
+      Graphics.Map.Static.Borders.Common
+      Graphics.Map.Static.Borders.InnerOuterBorder
+      Graphics.Map.Static.Borders.OuterOuterBorder
+      Graphics.Map.Static.GhostHouse.Common
+      Graphics.Map.Static.GhostHouse.InnerGhostHouse
+      Graphics.Map.Static.GhostHouse.OuterGhostHouse
+      Graphics.Map.Static.GhostHouseGate.Common
+      Graphics.Map.Static.GhostHouseGate.GhostHouseGate
+      Graphics.Map.Static.GridLines.GridLines
+      Graphics.Map.Static.Tiles.AllTileData
+      Graphics.Map.Static.Tiles.Definition
+      Graphics.Map.Static.Walls.Common
+      Graphics.Map.Static.Walls.Wall1
+      Graphics.Map.Static.Walls.Wall10
+      Graphics.Map.Static.Walls.Wall11
+      Graphics.Map.Static.Walls.Wall12
+      Graphics.Map.Static.Walls.Wall13
+      Graphics.Map.Static.Walls.Wall14
+      Graphics.Map.Static.Walls.Wall15
+      Graphics.Map.Static.Walls.Wall16
+      Graphics.Map.Static.Walls.Wall17
+      Graphics.Map.Static.Walls.Wall18
+      Graphics.Map.Static.Walls.Wall19
+      Graphics.Map.Static.Walls.Wall2
+      Graphics.Map.Static.Walls.Wall3
+      Graphics.Map.Static.Walls.Wall4
+      Graphics.Map.Static.Walls.Wall5
+      Graphics.Map.Static.Walls.Wall6
+      Graphics.Map.Static.Walls.Wall7
+      Graphics.Map.Static.Walls.Wall8
+      Graphics.Map.Static.Walls.Wall9
+  other-modules:
+      Paths_hs_pac_man
+  hs-source-dirs:
+      src
+  default-extensions:
+      MultiWayIf
+      DataKinds
+      DefaultSignatures
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DerivingStrategies
+      DuplicateRecordFields
+      FlexibleContexts
+      FlexibleInstances
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      LambdaCase
+      MagicHash
+      NamedFieldPuns
+      NoMonomorphismRestriction
+      NumDecimals
+      OverloadedStrings
+      PatternSynonyms
+      PolyKinds
+      QuantifiedConstraints
+      RankNTypes
+      RecordWildCards
+      RoleAnnotations
+      ScopedTypeVariables
+      StandaloneDeriving
+      Strict
+      TupleSections
+      TypeApplications
+      TypeFamilyDependencies
+      TypeOperators
+      TypeSynonymInstances
+      ViewPatterns
+      OverloadedLists
+      QuasiQuotes
+      ForeignFunctionInterface
+      CPP
+      EmptyDataDecls
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-export-lists
+  build-depends:
+      apecs
+    , base >=4.7 && <5
+    , bmp
+    , bytestring
+    , containers
+    , gloss
+  default-language: Haskell2010
+
+executable hs-pac-man
+  main-is: Main.hs
+  other-modules:
+      Paths_hs_pac_man
+  hs-source-dirs:
+      app
+  default-extensions:
+      MultiWayIf
+      DataKinds
+      DefaultSignatures
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DerivingStrategies
+      DuplicateRecordFields
+      FlexibleContexts
+      FlexibleInstances
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      LambdaCase
+      MagicHash
+      NamedFieldPuns
+      NoMonomorphismRestriction
+      NumDecimals
+      OverloadedStrings
+      PatternSynonyms
+      PolyKinds
+      QuantifiedConstraints
+      RankNTypes
+      RecordWildCards
+      RoleAnnotations
+      ScopedTypeVariables
+      StandaloneDeriving
+      Strict
+      TupleSections
+      TypeApplications
+      TypeFamilyDependencies
+      TypeOperators
+      TypeSynonymInstances
+      ViewPatterns
+      OverloadedLists
+      QuasiQuotes
+      ForeignFunctionInterface
+      CPP
+      EmptyDataDecls
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-export-lists -threaded -O2 -rtsopts -with-rtsopts=-N -with-rtsopts=-xn -fllvm -fno-warn-name-shadowing
+  build-depends:
+      apecs
+    , base >=4.7 && <5
+    , bmp
+    , bytestring
+    , containers
+    , gloss
+    , hs-pac-man
+  default-language: Haskell2010
+
+test-suite hs-pac-man-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hs_pac_man
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-export-lists -threaded -O2 -rtsopts -with-rtsopts=-N -with-rtsopts=-xn -fllvm -fno-warn-name-shadowing
+  build-depends:
+      apecs
+    , base >=4.7 && <5
+    , bmp
+    , bytestring
+    , containers
+    , gloss
+    , hs-pac-man
+  default-language: Haskell2010
