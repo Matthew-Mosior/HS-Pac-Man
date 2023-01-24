@@ -1,0 +1,155 @@
+name:                hs-pac-man
+version:             0.1.0.0
+github:              "githubuser/hs-pac-man"
+license:             BSD3
+author:              "Matthew Mosior <mattm.github@gmail.com>"
+maintainer:          "Matthew Mosior <mattm.github@gmail.com>"
+copyright:           "2023 Matthew Mosior"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/hs-pac-man#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- apecs
+- bmp
+- bytestring
+- containers
+- gloss
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+- -Wmissing-export-lists
+
+library:
+  source-dirs: src
+  default-extensions:
+   - MultiWayIf
+   - DataKinds
+   - DefaultSignatures
+   - DeriveFoldable
+   - DeriveFunctor
+   - DeriveGeneric
+   - DeriveTraversable
+   - DerivingStrategies
+   - DuplicateRecordFields
+   - FlexibleContexts
+   - FlexibleInstances
+   - GADTs
+   - GeneralizedNewtypeDeriving
+   - InstanceSigs
+   - LambdaCase
+   - MagicHash
+   - NamedFieldPuns
+   - NoMonomorphismRestriction
+   - NumDecimals
+   - OverloadedStrings
+   - PatternSynonyms
+   - PolyKinds
+   - QuantifiedConstraints
+   - RankNTypes
+   - RecordWildCards
+   - RoleAnnotations
+   - ScopedTypeVariables
+   - StandaloneDeriving
+   - Strict
+   - TupleSections
+   - TypeApplications
+   - TypeFamilyDependencies
+   - TypeOperators
+   - TypeSynonymInstances
+   - ViewPatterns
+   - OverloadedLists
+   - QuasiQuotes
+   - ForeignFunctionInterface
+   - CPP 
+   - EmptyDataDecls
+
+executables:
+  hs-pac-man:
+    main:                Main.hs
+    source-dirs:         app
+    default-extensions:
+     - MultiWayIf
+     - DataKinds
+     - DefaultSignatures
+     - DeriveFoldable
+     - DeriveFunctor
+     - DeriveGeneric
+     - DeriveTraversable
+     - DerivingStrategies
+     - DuplicateRecordFields
+     - FlexibleContexts
+     - FlexibleInstances
+     - GADTs
+     - GeneralizedNewtypeDeriving
+     - InstanceSigs
+     - LambdaCase
+     - MagicHash
+     - NamedFieldPuns
+     - NoMonomorphismRestriction
+     - NumDecimals
+     - OverloadedStrings
+     - PatternSynonyms
+     - PolyKinds
+     - QuantifiedConstraints
+     - RankNTypes
+     - RecordWildCards
+     - RoleAnnotations
+     - ScopedTypeVariables
+     - StandaloneDeriving
+     - Strict
+     - TupleSections
+     - TypeApplications
+     - TypeFamilyDependencies
+     - TypeOperators
+     - TypeSynonymInstances
+     - ViewPatterns
+     - OverloadedLists
+     - QuasiQuotes
+     - ForeignFunctionInterface
+     - CPP 
+     - EmptyDataDecls
+    ghc-options:
+     - -threaded
+     - -O2
+     - -rtsopts
+     - -with-rtsopts=-N
+     - -with-rtsopts=-xn
+     - -fllvm 
+     - -fno-warn-name-shadowing
+    dependencies:
+     - hs-pac-man
+
+tests:
+  hs-pac-man-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+     - -threaded
+     - -O2
+     - -rtsopts
+     - -with-rtsopts=-N
+     - -with-rtsopts=-xn
+     - -fllvm 
+     - -fno-warn-name-shadowing 
+    dependencies:
+     - hs-pac-man
