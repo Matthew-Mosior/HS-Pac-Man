@@ -1122,6 +1122,457 @@ alltiledatainit = fromList $
                                        True
                                        False
                              )
+                  , TileData 102 
+                             [(40,1240),(80,1240),(40,1280),(80,1280)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,1250))
+                             )
+                             (WallData False
+                                       False 
+                                       True
+                                       True
+                             )
+                  , TileData 103 
+                             [(40,1200),(80,1200),(40,1240),(80,1240)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,1210))
+                             )
+                             (WallData False
+                                       False 
+                                       True
+                                       True
+                             )
+                  , TileData 104 
+                             [(40,1160),(80,1160),(40,1200),(80,1200)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,1170))
+                             )
+                             (WallData True 
+                                       False
+                                       True
+                                       False
+                             )
+                  , TileData 105 
+                             [(80,1160),(120,1160),(80,1200),(120,1200)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (90,1170))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 106 
+                             [(120,1160),(160,1160),(120,1200),(160,1200)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (130,1170))
+                             )
+                             (WallData False
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 107 
+                             [(120,1120),(160,1120),(120,1160),(160,1160)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (130,1130))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 108
+                             [(120,1080),(160,1080),(120,1120),(160,1120)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (130,1090))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 109
+                             [(120,1040),(160,1040),(120,1080),(160,1080)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (130,1050))
+                             )
+                             (WallData True
+                                       False
+                                       False
+                                       True
+                             )
+                  , TileData 110
+                             [(80,1040),(120,1040),(80,1080),(120,1080)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (90,1050))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 111
+                             [(40,1040),(80,1040),(40,1080),(80,1080)]
+                             False
+                             (CookieData (Just LargeCookie)
+                                         (Just (50,1050))
+                             )
+                             (WallData False
+                                       True
+                                       True
+                                       False
+                             )
+                  , TileData 112
+                             [(40,1000),(80,1000),(40,1040),(80,1040)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,1010))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 113
+                             [(40,960),(80,960),(40,1000),(80,1000)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,970))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 114
+                             [(40,920),(80,920),(40,960),(80,960)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,930))
+                             )
+                             (WallData True
+                                       False
+                                       True
+                                       False
+                             )
+                  , TileData 115
+                             [(80,920),(120,920),(80,960),(120,960)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (90,930))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 116
+                             [(120,920),(160,920),(120,960),(160,960)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (130,930))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 117
+                             [(160,920),(200,920),(160,960),(200,960)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (170,930))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 118
+                             [(200,920),(240,920),(200,960),(240,960)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (210,930))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 119
+                             [(240,920),(280,920),(240,960),(280,960)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,930))
+                             )
+                             (WallData False
+                                       False
+                                       False
+                                       False
+                             )
+                  , TileData 120
+                             [(240,880),(280,880),(240,920),(280,920)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,890))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 121
+                             [(240,840),(280,840),(240,880),(280,880)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,850))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 122
+                             [(240,800),(280,800),(240,840),(280,840)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,810))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 123
+                             [(240,760),(280,760),(240,800),(280,800)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,770))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 124
+                             [(240,720),(280,720),(240,760),(280,760)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,730))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 125
+                             [(240,680),(280,680),(240,720),(280,720)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,690))
+                             )
+                             (WallData False
+                                       False
+                                       False
+                                       False
+                             )
+                  , TileData 126
+                             [(240,640),(280,640),(240,680),(280,680)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,650))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 127
+                             [(240,600),(280,600),(240,640),(280,640)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,610))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 128
+                             [(240,560),(280,560),(240,600),(280,600)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,570))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 129
+                             [(240,520),(280,520),(240,560),(280,560)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,530))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 130
+                             [(240,480),(280,480),(240,520),(280,520)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,490))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 131
+                             [(240,440),(280,440),(240,480),(280,480)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (250,450))
+                             )
+                             (WallData False
+                                       False
+                                       False
+                                       True
+                             )
+                  , TileData 132
+                             [(200,440),(240,440),(200,480),(240,480)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (210,450))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 133
+                             [(160,440),(200,440),(160,480),(200,480)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (170,450))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 134
+                             [(120,440),(160,440),(120,480),(160,480)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (130,450))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 135
+                             [(80,440),(120,440),(80,480),(120,480)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (90,450))
+                             )
+                             (WallData True
+                                       True
+                                       False
+                                       False
+                             )
+                  , TileData 136
+                             [(40,440),(80,440),(40,480),(80,480)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,450))
+                             )
+                             (WallData False
+                                       True
+                                       True
+                                       False
+                             )
+                  , TileData 137
+                             [(40,400),(80,400),(40,440),(80,440)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,410))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 138
+                             [(40,360),(80,360),(40,400),(80,400)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,370))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 139
+                             [(40,320),(80,320),(40,360),(80,360)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,330))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       False
+                             )
+                  , TileData 140
+                             [(40,280),(80,280),(40,320),(80,320)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,290))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 141
+                             [(40,240),(80,240),(40,280),(80,280)]
+                             False
+                             (CookieData (Just LargeCookie)
+                                         (Just (50,250))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
+                  , TileData 142
+                             [(40,200),(80,200),(40,240),(80,240)]
+                             False
+                             (CookieData (Just Cookie)
+                                         (Just (50,210))
+                             )
+                             (WallData False
+                                       False
+                                       True
+                                       True
+                             )
                   ]
 
 {----------------}
