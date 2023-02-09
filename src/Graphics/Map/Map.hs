@@ -33,6 +33,7 @@ import Graphics.Map.Static.GhostHouse.OuterGhostHouse
 import Graphics.Map.Static.GhostHouseGate.GhostHouseGate
 
 import Graphics.Map.Dynamic.Cookies.AllCookies
+import Graphics.Map.Dynamic.Cookies.InitialCookies
 
 import Graphics.Gloss
 
@@ -77,7 +78,7 @@ initmap = do
   createinnerghosthouse <- innerghosthouse
   createouterghosthouse <- outerghosthouse
   createghosthousegate <- ghosthousegate
-  createallcookiesinit <- allcookiesinit
+  createallcookiesinit <- allcookiesinit allcookiedatainit
   return $ Pictures [ createhorizontalgridlines
                     , createverticalgridlines
                     , createinnerouterborder

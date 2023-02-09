@@ -27,6 +27,8 @@ library
   exposed-modules:
       Graphics.Map.Dynamic.Cookies.AllCookies
       Graphics.Map.Dynamic.Cookies.Common
+      Graphics.Map.Dynamic.Cookies.Definition
+      Graphics.Map.Dynamic.Cookies.InitialCookies
       Graphics.Map.Dynamic.Pacman.Pacman
       Graphics.Map.Map
       Graphics.Map.Static.Borders.Common
@@ -40,6 +42,7 @@ library
       Graphics.Map.Static.GridLines.GridLines
       Graphics.Map.Static.Tiles.AllTileData
       Graphics.Map.Static.Tiles.Definition
+      Graphics.Map.Static.Tiles.TileToCookieCoor
       Graphics.Map.Static.Walls.Common
       Graphics.Map.Static.Walls.Wall1
       Graphics.Map.Static.Walls.Wall10
@@ -107,12 +110,16 @@ library
       EmptyDataDecls
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-export-lists
   build-depends:
-      apecs
+      Yampa
     , base >=4.7 && <5
     , bmp
     , bytestring
     , containers
     , gloss
+    , jose
+    , lens
+    , servant
+    , stm
   default-language: Haskell2010
 
 executable hs-pac-man
@@ -164,13 +171,17 @@ executable hs-pac-man
       EmptyDataDecls
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-export-lists -threaded -O2 -rtsopts -with-rtsopts=-N -with-rtsopts=-xn -fllvm -fno-warn-name-shadowing
   build-depends:
-      apecs
+      Yampa
     , base >=4.7 && <5
     , bmp
     , bytestring
     , containers
     , gloss
     , hs-pac-man
+    , jose
+    , lens
+    , servant
+    , stm
   default-language: Haskell2010
 
 test-suite hs-pac-man-test
@@ -182,11 +193,15 @@ test-suite hs-pac-man-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-export-lists -threaded -O2 -rtsopts -with-rtsopts=-N -with-rtsopts=-xn -fllvm -fno-warn-name-shadowing
   build-depends:
-      apecs
+      Yampa
     , base >=4.7 && <5
     , bmp
     , bytestring
     , containers
     , gloss
     , hs-pac-man
+    , jose
+    , lens
+    , servant
+    , stm
   default-language: Haskell2010
