@@ -18,20 +18,18 @@ allcookiesinit :: Seq CookieDrawData
 allcookiesinit allcookiedata = do
   --Grab and create cookies.
   let cookies = fmap cookiedrawcoordinates $ 
-	        DS.filter (\x -> (cookiedrawtype x) == Cookie
-		          )
-                allcookiedata
+                DS.filter (\x -> (cookiedrawtype x) == Cookie
+                          ) allcookiedata
   allcookiescreated <- sequence $ fmap createCookie cookies
   --Grab and create large cookies.
   let largecookies = fmap cookiedrawcoordinates $
-	             DS.filter (\x -> (cookiedrawtype x) == LargeCookie
-                               )
-                     allcookiedata
+                     DS.filter (\x -> (cookiedrawtype x) == LargeCookie
+                               ) allcookiedata
   alllargecookiescreated <- sequence $ fmap createCookie largecookies
   return $ Pictures $
-	   toList   $
+           toList   $
            alllargecookiescreated
-	   ><
+           ><
            allcookiescreated
 
 {-----------------------------------------------------------------}

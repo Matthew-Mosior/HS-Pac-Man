@@ -79,9 +79,10 @@ initmap = do
   createouterghosthouse <- outerghosthouse
   createghosthousegate <- ghosthousegate
   createallcookiesinit <- allcookiesinit allcookiedatainit
+  createpacmaninit <- drawpacmans (555,1055)
   return $ Pictures [ createhorizontalgridlines
                     , createverticalgridlines
-                    , createinnerouterborder
+		    , createinnerouterborder
                     , createouterouterborder
                     , createwall1
                     , createwall2
@@ -106,6 +107,7 @@ initmap = do
                     , createouterghosthouse
                     , createghosthousegate
                     , createallcookiesinit
+                    , createpacmaninit
                     ]
 
 {---------------------------------------}
