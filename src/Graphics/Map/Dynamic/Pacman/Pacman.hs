@@ -8,10 +8,10 @@ import Graphics.Gloss.Data.Picture
 
 {-Define Pac-Man starting position.-}
 
-drawpacmanr :: (Int,Int)
+drawpacmans :: (Int,Int)
             -> IO Picture 
-drawpacmanr (xpos,ypos) = do
-  bmp <- DBL.readFile "assets/largeb_pacman_right.bmp"
+drawpacmans (xpos,ypos) = do
+  bmp <- DBL.readFile "assets/largeb_pacman_start.bmp"
   let parsedbmp = parseBMP bmp
   case parsedbmp of
     Left  _    -> return Blank
