@@ -21,11 +21,15 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
-- apecs
 - bmp
 - bytestring
 - containers
 - gloss
+- jose
+- lens
+- stm
+- servant
+- Yampa
 
 ghc-options:
 - -Wall

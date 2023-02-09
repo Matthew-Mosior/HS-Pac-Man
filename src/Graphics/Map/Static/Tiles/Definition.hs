@@ -9,7 +9,7 @@ data CookieType = Cookie
   deriving (Show,Eq,Generic)
 
 data CookieData = CookieData { cookietype        :: Maybe CookieType
-                             , cookiecoordinates :: Maybe (Int,Int) --Top-left corner of cookie
+                             , centercoordinates :: (Int,Int) --Top-left corner of cookie
                              }
   deriving (Show,Eq,Generic)
 
@@ -21,7 +21,7 @@ data WallData = WallData { wallup    :: Bool
   deriving (Show,Eq,Generic)
 
 data TileData = TileData { tilenumber     :: Int
-                         , tilecoordinate :: [(Int,Int)]
+                         , tilecoordinate :: [(Int,Int)] --top left, top right, bottom left, bottom right
                          , tileoccupied   :: Bool
                          , cookiedata     :: CookieData
                          , walldata       :: WallData

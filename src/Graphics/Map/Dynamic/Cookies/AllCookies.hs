@@ -1,290 +1,1011 @@
 module Graphics.Map.Dynamic.Cookies.AllCookies where
 
-import Graphics.Map.Dynamic.Cookies.Common
 
-import Graphics.Gloss.Data.Picture
+import Graphics.Map.Dynamic.Cookies.Definition
+
+import Data.Sequence as Seq
 
 
-{-Define the Picture that makes up all of the cookies on the map.-}
+{-All cookie data.-}
 
-allcookiesinit :: IO Picture
-allcookiesinit = do
-  cookie1 <- createCookie (50,170)
-  cookie2 <- createCookie (90,170)
-  cookie3 <- createCookie (130,170)
-  cookie4 <- createCookie (170,170)
-  cookie5 <- createCookie (210,170)
-  cookie6 <- createCookie (250,170)
-  cookie7 <- createCookie (290,170)
-  cookie8 <- createCookie (330,170)
-  cookie9 <- createCookie (370,170)
-  cookie10 <- createCookie (410,170)
-  cookie11 <- createCookie (450,170)
-  cookie12 <- createCookie (490,170)
-  cookie13 <- createCookie (490,210)
-  cookie14 <- createCookie (490,250)
-  cookie15 <- createCookie (490,290)
-  cookie16 <- createCookie (490,330)
-  cookie17 <- createCookie (530,330)
-  cookie18 <- createCookie (570,330)
-  cookie19 <- createCookie (610,330)
-  cookie20 <- createCookie (610,290)
-  cookie21 <- createCookie (610,250)
-  cookie22 <- createCookie (610,210)
-  cookie23 <- createCookie (610,170)
-  cookie24 <- createCookie (650,170)
-  cookie25 <- createCookie (690,170)
-  cookie26 <- createCookie (730,170)
-  cookie27 <- createCookie (770,170)
-  cookie28 <- createCookie (810,170)
-  cookie29 <- createCookie (850,170)
-  cookie30 <- createCookie (890,170)
-  cookie31 <- createCookie (930,170)
-  cookie32 <- createCookie (970,170)
-  cookie33 <- createCookie (1010,170)
-  cookie34 <- createCookie (1050,170)
-  cookie35 <- createCookie (1050,210)
-  cookie36 <- createCookie (1050,290)
-  cookie37 <- createCookie (1050,330)
-  cookie38 <- createCookie (1050,370)
-  cookie39 <- createCookie (1050,410)
-  cookie40 <- createCookie (1050,450)
-  cookie41 <- createCookie (1010,450)
-  cookie42 <- createCookie (970,450)
-  cookie43 <- createCookie (930,450)
-  cookie44 <- createCookie (890,450)
-  cookie45 <- createCookie (850,450)
-  cookie46 <- createCookie (850,490)
-  cookie47 <- createCookie (850,530)
-  cookie48 <- createCookie (850,570)
-  cookie49 <- createCookie (850,610)
-  cookie50 <- createCookie (850,650)
-  cookie51 <- createCookie (850,690)
-  cookie52 <- createCookie (850,730)
-  cookie53 <- createCookie (850,770)
-  cookie54 <- createCookie (850,810)
-  cookie55 <- createCookie (850,850)
-  cookie56 <- createCookie (850,890)
-  cookie57 <- createCookie (850,930)
-  cookie58 <- createCookie (890,930)
-  cookie59 <- createCookie (930,930)
-  cookie60 <- createCookie (970,930)
-  cookie61 <- createCookie (1010,930)
-  cookie62 <- createCookie (1050,930)
-  cookie63 <- createCookie (1050,970)
-  cookie64 <- createCookie (1050,1010)
-  cookie65 <- createCookie (1010,1050)
-  cookie66 <- createCookie (970,1050)
-  cookie67 <- createCookie (970,1090)
-  cookie68 <- createCookie (970,1130)
-  cookie69 <- createCookie (970,1170)
-  cookie70 <- createCookie (1010,1170)
-  cookie71 <- createCookie (1050,1170)
-  cookie72 <- createCookie (1050,1210)
-  cookie73 <- createCookie (1050,1250)
-  cookie74 <- createCookie (1050,1290)
-  cookie75 <- createCookie (1010,1290)
-  cookie76 <- createCookie (970,1290)
-  cookie77 <- createCookie (930,1290)
-  cookie78 <- createCookie (890,1290)
-  cookie79 <- createCookie (850,1290)
-  cookie80 <- createCookie (810,1290)
-  cookie81 <- createCookie (770,1290)
-  cookie82 <- createCookie (730,1290)
-  cookie83 <- createCookie (690,1290)
-  cookie84 <- createCookie (650,1290)
-  cookie85 <- createCookie (610,1290)
-  cookie86 <- createCookie (570,1290)
-  cookie87 <- createCookie (530,1290)
-  cookie88 <- createCookie (490,1290)
-  cookie89 <- createCookie (450,1290)
-  cookie90 <- createCookie (410,1290)
-  cookie91 <- createCookie (370,1290)
-  cookie92 <- createCookie (330,1290)
-  cookie93 <- createCookie (290,1290)
-  cookie94 <- createCookie (250,1290)
-  cookie95 <- createCookie (210,1290)
-  cookie96 <- createCookie (170,1290)
-  cookie97 <- createCookie (130,1290)
-  cookie98 <- createCookie (90,1290)
-  cookie99 <- createCookie (50,1290)
-  cookie100 <- createCookie (50,1250)
-  cookie101 <- createCookie (50,1210)
-  cookie102 <- createCookie (50,1170)
-  cookie103 <- createCookie (90,1170)
-  cookie104 <- createCookie (130,1170)
-  cookie105 <- createCookie (130,1130)
-  cookie106 <- createCookie (130,1090)
-  cookie107 <- createCookie (130,1050)
-  cookie108 <- createCookie (90,1050)
-  cookie109 <- createCookie (50,1010)
-  cookie110 <- createCookie (50,970)
-  cookie111 <- createCookie (50,930)
-  cookie112 <- createCookie (90,930)
-  cookie113 <- createCookie (130,930)
-  cookie114 <- createCookie (170,930)
-  cookie115 <- createCookie (210,930)
-  cookie116 <- createCookie (250,930)
-  cookie117 <- createCookie (250,890)
-  cookie118 <- createCookie (250,850)
-  cookie119 <- createCookie (250,810)
-  cookie120 <- createCookie (250,770)
-  cookie121 <- createCookie (250,730)
-  cookie122 <- createCookie (250,690)
-  cookie123 <- createCookie (250,650)
-  cookie124 <- createCookie (250,610)
-  cookie125 <- createCookie (250,570)
-  cookie126 <- createCookie (250,530)
-  cookie127 <- createCookie (250,490)
-  cookie128 <- createCookie (250,450)
-  cookie129 <- createCookie (210,450)
-  cookie130 <- createCookie (170,450)
-  cookie131 <- createCookie (130,450)
-  cookie132 <- createCookie (90,450)
-  cookie133 <- createCookie (50,450)
-  cookie134 <- createCookie (50,410)
-  cookie135 <- createCookie (50,370)
-  cookie136 <- createCookie (50,330)
-  cookie137 <- createCookie (50,290)
-  cookie138 <- createCookie (50,210)
-  return $ Pictures [ cookie1
-                    , cookie2
-                    , cookie3
-                    , cookie4
-                    , cookie5
-                    , cookie6
-                    , cookie7
-                    , cookie8
-                    , cookie9
-                    , cookie10
-                    , cookie11
-                    , cookie12
-                    , cookie13
-                    , cookie14
-                    , cookie15
-                    , cookie16
-                    , cookie17
-                    , cookie18
-                    , cookie19
-                    , cookie20
-                    , cookie21
-                    , cookie22
-                    , cookie23
-                    , cookie24
-                    , cookie25
-                    , cookie26
-                    , cookie27
-                    , cookie28
-                    , cookie29
-                    , cookie30
-                    , cookie31
-                    , cookie32
-                    , cookie33
-                    , cookie34
-                    , cookie35
-                    , cookie36
-                    , cookie37
-                    , cookie38
-                    , cookie39
-                    , cookie40
-                    , cookie41
-                    , cookie42
-                    , cookie43
-                    , cookie44
-                    , cookie45
-                    , cookie46
-                    , cookie47
-                    , cookie48
-                    , cookie49
-                    , cookie50
-                    , cookie51
-                    , cookie52
-                    , cookie53
-                    , cookie54
-                    , cookie55
-                    , cookie56
-                    , cookie57
-                    , cookie58
-                    , cookie59
-                    , cookie60
-                    , cookie61
-                    , cookie62
-                    , cookie63
-                    , cookie64
-                    , cookie65
-                    , cookie66
-                    , cookie67
-                    , cookie68
-                    , cookie69
-                    , cookie70
-                    , cookie71
-                    , cookie72
-                    , cookie73
-                    , cookie74
-                    , cookie75
-                    , cookie76
-                    , cookie77
-                    , cookie78
-                    , cookie79
-                    , cookie80
-                    , cookie81
-                    , cookie82
-                    , cookie83
-                    , cookie84
-                    , cookie85
-                    , cookie86
-                    , cookie87
-                    , cookie88
-                    , cookie89
-                    , cookie90
-                    , cookie91
-                    , cookie92
-                    , cookie93
-                    , cookie94
-                    , cookie95
-                    , cookie96
-                    , cookie97
-                    , cookie98
-                    , cookie99
-                    , cookie100
-                    , cookie101
-                    , cookie102
-                    , cookie103
-                    , cookie104
-                    , cookie105
-                    , cookie106
-                    , cookie107
-                    , cookie108
-                    , cookie109
-                    , cookie110
-                    , cookie111
-                    , cookie112
-                    , cookie113
-                    , cookie114
-                    , cookie115
-                    , cookie116
-                    , cookie117
-                    , cookie118
-                    , cookie119
-                    , cookie120
-                    , cookie121
-                    , cookie122
-                    , cookie123
-                    , cookie124
-                    , cookie125
-                    , cookie126
-                    , cookie127
-                    , cookie128
-                    , cookie129
-                    , cookie130
-                    , cookie131
-                    , cookie132
-                    , cookie133
-                    , cookie134
-                    , cookie135
-                    , cookie136
-                    , cookie137
-                    , cookie138
+allcookiedatainit :: Seq CookieDrawData
+allcookiedatainit = fromList $
+                    [ --Large Cookies
+                      --Top right
+                      CookieDrawData 241
+                                     LargeCookie
+                                     (50,251)
+                      --Bottom right
+                    , CookieDrawData 242
+                                     LargeCookie
+                                     (50,1051)
+
+                      --Top left
+                    , CookieDrawData 243
+                                     LargeCookie
+                                     (1050,251)
+
+                      --Bottom left
+                    , CookieDrawData 244
+                                     LargeCookie
+                                     (1050,1051)
+                      --0
+                    , CookieDrawData 1 
+                                     Cookie
+                                     (50,170)
+
+                    , CookieDrawData 2 
+                                     Cookie
+                                     (90,170)
+
+                    , CookieDrawData 3 
+                                     Cookie
+                                     (130,170)
+
+                    , CookieDrawData 4 
+                                     Cookie
+                                     (170,170)
+
+                    , CookieDrawData 5 
+                                     Cookie
+                                     (210,170)
+
+                    , CookieDrawData 6 
+                                     Cookie
+                                     (250,170)
+
+                    , CookieDrawData 7 
+                                     Cookie
+                                     (290,170)
+
+                    , CookieDrawData 8 
+                                     Cookie
+                                     (330,170)
+
+                    , CookieDrawData 9 
+                                     Cookie
+                                     (370,170)
+
+                    , CookieDrawData 10 
+                                     Cookie
+                                     (410,170)
+
+                    , CookieDrawData 11 
+                                     Cookie
+                                     (450,170)
+
+                    , CookieDrawData 12 
+                                     Cookie
+                                     (490,170)
+
+                    , CookieDrawData 13 
+                                     Cookie
+                                     (490,210)
+
+                    , CookieDrawData 14 
+                                       Cookie
+                                       (490,250)
+
+                    , CookieDrawData 15 
+                                       Cookie
+                                       (490,290)
+
+                    , CookieDrawData 16 
+                                       Cookie
+                                       (490,330)
+
+                    , CookieDrawData 17 
+                                       Cookie
+                                       (530,330)
+
+                    , CookieDrawData 18 
+                                       Cookie
+                                       (570,330)
+
+                    , CookieDrawData 19 
+                                       Cookie
+                                       (610,330)
+
+                    , CookieDrawData 20 
+                                       Cookie
+                                       (610,290)
+
+                    , CookieDrawData 21 
+                                       Cookie
+                                       (610,250)
+
+                    , CookieDrawData 22 
+                                       Cookie
+                                       (610,210)
+
+                    , CookieDrawData 23 
+                                       Cookie
+                                       (610,170)
+
+                    , CookieDrawData 24 
+                                       Cookie
+                                       (650,170)
+
+                    , CookieDrawData 25 
+                                       Cookie
+                                       (690,170)
+
+                    , CookieDrawData 26 
+                                       Cookie
+                                       (730,170)
+
+                    , CookieDrawData 27 
+                                       Cookie
+                                       (770,170)
+
+                    , CookieDrawData 28 
+                                       Cookie
+                                       (810,170)
+
+                    , CookieDrawData 29 
+                                       Cookie
+                                       (850,170)
+
+                    , CookieDrawData 30 
+                                       Cookie
+                                       (890,170)
+
+                    , CookieDrawData 31 
+                                       Cookie
+                                       (930,170)
+
+                    , CookieDrawData 32 
+                                       Cookie
+                                       (970,170)
+
+                    , CookieDrawData 33 
+                                       Cookie
+                                       (1010,170)
+
+                    , CookieDrawData 34 
+                                       Cookie
+                                       (1050,170)
+
+                    , CookieDrawData 35 
+                                       Cookie
+                                       (1050,210)
+
+                    , CookieDrawData 36 
+                                       Cookie
+                                       (1050,290)
+
+                    , CookieDrawData 37 
+                                       Cookie
+                                       (1050,330)
+
+                    , CookieDrawData 38 
+                                       Cookie
+                                       (1050,370)
+
+                    , CookieDrawData 39 
+                                       Cookie
+                                       (1050,410)
+
+                    , CookieDrawData 40 
+                                       Cookie
+                                       (1050,450)
+
+                    , CookieDrawData 41 
+                                       Cookie
+                                       (1010,450)
+
+                    , CookieDrawData 42 
+                                       Cookie
+                                       (970,450)
+
+                    , CookieDrawData 43 
+                                       Cookie
+                                       (930,450)
+
+                    , CookieDrawData 44 
+                                       Cookie
+                                       (890,450)
+
+                    , CookieDrawData 45 
+                                       Cookie
+                                       (850,450)
+
+                    , CookieDrawData 46 
+                                       Cookie
+                                       (850,490)
+
+                    , CookieDrawData 47 
+                                       Cookie
+                                       (850,530)
+
+                    , CookieDrawData 48 
+                                       Cookie
+                                       (850,570)
+
+                    , CookieDrawData 49 
+                                       Cookie
+                                       (850,610)
+
+                    , CookieDrawData 50 
+                                       Cookie
+                                       (850,650)
+
+                    , CookieDrawData 51 
+                                       Cookie
+                                       (850,690)
+
+                    , CookieDrawData 52 
+                                       Cookie
+                                       (850,730)
+
+                    , CookieDrawData 53 
+                                       Cookie
+                                       (850,770)
+
+                    , CookieDrawData 54 
+                                       Cookie
+                                       (850,810)
+
+                    , CookieDrawData 55 
+                                       Cookie
+                                       (850,850)
+
+                    , CookieDrawData 56 
+                                       Cookie
+                                       (850,890)
+
+                    , CookieDrawData 57 
+                                       Cookie
+                                       (850,930)
+
+                    , CookieDrawData 58 
+                                       Cookie
+                                       (890,930)
+
+                    , CookieDrawData 59 
+                                       Cookie
+                                       (930,930)
+
+                    , CookieDrawData 60 
+                                       Cookie
+                                       (970,930)
+
+                    , CookieDrawData 61 
+                                       Cookie
+                                       (1010,930)
+
+                    , CookieDrawData 62 
+                                       Cookie
+                                       (1050,930)
+
+                    , CookieDrawData 63 
+                                       Cookie
+                                       (1050,970)
+
+                    , CookieDrawData 64 
+                                       Cookie
+                                       (1050,1010)
+
+                    , CookieDrawData 65 
+                                       Cookie
+                                       (1010,1050)
+
+                    , CookieDrawData 66 
+                                       Cookie
+                                       (970,1050)
+
+                    , CookieDrawData 67 
+                                       Cookie
+                                       (970,1090)
+
+                    , CookieDrawData 68 
+                                       Cookie
+                                       (970,1130)
+
+                    , CookieDrawData 69 
+                                       Cookie
+                                       (970,1170)
+
+                    , CookieDrawData 70 
+                                       Cookie
+                                       (1010,1170)
+
+                    , CookieDrawData 71 
+                                       Cookie
+                                       (1050,1170)
+
+                    , CookieDrawData 72 
+                                       Cookie
+                                       (1050,1210)
+
+                    , CookieDrawData 73 
+                                       Cookie
+                                       (1050,1250)
+
+                    , CookieDrawData 74 
+                                       Cookie
+                                       (1050,1290)
+
+                    , CookieDrawData 75 
+                                       Cookie
+                                       (1010,1290)
+
+                    , CookieDrawData 76 
+                                       Cookie
+                                       (970,1290)
+
+                    , CookieDrawData 77 
+                                       Cookie
+                                       (930,1290)
+
+                    , CookieDrawData 78 
+                                       Cookie
+                                       (890,1290)
+
+                    , CookieDrawData 79 
+                                       Cookie
+                                       (850,1290)
+
+                    , CookieDrawData 80 
+                                       Cookie
+                                       (810,1290)
+
+                    , CookieDrawData 81 
+                                       Cookie
+                                       (770,1290)
+
+                    , CookieDrawData 82 
+                                       Cookie
+                                       (730,1290)
+
+                    , CookieDrawData 83 
+                                       Cookie
+                                       (690,1290)
+
+                    , CookieDrawData 84 
+                                       Cookie
+                                       (650,1290)
+
+                    , CookieDrawData 85 
+                                       Cookie
+                                       (610,1290)
+
+                    , CookieDrawData 86 
+                                       Cookie
+                                       (570,1290)
+
+                    , CookieDrawData 87 
+                                       Cookie
+                                       (530,1290)
+
+                    , CookieDrawData 88 
+                                       Cookie
+                                       (490,1290)
+
+                    , CookieDrawData 89 
+                                       Cookie
+                                       (450,1290)
+
+                    , CookieDrawData 90 
+                                       Cookie
+                                       (410,1290)
+
+                    , CookieDrawData 91 
+                                       Cookie
+                                       (370,1290)
+
+                    , CookieDrawData 92 
+                                       Cookie
+                                       (330,1290)
+
+                    , CookieDrawData 93 
+                                       Cookie
+                                       (290,1290)
+
+                    , CookieDrawData 94 
+                                       Cookie
+                                       (250,1290)
+
+                    , CookieDrawData 95 
+                                       Cookie
+                                       (210,1290)
+
+                    , CookieDrawData 96 
+                                       Cookie
+                                       (170,1290)
+
+                    , CookieDrawData 97 
+                                       Cookie
+                                       (130,1290)
+
+                    , CookieDrawData 98 
+                                       Cookie
+                                       (90,1290)
+
+                    , CookieDrawData 99 
+                                       Cookie
+                                       (50,1290)
+
+                    , CookieDrawData 100 
+                                       Cookie
+                                       (50,1250)
+
+                    , CookieDrawData 101 
+                                       Cookie
+                                       (50,1210)
+
+                    , CookieDrawData 102 
+                                       Cookie
+                                       (50,1170)
+
+                    , CookieDrawData 103 
+                                       Cookie
+                                       (90,1170)
+
+                    , CookieDrawData 104 
+                                       Cookie
+                                       (130,1170)
+
+                    , CookieDrawData 105 
+                                       Cookie
+                                       (130,1130)
+
+                    , CookieDrawData 106 
+                                       Cookie
+                                       (130,1090)
+
+                    , CookieDrawData 107 
+                                       Cookie
+                                       (130,1050)
+
+                    , CookieDrawData 108 
+                                       Cookie
+                                       (90,1050)
+
+                    , CookieDrawData 109 
+                                       Cookie
+                                       (50,1010)
+
+                    , CookieDrawData 110 
+                                       Cookie
+                                       (50,970)
+
+                    , CookieDrawData 111 
+                                       Cookie
+                                       (50,930)
+
+                    , CookieDrawData 112 
+                                       Cookie
+                                       (90,930)
+
+                    , CookieDrawData 113 
+                                       Cookie
+                                       (130,930)
+
+                    , CookieDrawData 114 
+                                       Cookie
+                                       (170,930)
+
+                    , CookieDrawData 115 
+                                       Cookie
+                                       (210,930)
+
+                    , CookieDrawData 116 
+                                       Cookie
+                                       (250,930)
+
+                    , CookieDrawData 117 
+                                       Cookie
+                                       (250,890)
+
+                    , CookieDrawData 118 
+                                       Cookie
+                                       (250,850)
+
+                    , CookieDrawData 119 
+                                       Cookie
+                                       (250,810)
+
+                    , CookieDrawData 120 
+                                       Cookie
+                                       (250,770)
+
+                    , CookieDrawData 121 
+                                       Cookie
+                                       (250,730)
+
+                    , CookieDrawData 122 
+                                       Cookie
+                                       (250,690)
+
+                    , CookieDrawData 123 
+                                       Cookie
+                                       (250,650)
+
+                    , CookieDrawData 124 
+                                       Cookie
+                                       (250,610)
+
+                    , CookieDrawData 125 
+                                       Cookie
+                                       (250,570)
+
+                    , CookieDrawData 126 
+                                       Cookie
+                                       (250,530)
+
+                    , CookieDrawData 127 
+                                       Cookie
+                                       (250,490)
+
+                    , CookieDrawData 128 
+                                       Cookie
+                                       (250,450)
+
+                    , CookieDrawData 129 
+                                       Cookie
+                                       (210,450)
+
+                    , CookieDrawData 130 
+                                       Cookie
+                                       (170,450)
+
+                    , CookieDrawData 131 
+                                       Cookie
+                                       (130,450)
+
+                    , CookieDrawData 132 
+                                       Cookie
+                                       (90,450)
+
+                    , CookieDrawData 133 
+                                       Cookie
+                                       (50,450)
+
+                    , CookieDrawData 134 
+                                       Cookie
+                                       (50,410)
+
+                    , CookieDrawData 135 
+                                       Cookie
+                                       (50,370)
+
+                    , CookieDrawData 136 
+                                       Cookie
+                                       (50,330)
+
+                    , CookieDrawData 137 
+                                       Cookie
+                                       (50,290)
+
+                    , CookieDrawData 138 
+                                       Cookie
+                                       (50,210)
+
+                      --1
+                    , CookieDrawData 139 
+                                       Cookie
+                                       (1010,330)
+
+                    , CookieDrawData 140 
+                                       Cookie
+                                       (970,330)
+
+                    , CookieDrawData 141 
+                                       Cookie
+                                       (930,330)
+
+                    , CookieDrawData 142 
+                                       Cookie
+                                       (890,330)
+
+                    , CookieDrawData 143 
+                                       Cookie
+                                       (850,330)
+
+                    , CookieDrawData 144 
+                                       Cookie
+                                       (850,290)
+
+                    , CookieDrawData 145 
+                                       Cookie
+                                       (850,250)
+
+                    , CookieDrawData 146 
+                                       Cookie
+                                       (850,210)
+
+                      --2
+                    , CookieDrawData 147 
+                                       Cookie
+                                       (810,330)
+
+                    , CookieDrawData 148 
+                                       Cookie
+                                       (770,330)
+
+                    , CookieDrawData 149 
+                                       Cookie
+                                       (730,330)
+
+                    , CookieDrawData 150 
+                                       Cookie
+                                       (690,330)
+
+                    , CookieDrawData 151 
+                                       Cookie
+                                       (650,330)
+
+                      --3
+                    , CookieDrawData 152 
+                                       Cookie
+                                       (730,370)
+
+                    , CookieDrawData 153 
+                                       Cookie
+                                       (730,410)
+
+                    , CookieDrawData 154 
+                                       Cookie
+                                       (730,450)
+
+                    , CookieDrawData 155 
+                                       Cookie
+                                       (690,450)
+
+                    , CookieDrawData 156 
+                                       Cookie
+                                       (650,450)
+
+                    , CookieDrawData 157 
+                                       Cookie
+                                       (610,450)
+
+                      --4
+                    , CookieDrawData 158 
+                                       Cookie
+                                       (450,330)
+
+                    , CookieDrawData 159 
+                                       Cookie
+                                       (410,330)
+
+                    , CookieDrawData 160 
+                                       Cookie
+                                       (370,330)
+
+                    , CookieDrawData 161 
+                                       Cookie
+                                       (330,330)
+
+                    , CookieDrawData 162 
+                                       Cookie
+                                       (290,330)
+
+                    , CookieDrawData 163 
+                                       Cookie
+                                       (250,330)
+
+                    , CookieDrawData 164 
+                                       Cookie
+                                       (250,290)
+
+                    , CookieDrawData 165 
+                                       Cookie
+                                       (250,250)
+
+                    , CookieDrawData 166 
+                                       Cookie
+                                       (250,210)
+
+                      --5
+                    , CookieDrawData 167 
+                                       Cookie
+                                       (210,330)
+
+                    , CookieDrawData 168 
+                                       Cookie
+                                       (170,330)
+
+                    , CookieDrawData 169 
+                                       Cookie
+                                       (130,330)
+
+                    , CookieDrawData 170 
+                                       Cookie
+                                       (90,330)
+
+                      --6
+                    , CookieDrawData 171 
+                                       Cookie
+                                       (250,370)
+
+                    , CookieDrawData 172 
+                                       Cookie
+                                       (250,410)
+
+                      --7
+                    , CookieDrawData 173 
+                                       Cookie
+                                       (370,370)
+
+                    , CookieDrawData 174 
+                                       Cookie
+                                       (370,410)
+
+                    , CookieDrawData 175 
+                                       Cookie
+                                       (370,450)
+
+                    , CookieDrawData 176 
+                                       Cookie
+                                       (410,450)
+
+                    , CookieDrawData 177 
+                                       Cookie
+                                       (450,450)
+
+                    , CookieDrawData 178 
+                                       Cookie
+                                       (490,450)
+
+                      --8
+                    , CookieDrawData 179 
+                                       Cookie
+                                       (850,970)
+
+                    , CookieDrawData 180 
+                                       Cookie
+                                       (850,1010)
+
+                    , CookieDrawData 181 
+                                       Cookie
+                                       (850,1050)
+
+                    , CookieDrawData 182 
+                                       Cookie
+                                       (850,1090)
+
+                    , CookieDrawData 183 
+                                       Cookie
+                                       (850,1130)
+
+                    , CookieDrawData 184 
+                                       Cookie
+                                       (850,1170)
+
+                    , CookieDrawData 185 
+                                       Cookie
+                                       (890,1170)
+
+                    , CookieDrawData 186 
+                                       Cookie
+                                       (930,1170)
+
+                      --9
+                    , CookieDrawData 187 
+                                       Cookie
+                                       (810,930)
+
+                    , CookieDrawData 188 
+                                       Cookie
+                                       (770,930)
+
+                    , CookieDrawData 189 
+                                       Cookie
+                                       (730,930)
+
+                    , CookieDrawData 190 
+                                       Cookie
+                                       (690,930)
+
+                    , CookieDrawData 191 
+                                       Cookie
+                                       (650,930)
+
+                    , CookieDrawData 192 
+                                       Cookie
+                                       (610,930)
+
+                    , CookieDrawData 193 
+                                       Cookie
+                                       (610,970)
+
+                    , CookieDrawData 194 
+                                       Cookie
+                                       (610,1010)
+
+                    , CookieDrawData 195 
+                                       Cookie
+                                       (610,1050)
+
+                      --10
+                    , CookieDrawData 196 
+                                       Cookie
+                                       (810,1050)
+
+                    , CookieDrawData 197 
+                                       Cookie
+                                       (770,1050)
+
+                    , CookieDrawData 198 
+                                       Cookie
+                                       (730,1050)
+
+                    , CookieDrawData 199 
+                                       Cookie
+                                       (690,1050)
+
+                    , CookieDrawData 200 
+                                       Cookie
+                                       (650,1050)
+
+                      --11
+                    , CookieDrawData 201 
+                                       Cookie
+                                       (730,1090)
+
+                    , CookieDrawData 202 
+                                       Cookie
+                                       (730,1130)
+
+                    , CookieDrawData 203 
+                                       Cookie
+                                       (730,1170)
+
+                    , CookieDrawData 204 
+                                       Cookie
+                                       (690,1170)
+
+                    , CookieDrawData 205 
+                                       Cookie
+                                       (650,1170)
+
+                    , CookieDrawData 206 
+                                       Cookie
+                                       (610,1170)
+
+                    , CookieDrawData 207 
+                                       Cookie
+                                       (610,1210)
+
+                    , CookieDrawData 208 
+                                       Cookie
+                                       (610,1250)
+
+                      --12
+                    , CookieDrawData 209 
+                                       Cookie
+                                       (250,970)
+
+                    , CookieDrawData 210 
+                                       Cookie
+                                       (250,1010)
+
+                    , CookieDrawData 211 
+                                       Cookie
+                                       (250,1050)
+
+                    , CookieDrawData 212 
+                                       Cookie
+                                       (250,1090)
+
+                    , CookieDrawData 213 
+                                       Cookie
+                                       (250,1130)
+
+                    , CookieDrawData 214 
+                                       Cookie
+                                       (250,1170)
+
+                    , CookieDrawData 215 
+                                       Cookie
+                                       (210,1170)
+
+                    , CookieDrawData 216 
+                                       Cookie
+                                       (170,1170)
+
+                      --13
+                    , CookieDrawData 217 
+                                       Cookie
+                                       (290,930)
+
+                    , CookieDrawData 218 
+                                       Cookie
+                                       (330,930)
+
+                    , CookieDrawData 219 
+                                       Cookie
+                                       (370,930)
+
+                    , CookieDrawData 220 
+                                       Cookie
+                                       (410,930)
+
+                    , CookieDrawData 221 
+                                       Cookie
+                                       (450,930)
+
+                    , CookieDrawData 222 
+                                       Cookie
+                                       (490,930)
+
+                    , CookieDrawData 223 
+                                       Cookie
+                                       (490,970)
+
+                    , CookieDrawData 224 
+                                       Cookie
+                                       (490,1010)
+
+                    , CookieDrawData 225 
+                                       Cookie
+                                       (490,1050)
+
+                      --14
+                    , CookieDrawData 226 
+                                       Cookie
+                                       (290,1050)
+
+                    , CookieDrawData 227 
+                                       Cookie
+                                       (330,1050)
+
+                    , CookieDrawData 228 
+                                       Cookie
+                                       (370,1050)
+
+                    , CookieDrawData 229 
+                                       Cookie
+                                       (410,1050)
+
+                    , CookieDrawData 230 
+                                       Cookie
+                                       (450,1050)
+
+                      --15
+                    , CookieDrawData 231 
+                                       Cookie
+                                       (370,1090)
+
+                    , CookieDrawData 232 
+                                       Cookie
+                                       (370,1130)
+
+                    , CookieDrawData 233 
+                                       Cookie
+                                       (370,1170)
+
+                    , CookieDrawData 234 
+                                       Cookie
+                                       (410,1170)
+
+                    , CookieDrawData 235 
+                                       Cookie
+                                       (450,1170)
+
+                    , CookieDrawData 236 
+                                       Cookie
+                                       (490,1170)
+
+                    , CookieDrawData 237 
+                                       Cookie
+                                       (490,1210)
+
+                    , CookieDrawData 238 
+                                       Cookie
+                                       (490,1250)
+
+                      --16
+                    , CookieDrawData 239 
+                                       Cookie
+                                       (850,370)
+
+                    , CookieDrawData 240 
+                                       Cookie
+                                       (850,410)
+
                     ]
 
-{-----------------------------------------------------------------}
+{------------------}
