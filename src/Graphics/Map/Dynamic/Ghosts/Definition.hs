@@ -15,8 +15,8 @@ data GhostDrawType = Start
                    | Right
   deriving (Show,Eq,Generic)
 
-data GhostDrawData = GhostDrawData { ghostdrawname           :: GhostDrawName
-                                   , pacmandrawtype          :: GhostDrawType
+data GhostDrawData = GhostDrawData { ghostdrawname          :: GhostDrawName
+                                   , ghostdrawtype          :: GhostDrawType
                                    , ghostdrawcoordinates   :: (Int,Int)
                                    , ghostcentercoordinates :: (Int,Int)
                                    }
