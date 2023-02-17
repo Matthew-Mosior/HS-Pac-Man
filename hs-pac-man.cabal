@@ -25,11 +25,25 @@ source-repository head
 
 library
   exposed-modules:
+      Game.Ghosts.Logic.Blinky
+      Game.Ghosts.Logic.Clyde
+      Game.Ghosts.Logic.Inky
+      Game.Ghosts.Logic.Pinky
+      Game.Initial.Level1
+      Game.Initial.Level2_4
+      Game.Initial.Level5_All
+      Game.Types
       Graphics.Map.Dynamic.Cookies.AllCookies
       Graphics.Map.Dynamic.Cookies.Common
       Graphics.Map.Dynamic.Cookies.Definition
       Graphics.Map.Dynamic.Cookies.InitialCookies
-      Graphics.Map.Dynamic.Pacman.Pacman
+      Graphics.Map.Dynamic.Ghosts.BlinkyStart
+      Graphics.Map.Dynamic.Ghosts.ClydeStart
+      Graphics.Map.Dynamic.Ghosts.Definition
+      Graphics.Map.Dynamic.Ghosts.InkyStart
+      Graphics.Map.Dynamic.Ghosts.PinkyStart
+      Graphics.Map.Dynamic.Pacman.Definition
+      Graphics.Map.Dynamic.Pacman.PacmanStart
       Graphics.Map.Map
       Graphics.Map.Static.Borders.Common
       Graphics.Map.Static.Borders.InnerOuterBorder
@@ -41,6 +55,7 @@ library
       Graphics.Map.Static.GhostHouseGate.GhostHouseGate
       Graphics.Map.Static.GridLines.GridLines
       Graphics.Map.Static.Tiles.AllTileData
+      Graphics.Map.Static.Tiles.Default
       Graphics.Map.Static.Tiles.Definition
       Graphics.Map.Static.Tiles.TileToCookieCoor
       Graphics.Map.Static.Walls.Common
@@ -120,6 +135,7 @@ library
     , lens
     , servant
     , stm
+    , wuss
   default-language: Haskell2010
 
 executable hs-pac-man
@@ -182,6 +198,7 @@ executable hs-pac-man
     , lens
     , servant
     , stm
+    , wuss
   default-language: Haskell2010
 
 test-suite hs-pac-man-test
@@ -204,4 +221,5 @@ test-suite hs-pac-man-test
     , lens
     , servant
     , stm
+    , wuss
   default-language: Haskell2010
