@@ -29,6 +29,7 @@ dependencies:
 - lens
 - stm
 - servant
+- wuss
 - Yampa
 
 ghc-options:

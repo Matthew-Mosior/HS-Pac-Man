@@ -1,6 +1,10 @@
 module Graphics.Map.Map where
 
-import Graphics.Map.Dynamic.Pacman.Pacman
+import Graphics.Map.Dynamic.Pacman.PacmanStart
+import Graphics.Map.Dynamic.Ghosts.BlinkyStart
+import Graphics.Map.Dynamic.Ghosts.PinkyStart
+import Graphics.Map.Dynamic.Ghosts.InkyStart
+import Graphics.Map.Dynamic.Ghosts.ClydeStart
 
 import Graphics.Map.Static.Borders.InnerOuterBorder
 import Graphics.Map.Static.Borders.OuterOuterBorder
@@ -79,10 +83,14 @@ initmap = do
   createouterghosthouse <- outerghosthouse
   createghosthousegate <- ghosthousegate
   createallcookiesinit <- allcookiesinit allcookiedatainit
-  createpacmaninit <- drawpacmans (555,1055)
-  return $ Pictures [ createhorizontalgridlines
-                    , createverticalgridlines
-		    , createinnerouterborder
+  createpacmaninit <- drawpacmans (557,378)
+  createblinkyinit <- drawblinkys (557,858)
+  createpinkyinit <- drawpinkys (557,738)
+  createinkyinit  <- drawinkys (487,738)
+  createclydeinit <- drawclydes (627,738)
+  return $ Pictures [ --createhorizontalgridlines
+                    --, createverticalgridlines
+                     createinnerouterborder
                     , createouterouterborder
                     , createwall1
                     , createwall2
@@ -108,6 +116,10 @@ initmap = do
                     , createghosthousegate
                     , createallcookiesinit
                     , createpacmaninit
+                    , createblinkyinit
+                    , createpinkyinit
+                    , createinkyinit
+                    , createclydeinit
                     ]
 
 {---------------------------------------}
