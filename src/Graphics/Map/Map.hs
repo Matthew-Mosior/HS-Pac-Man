@@ -88,9 +88,9 @@ initmap = do
   createpinkyinit <- drawpinkys (557,738)
   createinkyinit  <- drawinkys (487,738)
   createclydeinit <- drawclydes (627,738)
-  return $ Pictures [ --createhorizontalgridlines
-                    --, createverticalgridlines
-                     createinnerouterborder
+  return $ Pictures [ createhorizontalgridlines
+                    , createverticalgridlines
+                    , createinnerouterborder
                     , createouterouterborder
                     , createwall1
                     , createwall2

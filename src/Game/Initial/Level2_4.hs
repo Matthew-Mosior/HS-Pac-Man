@@ -4,13 +4,14 @@ import Game.Types
 import Graphics.Map.Static.Tiles.Definition
 import Graphics.Map.Static.Tiles.Default
 import Graphics.Map.Static.Tiles.AllTileData
+import Game.Initial.Definition
 
 import Control.Monad.STM as CMSTM
 import Control.Concurrent.STM.TVar as TVar
-import Data.Sequence as Seq
+import Data.Sequence as Seq (empty,filter,viewl,ViewL(..))
 
 
-initialgamestatelevel2_4 :: Int
+initialgamestatelevel2_4 :: Level
                          -> IO GameData
 initialgamestatelevel2_4 levelnumber = do
   gamedatagamestate <- CMSTM.atomically $ newTVar Start
@@ -37,6 +38,7 @@ initialgamestatelevel2_4 levelnumber = do
                                      , blinkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
                                                                   Seq.EmptyL   -> defaulttile 
                                                                   (x Seq.:< _) -> x
+                                     , blinkytargettileseq    = Seq.empty
                                      , blinkycurrentdirection = Game.Types.Right
                                      , blinkycurrentspeed     = 85
                                      , blinkydotcounter       = 0
@@ -49,6 +51,7 @@ initialgamestatelevel2_4 levelnumber = do
                                    , pinkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
                                                                Seq.EmptyL   -> defaulttile  
                                                                (x Seq.:< _) -> x
+                                   , pinkytargettileseq    = Seq.empty
                                    , pinkycurrentdirection = Down
                                    , pinkycurrentspeed     = 85
                                    , pinkydotcounter       = 0
@@ -61,6 +64,7 @@ initialgamestatelevel2_4 levelnumber = do
                                  , inkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
                                                             Seq.EmptyL   -> defaulttile
                                                             (x Seq.:< _) -> x
+                                 , inkytargettileseq    = Seq.empty
                                  , inkycurrentdirection = Up
                                  , inkycurrentspeed     = 85
                                  , inkydotcounter       = 0
@@ -73,6 +77,7 @@ initialgamestatelevel2_4 levelnumber = do
                                    , clydetargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
                                                                Seq.EmptyL   -> defaulttile
                                                                (x Seq.:< _) -> x
+                                   , clydetargettileseq    = Seq.empty
                                    , clydecurrentdirection = Up
                                    , clydecurrentspeed     = 85
                                    , clydedotcounter       = 0

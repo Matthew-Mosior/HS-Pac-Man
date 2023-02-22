@@ -3,6 +3,7 @@ module Game.Types where
 import Graphics.Map.Static.Tiles.Definition
 
 import Control.Concurrent.STM.TVar as TVar
+import Data.Sequence (Seq(..))
 import FRP.Yampa (DTime)
 import GHC.Generics
 
@@ -44,6 +45,7 @@ data BlinkyState = BlinkyState { blinkycurrentmode      :: GhostMode
                                , blinkycurrentposition  :: (Int,Int)
                                , blinkycurrenttile      :: TileData
                                , blinkytargettile       :: TileData
+                               , blinkytargettileseq    :: Seq TileData
                                , blinkycurrentdirection :: Direction
                                , blinkycurrentspeed     :: Int
                                , blinkydotcounter       :: Int
@@ -54,6 +56,7 @@ data PinkyState = PinkyState { pinkycurrentmode      :: GhostMode
                              , pinkycurrentposition  :: (Int,Int)
                              , pinkycurrenttile      :: Maybe TileData
                              , pinkytargettile       :: TileData
+                             , pinkytargettileseq    :: Seq TileData
                              , pinkycurrentdirection :: Direction
                              , pinkycurrentspeed     :: Int
                              , pinkydotcounter       :: Int
@@ -64,6 +67,7 @@ data InkyState = InkyState { inkycurrentmode      :: GhostMode
                            , inkycurrentposition  :: (Int,Int)
                            , inkycurrenttile      :: Maybe TileData
                            , inkytargettile       :: TileData
+                           , inkytargettileseq    :: Seq TileData
                            , inkycurrentdirection :: Direction
                            , inkycurrentspeed     :: Int
                            , inkydotcounter       :: Int
@@ -74,6 +78,7 @@ data ClydeState = ClydeState { clydecurrentmode      :: GhostMode
                              , clydecurrentposition  :: (Int,Int)
                              , clydecurrenttile      :: Maybe TileData
                              , clydetargettile       :: TileData
+                             , clydetargettileseq    :: Seq TileData
                              , clydecurrentdirection :: Direction
                              , clydecurrentspeed     :: Int
                              , clydedotcounter       :: Int
