@@ -7,8 +7,6 @@ import Game.Ghosts.Algo.AStar.Default.Blinky
 import Game.Ghosts.Algo.AStar.Default.Pinky
 import Game.Ghosts.Algo.AStar.Default.Inky
 import Game.Ghosts.Algo.AStar.Default.Clyde
-import Game.Ghosts.Algo.Graph.GhostGraph
-import Game.Ghosts.Algo.Graph.Definition
 
 import Control.Concurrent.STM as CCSTM
 import Data.Foldable as DFold (toList)
