@@ -6,7 +6,7 @@ cabal-version: 1.12
 
 name:           hs-pac-man
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/hs-pac-man#readme>
+description:    Please see the README on GitHub at <https://github.com/Matthew-Mosior/HS-Pac-Man#readme>
 homepage:       https://github.com/githubuser/hs-pac-man#readme
 bug-reports:    https://github.com/githubuser/hs-pac-man/issues
 author:         Matthew Mosior <mattm.github@gmail.com>
@@ -25,10 +25,15 @@ source-repository head
 
 library
   exposed-modules:
-      Game.Ghosts.Logic.Blinky
-      Game.Ghosts.Logic.Clyde
-      Game.Ghosts.Logic.Inky
-      Game.Ghosts.Logic.Pinky
+      Application
+      Game.Ghosts.Algo.AStar.Default.Blinky
+      Game.Ghosts.Algo.AStar.Default.Clyde
+      Game.Ghosts.Algo.AStar.Default.Inky
+      Game.Ghosts.Algo.AStar.Default.Pinky
+      Game.Ghosts.Algo.AStar.Definition
+      Game.Ghosts.Algo.AStar.Distance
+      Game.Ghosts.Algo.AStar.Run
+      Game.Initial.Definition
       Game.Initial.Level1
       Game.Initial.Level2_4
       Game.Initial.Level5_All
@@ -133,8 +138,10 @@ library
     , gloss
     , jose
     , lens
+    , pqueue
     , servant
     , stm
+    , websockets
     , wuss
   default-language: Haskell2010
 
@@ -196,8 +203,10 @@ executable hs-pac-man
     , hs-pac-man
     , jose
     , lens
+    , pqueue
     , servant
     , stm
+    , websockets
     , wuss
   default-language: Haskell2010
 
@@ -219,7 +228,9 @@ test-suite hs-pac-man-test
     , hs-pac-man
     , jose
     , lens
+    , pqueue
     , servant
     , stm
+    , websockets
     , wuss
   default-language: Haskell2010

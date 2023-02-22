@@ -25,5 +25,6 @@ data TileData = TileData { tilenumber     :: Int
                          , tileoccupied   :: Bool
                          , cookiedata     :: CookieData
                          , walldata       :: WallData
+                         , adjacentto     :: [Int] --tiles this tile is directly adjacent to, defined by tilenumber.
                          }
   deriving (Show,Eq,Generic)

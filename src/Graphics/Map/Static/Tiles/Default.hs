@@ -15,4 +15,5 @@ defaulttile = TileData { tilenumber     = (-1)
                                                    , wallleft  = False
                                                    , wallright = False
                                                    }
+                       , adjacentto     = []
                        }
