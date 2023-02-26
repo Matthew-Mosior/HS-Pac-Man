@@ -10,7 +10,7 @@ data TileDataAStar = TileDataAStar { tilenumberastar     :: Int
                                    , tileoccupiedastar   :: Bool
                                    , cookiedataastar     :: CookieData
                                    , walldataastar       :: WallData
-                                   , adjacenttoastar     :: [Int] --tiles this tile is directed adjacent to, defined by tilenumber.
+                                   , adjacenttoastar     :: [Int] --tiles this tile is directly adjacent to, defined by tilenumber.
                                    , fscoreastar         :: Int --the astar fscore for the tile.
                                    }
   deriving (Show,Eq,Generic)
