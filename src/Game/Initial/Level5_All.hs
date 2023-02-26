@@ -1,6 +1,9 @@
 module Game.Initial.Level5_All where
 
 import Game.Types
+import Game.Ghosts.Algo.AStar.Tiles.Definition
+import Game.Ghosts.Algo.AStar.Tiles.Default
+import Game.Ghosts.Algo.AStar.Tiles.AllTileDataAStar
 import Graphics.Map.Static.Tiles.Definition
 import Graphics.Map.Static.Tiles.Default
 import Graphics.Map.Static.Tiles.AllTileData
@@ -25,18 +28,20 @@ initialgamestatelevel5_all levelnumber = do
                                                                    (x Seq.:< _) -> x
                                      , pacmancurrentdirection = None
                                      , pacmancurrentstate     = Normal
+                                     , pacmancurrentdrawstate = PacmanRegularDraw
                                      , pacmancurrentspeed     = 100
                                      , pacmancurrentlives     = 3
                                      }
   gamedatablinkystate <- CMSTM.atomically $
                          newTVar          $
                          BlinkyState { blinkycurrentmode      = Chase
+                                     , blinkycurrentdrawstate = GhostRegularDraw
                                      , blinkycurrentposition  = (557,858)
-                                     , blinkycurrenttile      = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 256) alltiledatainit) of
-                                                                  Seq.EmptyL   -> defaulttile
+                                     , blinkycurrenttile      = case Seq.viewl (Seq.filter (\x -> (tilenumberastar x) == 256) alltiledataastarinit) of
+                                                                  Seq.EmptyL   -> defaulttileastar
                                                                   (x Seq.:< _) -> x
-                                     , blinkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
-                                                                  Seq.EmptyL   -> defaulttile 
+                                     , blinkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumberastar x) == 299) alltiledataastarinit) of
+                                                                  Seq.EmptyL   -> defaulttileastar 
                                                                   (x Seq.:< _) -> x
                                      , blinkytargettileseq    = Seq.empty
                                      , blinkycurrentdirection = Game.Types.Right
@@ -46,10 +51,11 @@ initialgamestatelevel5_all levelnumber = do
   gamedatapinkystate <- CMSTM.atomically $
                         newTVar          $
                         PinkyState { pinkycurrentmode      = GhostHouseStart
+                                   , pinkycurrentdrawstate = GhostRegularDraw
                                    , pinkycurrentposition  = (557,738) 
                                    , pinkycurrenttile      = Nothing 
-                                   , pinkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
-                                                               Seq.EmptyL   -> defaulttile 
+                                   , pinkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumberastar x) == 299) alltiledataastarinit) of
+                                                               Seq.EmptyL   -> defaulttileastar 
                                                                (x Seq.:< _) -> x
                                    , pinkytargettileseq    = Seq.empty
                                    , pinkycurrentdirection = Down
@@ -59,10 +65,11 @@ initialgamestatelevel5_all levelnumber = do
   gamedatainkystate <- CMSTM.atomically $
                        newTVar          $
                        InkyState { inkycurrentmode      = GhostHouseStart
+                                 , inkycurrentdrawstate = GhostRegularDraw
                                  , inkycurrentposition  = (487,738)
                                  , inkycurrenttile      = Nothing
-                                 , inkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
-                                                            Seq.EmptyL   -> defaulttile 
+                                 , inkytargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumberastar x) == 299) alltiledataastarinit) of
+                                                            Seq.EmptyL   -> defaulttileastar 
                                                             (x Seq.:< _) -> x
                                  , inkytargettileseq    = Seq.empty
                                  , inkycurrentdirection = Up
@@ -72,10 +79,11 @@ initialgamestatelevel5_all levelnumber = do
   gamedataclydestate <- CMSTM.atomically $
                         newTVar          $
                         ClydeState { clydecurrentmode      = GhostHouseStart
+                                   , clydecurrentdrawstate = GhostRegularDraw
                                    , clydecurrentposition  = (627,738) 
                                    , clydecurrenttile      = Nothing
-                                   , clydetargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumber x) == 299) alltiledatainit) of
-                                                               Seq.EmptyL   -> defaulttile
+                                   , clydetargettile       = case Seq.viewl (Seq.filter (\x -> (tilenumberastar x) == 299) alltiledataastarinit) of
+                                                               Seq.EmptyL   -> defaulttileastar
                                                                (x Seq.:< _) -> x
                                    , clydetargettileseq    = Seq.empty
                                    , clydecurrentdirection = Up

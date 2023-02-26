@@ -26,13 +26,20 @@ source-repository head
 library
   exposed-modules:
       Application
+      Game.Ghosts.Algo.AStar.Common
       Game.Ghosts.Algo.AStar.Default.Blinky
       Game.Ghosts.Algo.AStar.Default.Clyde
       Game.Ghosts.Algo.AStar.Default.Inky
       Game.Ghosts.Algo.AStar.Default.Pinky
       Game.Ghosts.Algo.AStar.Definition
       Game.Ghosts.Algo.AStar.Distance
-      Game.Ghosts.Algo.AStar.Run
+      Game.Ghosts.Algo.AStar.Run.Blinky
+      Game.Ghosts.Algo.AStar.Run.Clyde
+      Game.Ghosts.Algo.AStar.Run.Inky
+      Game.Ghosts.Algo.AStar.Run.Pinky
+      Game.Ghosts.Algo.AStar.Tiles.AllTileDataAStar
+      Game.Ghosts.Algo.AStar.Tiles.Default
+      Game.Ghosts.Algo.AStar.Tiles.Definition
       Game.Initial.Definition
       Game.Initial.Level1
       Game.Initial.Level2_4
