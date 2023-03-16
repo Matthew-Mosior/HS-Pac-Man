@@ -11,30 +11,6 @@ import Graphics.Map.Static.Tiles.Definition
 import Graphics.Gloss.Data.Picture
 import Data.Sequence as Seq (filter,(><),Seq(..))
 
-
-{-Define the Picture that makes up all of the cookies on the map.-}
-
-{-
-drawCookies :: Seq CookieDrawData
-            -> IO Picture
-drawCookies allcookiedata = do
-  --Grab and create cookies.
-  let cookies = fmap cookiedrawcoordinates $ 
-                DS.filter (\x -> (cookiedrawtype x) == Cookie
-                          ) allcookiedata
-  allcookiescreated <- sequence $ fmap createCookie cookies
-  --Grab and create large cookies.
-  let largecookies = fmap cookiedrawcoordinates $
-                     DS.filter (\x -> (cookiedrawtype x) == LargeCookie
-                               ) allcookiedata
-  alllargecookiescreated <- sequence $ fmap createCookie largecookies
-  return $ Pictures $
-           toList   $
-           alllargecookiescreated
-           ><
-           allcookiescreated
--}
-
 drawCookies :: Seq TileData
             -> Seq CookieDrawData
             -> IO Picture
