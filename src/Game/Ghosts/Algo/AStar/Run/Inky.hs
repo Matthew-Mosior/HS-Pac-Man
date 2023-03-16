@@ -6,15 +6,13 @@ import Game.Types
 import Game.Ghosts.Algo.AStar.Tiles.Default
 import Game.Ghosts.Algo.AStar.Tiles.Definition
 import Game.Ghosts.Algo.AStar.Tiles.AllTileDataAStar
-import Game.Ghosts.Algo.AStar.Common
 import Game.Ghosts.Algo.AStar.Definition
 import Game.Ghosts.Algo.AStar.Distance
 import Game.Ghosts.Algo.AStar.Default.Inky
 import Graphics.Map.Static.Tiles.Definition
 
-import Control.Concurrent.STM as CCSTM
-import Data.Foldable as DFold (toList)
-import Data.List as DL (elem,map,unfoldr)
+import Data.IORef
+import Data.List as DL (unfoldr)
 import Data.Map.Strict as DMS
 import Data.PQueue.Min as DPQM
 import Data.Sequence as Seq (filter,fromList,Seq(..))
@@ -23,7 +21,7 @@ import Data.Sequence as Seq (filter,fromList,Seq(..))
 runAStarInky :: GameData
              -> IO InkyState
 runAStarInky gd = do
-  inkycurrentstate <- CCSTM.readTVarIO $ 
+  inkycurrentstate <- readIORef $ 
                       inkystate gd
   let inkyct  = case (inkycurrenttile inkycurrentstate) of
                   Nothing -> defaulttileastar
@@ -36,9 +34,9 @@ runAStarInky gd = do
   astarinky <- astarloop a0
   return astarinky
     where
-      astarloop a = do inkycurrentstate  <- CCSTM.readTVarIO $ 
+      astarloop a = do inkycurrentstate  <- readIORef $ 
                                             inkystate gd
-                       pacmancurrentstate <- CCSTM.readTVarIO $
+                       pacmancurrentstate <- readIORef $
                                              pacmanstate gd 
                        let pacmanct      = pacmancurrenttile pacmancurrentstate
                        let pacmanctastar = TileDataAStar { tilenumberastar     = tilenumber pacmanct
@@ -65,6 +63,7 @@ runAStarInky gd = do
                                                                                              , inkycurrentdirection = inkycurrentdirection inkycurrentstate
                                                                                              , inkycurrentspeed     = inkycurrentspeed inkycurrentstate
                                                                                              , inkydotcounter       = inkydotcounter inkycurrentstate
+                                                                                             , inkyghsl             = inkyghsl inkycurrentstate
                                                                                              } 
                                                        return newinkystate
                                                  | otherwise
@@ -76,9 +75,9 @@ runAStarInky gd = do
                                                        astarloop a'
         where
           go a Seq.Empty                             = return a 
-          go a (currentneighbor :<| restofneighbors) = do inkycurrentstate <- CCSTM.readTVarIO $ 
+          go a (currentneighbor :<| restofneighbors) = do inkycurrentstate <- readIORef $ 
                                                                               inkystate gd
-                                                          pacmancurrentstate <- CCSTM.readTVarIO $
+                                                          pacmancurrentstate <- readIORef $
                                                                                 pacmanstate gd
                                                           let inkyct       = case (inkycurrenttile inkycurrentstate) of
                                                                                Nothing -> defaulttileastar
@@ -128,7 +127,7 @@ runAStarInky gd = do
           pqs = case (DPQM.getMin (openset a)) of
                   Nothing    -> defaulttileastar
                   Just minqe -> minqe
-          getPath m = do pacmancurrentstate <- CCSTM.readTVarIO $
+          getPath m = do pacmancurrentstate <- readIORef $
                                                pacmanstate gd
                          let pacmanct      = pacmancurrenttile pacmancurrentstate
                          let pacmanctastar = TileDataAStar { tilenumberastar     = tilenumber pacmanct

@@ -16,4 +16,5 @@ pinkyastardefault = PinkyState { pinkycurrentmode      = Chase
                                , pinkycurrentdirection = None
                                , pinkycurrentspeed     = (-1)
                                , pinkydotcounter       = (-1)
+                               , pinkyghsl             = Nothing
                                }

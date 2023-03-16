@@ -6,15 +6,14 @@ import Game.Types
 import Game.Ghosts.Algo.AStar.Tiles.Default
 import Game.Ghosts.Algo.AStar.Tiles.Definition
 import Game.Ghosts.Algo.AStar.Tiles.AllTileDataAStar
-import Game.Ghosts.Algo.AStar.Common
+
 import Game.Ghosts.Algo.AStar.Definition
 import Game.Ghosts.Algo.AStar.Distance
 import Game.Ghosts.Algo.AStar.Default.Pinky
 import Graphics.Map.Static.Tiles.Definition
 
-import Control.Concurrent.STM as CCSTM
-import Data.Foldable as DFold (toList)
-import Data.List as DL (elem,map,unfoldr)
+import Data.IORef
+import Data.List as DL (unfoldr)
 import Data.Map.Strict as DMS
 import Data.PQueue.Min as DPQM
 import Data.Sequence as Seq (filter,fromList,Seq(..))
@@ -23,8 +22,8 @@ import Data.Sequence as Seq (filter,fromList,Seq(..))
 runAStarPinky :: GameData
               -> IO PinkyState
 runAStarPinky gd = do
-  pinkycurrentstate <- CCSTM.readTVarIO $ 
-                        pinkystate gd
+  pinkycurrentstate <- readIORef $ 
+                       pinkystate gd
   let pinkyct  = case (pinkycurrenttile pinkycurrentstate) of
                    Nothing -> defaulttileastar
                    Just ct -> ct
@@ -36,9 +35,9 @@ runAStarPinky gd = do
   astarpinky <- astarloop a0
   return astarpinky
     where
-      astarloop a = do pinkycurrentstate  <- CCSTM.readTVarIO $ 
+      astarloop a = do pinkycurrentstate  <- readIORef $ 
                                              pinkystate gd
-                       pacmancurrentstate <- CCSTM.readTVarIO $
+                       pacmancurrentstate <- readIORef $
                                              pacmanstate gd 
                        let pacmanct      = pacmancurrenttile pacmancurrentstate
                        let pacmanctastar = TileDataAStar { tilenumberastar     = tilenumber pacmanct
@@ -65,6 +64,7 @@ runAStarPinky gd = do
                                                                                                 , pinkycurrentdirection = pinkycurrentdirection pinkycurrentstate
                                                                                                 , pinkycurrentspeed     = pinkycurrentspeed pinkycurrentstate
                                                                                                 , pinkydotcounter       = pinkydotcounter pinkycurrentstate
+                                                                                                , pinkyghsl             = pinkyghsl pinkycurrentstate
                                                                                                 } 
                                                        return newpinkystate
                                                  | otherwise
@@ -76,9 +76,9 @@ runAStarPinky gd = do
                                                        astarloop a'
         where
           go a Seq.Empty                             = return a 
-          go a (currentneighbor :<| restofneighbors) = do pinkycurrentstate <- CCSTM.readTVarIO $ 
+          go a (currentneighbor :<| restofneighbors) = do pinkycurrentstate <- readIORef $ 
                                                                                pinkystate gd
-                                                          pacmancurrentstate <- CCSTM.readTVarIO $
+                                                          pacmancurrentstate <- readIORef $
                                                                                 pacmanstate gd
                                                           let pinkyct       = case (pinkycurrenttile pinkycurrentstate) of
                                                                                 Nothing -> defaulttileastar
@@ -128,7 +128,7 @@ runAStarPinky gd = do
           pqs = case (DPQM.getMin (openset a)) of
                   Nothing    -> defaulttileastar
                   Just minqe -> minqe
-          getPath m = do pacmancurrentstate <- CCSTM.readTVarIO $
+          getPath m = do pacmancurrentstate <- readIORef $
                                                pacmanstate gd
                          let pacmanct      = pacmancurrenttile pacmancurrentstate
                          let pacmanctastar = TileDataAStar { tilenumberastar     = tilenumber pacmanct
