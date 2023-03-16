@@ -25,10 +25,10 @@ dependencies:
 - bytestring
 - containers
 - gloss
+- iris
 - jose
 - lens
 - pqueue
-- stm
 - servant
 - websockets
 - wuss
@@ -80,6 +80,7 @@ library:
    - Strict
    - TupleSections
    - TypeApplications
+   - TypeFamilies
    - TypeFamilyDependencies
    - TypeOperators
    - TypeSynonymInstances
@@ -126,6 +127,7 @@ executables:
      - Strict
      - TupleSections
      - TypeApplications
+     - TypeFamilies
      - TypeFamilyDependencies
      - TypeOperators
      - TypeSynonymInstances

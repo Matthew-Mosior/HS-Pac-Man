@@ -16,4 +16,5 @@ inkyastardefault = InkyState { inkycurrentmode      = Chase
                              , inkycurrentdirection = None
                              , inkycurrentspeed     = (-1)
                              , inkydotcounter       = (-1)
+                             , inkyghsl             = Nothing
                              }

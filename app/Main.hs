@@ -1,10 +1,7 @@
 module Main (main) where
 
-import Graphics.Map.Map
+import Application.App
 
-import Graphics.Gloss
 
 main :: IO ()
-main = do
-  createinitmap <- initmap
-  display window black createinitmap
+main = runPacMan

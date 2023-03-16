@@ -2,8 +2,9 @@ module Game.Types where
 
 import Game.Ghosts.Algo.AStar.Tiles.Definition
 import Graphics.Map.Static.Tiles.Definition
+import Rendering.GhostHouse.StartingLoop.Definition
 
-import Control.Concurrent.STM.TVar as TVar
+import Data.IORef
 import Data.Sequence (Seq(..))
 import FRP.Yampa (DTime)
 import GHC.Generics
@@ -72,6 +73,7 @@ data PinkyState = PinkyState { pinkycurrentmode      :: GhostMode
                              , pinkycurrentdirection :: Direction
                              , pinkycurrentspeed     :: Int
                              , pinkydotcounter       :: Int
+                             , pinkyghsl             :: Maybe GHSLData
                              }
   deriving (Show,Eq,Generic)
 
@@ -84,6 +86,7 @@ data InkyState = InkyState { inkycurrentmode      :: GhostMode
                            , inkycurrentdirection :: Direction
                            , inkycurrentspeed     :: Int
                            , inkydotcounter       :: Int
+                           , inkyghsl             :: Maybe GHSLData
                            }
   deriving (Show,Eq,Generic)
 
@@ -96,6 +99,7 @@ data ClydeState = ClydeState { clydecurrentmode      :: GhostMode
                              , clydecurrentdirection :: Direction
                              , clydecurrentspeed     :: Int
                              , clydedotcounter       :: Int
+                             , clydeghsl             :: Maybe GHSLData
                              }
   deriving (Show,Eq,Generic)
 
@@ -105,14 +109,15 @@ data Ghosts = Blinky
             | Clyde
   deriving (Show,Eq,Generic)
 
-data GameData = GameData { gamestate       :: TVar GameState
-                         , currentlevel    :: TVar Int
-                         , currentscore    :: TVar Int 
-                         , pacmanstate     :: TVar PacmanState
-                         , blinkystate     :: TVar BlinkyState
-                         , pinkystate      :: TVar PinkyState
-                         , inkystate       :: TVar InkyState
-                         , clydestate      :: TVar ClydeState
-                         , doteatentimer   :: TVar DTime
+data GameData = GameData { gamestate       :: IORef GameState
+                         , tilestate       :: IORef (Seq TileData)
+                         , currentlevel    :: IORef Int
+                         , currentscore    :: IORef Int
+                         , pacmanstate     :: IORef PacmanState
+                         , blinkystate     :: IORef BlinkyState
+                         , pinkystate      :: IORef PinkyState
+                         , inkystate       :: IORef InkyState
+                         , clydestate      :: IORef ClydeState
+                         , doteatentimer   :: IORef Double
                          }
-  deriving (Eq,Generic)
+  deriving (Generic)

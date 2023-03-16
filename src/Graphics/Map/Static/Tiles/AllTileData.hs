@@ -1,6 +1,5 @@
 module Graphics.Map.Static.Tiles.AllTileData where
 
-
 import Graphics.Map.Static.Tiles.Definition
 
 import Data.Sequence
@@ -3609,7 +3608,7 @@ alltiledatainit = fromList $
                                        False
                              )
                              [297,287]
-                  --25(STARTING POSITION)
+                  --26(STARTING POSITION)
                   , TileData 299
                              [(520,1040),(560,1040),(520,1080),(560,1080)]
                              False

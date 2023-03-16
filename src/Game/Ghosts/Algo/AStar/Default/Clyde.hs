@@ -16,4 +16,5 @@ clydeastardefault = ClydeState { clydecurrentmode      = Chase
                                , clydecurrentdirection = None
                                , clydecurrentspeed     = (-1)
                                , clydedotcounter       = (-1)
+                               , clydeghsl             = Nothing
                                }

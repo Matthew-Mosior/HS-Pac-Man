@@ -25,8 +25,11 @@ source-repository head
 
 library
   exposed-modules:
-      Application
-      Game.Ghosts.Algo.AStar.Common
+      Application.App
+      Application.HandleKeys
+      Application.RenderGS
+      Application.UpdateGS
+      Game.GameData.Tile
       Game.Ghosts.Algo.AStar.Default.Blinky
       Game.Ghosts.Algo.AStar.Default.Clyde
       Game.Ghosts.Algo.AStar.Default.Inky
@@ -40,15 +43,23 @@ library
       Game.Ghosts.Algo.AStar.Tiles.AllTileDataAStar
       Game.Ghosts.Algo.AStar.Tiles.Default
       Game.Ghosts.Algo.AStar.Tiles.Definition
+      Game.Ghosts.GhostCoorToCookieCoor
+      Game.Ghosts.Movement.Blinky
+      Game.Ghosts.Movement.Clyde
+      Game.Ghosts.Movement.Inky
+      Game.Ghosts.Movement.Pinky
       Game.Initial.Definition
       Game.Initial.Level1
       Game.Initial.Level2_4
       Game.Initial.Level5_All
+      Game.Pacman.Movement
+      Game.Pacman.PacmanCoorToCookieCoor
+      Game.Pacman.Tile
       Game.Types
       Graphics.Map.Dynamic.Cookies.AllCookies
       Graphics.Map.Dynamic.Cookies.Common
       Graphics.Map.Dynamic.Cookies.Definition
-      Graphics.Map.Dynamic.Cookies.InitialCookies
+      Graphics.Map.Dynamic.Cookies.DrawCookies
       Graphics.Map.Dynamic.Ghosts.BlinkyStart
       Graphics.Map.Dynamic.Ghosts.ClydeStart
       Graphics.Map.Dynamic.Ghosts.Definition
@@ -56,7 +67,6 @@ library
       Graphics.Map.Dynamic.Ghosts.PinkyStart
       Graphics.Map.Dynamic.Pacman.Definition
       Graphics.Map.Dynamic.Pacman.PacmanStart
-      Graphics.Map.Map
       Graphics.Map.Static.Borders.Common
       Graphics.Map.Static.Borders.InnerOuterBorder
       Graphics.Map.Static.Borders.OuterOuterBorder
@@ -69,6 +79,7 @@ library
       Graphics.Map.Static.Tiles.AllTileData
       Graphics.Map.Static.Tiles.Default
       Graphics.Map.Static.Tiles.Definition
+      Graphics.Map.Static.Tiles.GhostHouse.AllTileData
       Graphics.Map.Static.Tiles.TileToCookieCoor
       Graphics.Map.Static.Walls.Common
       Graphics.Map.Static.Walls.Wall1
@@ -90,6 +101,12 @@ library
       Graphics.Map.Static.Walls.Wall7
       Graphics.Map.Static.Walls.Wall8
       Graphics.Map.Static.Walls.Wall9
+      Rendering.GhostHouse.GhostHouseStart
+      Rendering.GhostHouse.StartingLoop.Clyde
+      Rendering.GhostHouse.StartingLoop.Definition
+      Rendering.GhostHouse.StartingLoop.Inky
+      Rendering.GhostHouse.StartingLoop.Pinky
+      Rendering.GhostHouse.StartingPositions
   other-modules:
       Paths_hs_pac_man
   hs-source-dirs:
@@ -126,6 +143,7 @@ library
       Strict
       TupleSections
       TypeApplications
+      TypeFamilies
       TypeFamilyDependencies
       TypeOperators
       TypeSynonymInstances
@@ -143,11 +161,11 @@ library
     , bytestring
     , containers
     , gloss
+    , iris
     , jose
     , lens
     , pqueue
     , servant
-    , stm
     , websockets
     , wuss
   default-language: Haskell2010
@@ -190,6 +208,7 @@ executable hs-pac-man
       Strict
       TupleSections
       TypeApplications
+      TypeFamilies
       TypeFamilyDependencies
       TypeOperators
       TypeSynonymInstances
@@ -208,11 +227,11 @@ executable hs-pac-man
     , containers
     , gloss
     , hs-pac-man
+    , iris
     , jose
     , lens
     , pqueue
     , servant
-    , stm
     , websockets
     , wuss
   default-language: Haskell2010
@@ -233,11 +252,11 @@ test-suite hs-pac-man-test
     , containers
     , gloss
     , hs-pac-man
+    , iris
     , jose
     , lens
     , pqueue
     , servant
-    , stm
     , websockets
     , wuss
   default-language: Haskell2010
