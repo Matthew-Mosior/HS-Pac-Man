@@ -1,23 +1,24 @@
 module Graphics.Map.Dynamic.Ghosts.ClydeStart where
 
-import Codec.BMP (parseBMP)
-import Data.ByteString.Lazy as DBL (readFile)
-import Graphics.Gloss.Data.Bitmap
-import Graphics.Gloss.Data.Picture
+import Application.LoadAssets
+
+import Data.Massiv.Array as DMA
+import Data.Massiv.Array.IO as DMAIO
+import qualified Graphics.ColorModel as CM
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
-{-Define Clyde picture.-}
+{-Define Clyde array.-}
 
-drawclydes :: (Int,Int)
-            -> IO Picture 
-drawclydes (xpos,ypos) = do
-  bmp <- DBL.readFile "assets/largeb_biegeghost_up.bmp"
-  let parsedbmp = parseBMP bmp
-  case parsedbmp of
-    Left  _    -> return Blank
-    Right fbmp -> return                                                  $
-                  Translate ((fromIntegral xpos :: Float) - (1120/2) + 4)
-                            ((fromIntegral ypos :: Float) - (1440/2) + 3) $
-                  Bitmap (bitmapDataOfBMP fbmp)
+drawClydeS :: (Int,Int)
+           -> IO ((Array S Ix2 ColorMassiv),(Int,Int))
+drawClydeS (xpos,ypos) = do
+  clydergb <- loadClydeUpAsset
+  clydergbf <- DMA.traversePrim (\x -> return $ rgbMassiv8w ((\(a,_,_) -> a) $ toComponents $ pixelColor x)
+                                                            ((\(_,b,_) -> b) $ toComponents $ pixelColor x)
+                                                            ((\(_,_,c) -> c) $ toComponents $ pixelColor x)
+                                )
+               clydergb
+  return (clydergbf,(xpos,ypos))
 
-{-----------------------}
+{---------------------}

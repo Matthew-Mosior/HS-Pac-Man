@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall14 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the fourteenth wall of the map.-}
 
-wall14 :: IO Picture
+wall14 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall14 = do
+  return DSeq.empty
+  {-
   wall141 <- createWall (432,856)
   wall142 <- createWall (440,856)
   wall143 <- createWall (448,856)
@@ -104,100 +108,101 @@ wall14 = do
   wall1492 <- createWall (416,880)
   wall1493 <- createWall (416,872)
   wall1494 <- createWall (424,864)
-  return $ Pictures [ wall141 
-                    , wall142 
-                    , wall143 
-                    , wall144 
-                    , wall145 
-                    , wall146 
-                    , wall147 
-                    , wall148 
-                    , wall149 
-                    , wall1410 
-                    , wall1411 
-                    , wall1412 
-                    , wall1413 
-                    , wall1414 
-                    , wall1415 
-                    , wall1416 
-                    , wall1417 
-                    , wall1418 
-                    , wall1419 
-                    , wall1420 
-                    , wall1421 
-                    , wall1422 
-                    , wall1423 
-                    , wall1424 
-                    , wall1425 
-                    , wall1426 
-                    , wall1427 
-                    , wall1428 
-                    , wall1429 
-                    , wall1430 
-                    , wall1431 
-                    , wall1432 
-                    , wall1433 
-                    , wall1434 
-                    , wall1435 
-                    , wall1436 
-                    , wall1437 
-                    , wall1438 
-                    , wall1439 
-                    , wall1440 
-                    , wall1441 
-                    , wall1442 
-                    , wall1443 
-                    , wall1444 
-                    , wall1445 
-                    , wall1446 
-                    , wall1447 
-                    , wall1448 
-                    , wall1449 
-                    , wall1450 
-                    , wall1451 
-                    , wall1452 
-                    , wall1453 
-                    , wall1454 
-                    , wall1455 
-                    , wall1456 
-                    , wall1457 
-                    , wall1458 
-                    , wall1459 
-                    , wall1460 
-                    , wall1461 
-                    , wall1462 
-                    , wall1463 
-                    , wall1464 
-                    , wall1465 
-                    , wall1466 
-                    , wall1467 
-                    , wall1468 
-                    , wall1469 
-                    , wall1470 
-                    , wall1471 
-                    , wall1472 
-                    , wall1473 
-                    , wall1474 
-                    , wall1475 
-                    , wall1476 
-                    , wall1477 
-                    , wall1478 
-                    , wall1479 
-                    , wall1480 
-                    , wall1481 
-                    , wall1482 
-                    , wall1483 
-                    , wall1484 
-                    , wall1485 
-                    , wall1486 
-                    , wall1487 
-                    , wall1488 
-                    , wall1489 
-                    , wall1490 
-                    , wall1491 
-                    , wall1492 
-                    , wall1493 
-                    , wall1494
-                    ]
+  return $ [ wall141 
+           , wall142 
+           , wall143 
+           , wall144 
+           , wall145 
+           , wall146 
+           , wall147 
+           , wall148 
+           , wall149 
+           , wall1410 
+           , wall1411 
+           , wall1412 
+           , wall1413 
+           , wall1414 
+           , wall1415 
+           , wall1416 
+           , wall1417 
+           , wall1418 
+           , wall1419 
+           , wall1420 
+           , wall1421 
+           , wall1422 
+           , wall1423 
+           , wall1424 
+           , wall1425 
+           , wall1426 
+           , wall1427 
+           , wall1428 
+           , wall1429 
+           , wall1430 
+           , wall1431 
+           , wall1432 
+           , wall1433 
+           , wall1434 
+           , wall1435 
+           , wall1436 
+           , wall1437 
+           , wall1438 
+           , wall1439 
+           , wall1440 
+           , wall1441 
+           , wall1442 
+           , wall1443 
+           , wall1444 
+           , wall1445 
+           , wall1446 
+           , wall1447 
+           , wall1448 
+           , wall1449 
+           , wall1450 
+           , wall1451 
+           , wall1452 
+           , wall1453 
+           , wall1454 
+           , wall1455 
+           , wall1456 
+           , wall1457 
+           , wall1458 
+           , wall1459 
+           , wall1460 
+           , wall1461 
+           , wall1462 
+           , wall1463 
+           , wall1464 
+           , wall1465 
+           , wall1466 
+           , wall1467 
+           , wall1468 
+           , wall1469 
+           , wall1470 
+           , wall1471 
+           , wall1472 
+           , wall1473 
+           , wall1474 
+           , wall1475 
+           , wall1476 
+           , wall1477 
+           , wall1478 
+           , wall1479 
+           , wall1480 
+           , wall1481 
+           , wall1482 
+           , wall1483 
+           , wall1484 
+           , wall1485 
+           , wall1486 
+           , wall1487 
+           , wall1488 
+           , wall1489 
+           , wall1490 
+           , wall1491 
+           , wall1492 
+           , wall1493 
+           , wall1494
+           ]
+  -}
 
 {------------------------------------------------------------------}

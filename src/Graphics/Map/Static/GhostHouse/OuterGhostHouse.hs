@@ -3,13 +3,17 @@ module Graphics.Map.Static.GhostHouse.OuterGhostHouse where
 
 import Graphics.Map.Static.GhostHouse.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the ghost house of the map.-}
 
-outerghosthouse :: IO Picture
+outerghosthouse :: IO (Seq ((Array S Ix2 ColorMassiv),(Int,Int)))
 outerghosthouse = do
+  return DSeq.empty
+  {-
   outerghosthouse1 <- createGhostHouse (432,616)
   outerghosthouse2 <- createGhostHouse (440,616)
   outerghosthouse3 <- createGhostHouse (448,616)
@@ -110,106 +114,107 @@ outerghosthouse = do
   outerghosthouse98 <- createGhostHouse (416,624)
   outerghosthouse99 <- createGhostHouse (416,616)
   outerghosthouse100 <- createGhostHouse (424,616)
-  return $ Pictures [ outerghosthouse1 
-                    , outerghosthouse2 
-                    , outerghosthouse3 
-                    , outerghosthouse4 
-                    , outerghosthouse5 
-                    , outerghosthouse6 
-                    , outerghosthouse7 
-                    , outerghosthouse8 
-                    , outerghosthouse9 
-                    , outerghosthouse10 
-                    , outerghosthouse11 
-                    , outerghosthouse12 
-                    , outerghosthouse13 
-                    , outerghosthouse14 
-                    , outerghosthouse15 
-                    , outerghosthouse16 
-                    , outerghosthouse17 
-                    , outerghosthouse18 
-                    , outerghosthouse19 
-                    , outerghosthouse20 
-                    , outerghosthouse21 
-                    , outerghosthouse22 
-                    , outerghosthouse23 
-                    , outerghosthouse24 
-                    , outerghosthouse25 
-                    , outerghosthouse26 
-                    , outerghosthouse27 
-                    , outerghosthouse28 
-                    , outerghosthouse29 
-                    , outerghosthouse30 
-                    , outerghosthouse31 
-                    , outerghosthouse32 
-                    , outerghosthouse33 
-                    , outerghosthouse34 
-                    , outerghosthouse35 
-                    , outerghosthouse36 
-                    , outerghosthouse37 
-                    , outerghosthouse38 
-                    , outerghosthouse39 
-                    , outerghosthouse40 
-                    , outerghosthouse41 
-                    , outerghosthouse42 
-                    , outerghosthouse43 
-                    , outerghosthouse44 
-                    , outerghosthouse45 
-                    , outerghosthouse46 
-                    , outerghosthouse47 
-                    , outerghosthouse48 
-                    , outerghosthouse49 
-                    , outerghosthouse50 
-                    , outerghosthouse51 
-                    , outerghosthouse52 
-                    , outerghosthouse53 
-                    , outerghosthouse54 
-                    , outerghosthouse55 
-                    , outerghosthouse56 
-                    , outerghosthouse57 
-                    , outerghosthouse58 
-                    , outerghosthouse59 
-                    , outerghosthouse60 
-                    , outerghosthouse61 
-                    , outerghosthouse62 
-                    , outerghosthouse63 
-                    , outerghosthouse64 
-                    , outerghosthouse65 
-                    , outerghosthouse66 
-                    , outerghosthouse67 
-                    , outerghosthouse68 
-                    , outerghosthouse69 
-                    , outerghosthouse70 
-                    , outerghosthouse71 
-                    , outerghosthouse72 
-                    , outerghosthouse73 
-                    , outerghosthouse74 
-                    , outerghosthouse75 
-                    , outerghosthouse76 
-                    , outerghosthouse77 
-                    , outerghosthouse78 
-                    , outerghosthouse79 
-                    , outerghosthouse80 
-                    , outerghosthouse81 
-                    , outerghosthouse82 
-                    , outerghosthouse83 
-                    , outerghosthouse84 
-                    , outerghosthouse85 
-                    , outerghosthouse86 
-                    , outerghosthouse87 
-                    , outerghosthouse88 
-                    , outerghosthouse89 
-                    , outerghosthouse90 
-                    , outerghosthouse91 
-                    , outerghosthouse92 
-                    , outerghosthouse93 
-                    , outerghosthouse94 
-                    , outerghosthouse95 
-                    , outerghosthouse96 
-                    , outerghosthouse97 
-                    , outerghosthouse98 
-                    , outerghosthouse99 
-                    , outerghosthouse100
-                    ]
+  return $ [ outerghosthouse1 
+           , outerghosthouse2 
+           , outerghosthouse3 
+           , outerghosthouse4 
+           , outerghosthouse5 
+           , outerghosthouse6 
+           , outerghosthouse7 
+           , outerghosthouse8 
+           , outerghosthouse9 
+           , outerghosthouse10 
+           , outerghosthouse11 
+           , outerghosthouse12 
+           , outerghosthouse13 
+           , outerghosthouse14 
+           , outerghosthouse15 
+           , outerghosthouse16 
+           , outerghosthouse17 
+           , outerghosthouse18 
+           , outerghosthouse19 
+           , outerghosthouse20 
+           , outerghosthouse21 
+           , outerghosthouse22 
+           , outerghosthouse23 
+           , outerghosthouse24 
+           , outerghosthouse25 
+           , outerghosthouse26 
+           , outerghosthouse27 
+           , outerghosthouse28 
+           , outerghosthouse29 
+           , outerghosthouse30 
+           , outerghosthouse31 
+           , outerghosthouse32 
+           , outerghosthouse33 
+           , outerghosthouse34 
+           , outerghosthouse35 
+           , outerghosthouse36 
+           , outerghosthouse37 
+           , outerghosthouse38 
+           , outerghosthouse39 
+           , outerghosthouse40 
+           , outerghosthouse41 
+           , outerghosthouse42 
+           , outerghosthouse43 
+           , outerghosthouse44 
+           , outerghosthouse45 
+           , outerghosthouse46 
+           , outerghosthouse47 
+           , outerghosthouse48 
+           , outerghosthouse49 
+           , outerghosthouse50 
+           , outerghosthouse51 
+           , outerghosthouse52 
+           , outerghosthouse53 
+           , outerghosthouse54 
+           , outerghosthouse55 
+           , outerghosthouse56 
+           , outerghosthouse57 
+           , outerghosthouse58 
+           , outerghosthouse59 
+           , outerghosthouse60 
+           , outerghosthouse61 
+           , outerghosthouse62 
+           , outerghosthouse63 
+           , outerghosthouse64 
+           , outerghosthouse65 
+           , outerghosthouse66 
+           , outerghosthouse67 
+           , outerghosthouse68 
+           , outerghosthouse69 
+           , outerghosthouse70 
+           , outerghosthouse71 
+           , outerghosthouse72 
+           , outerghosthouse73 
+           , outerghosthouse74 
+           , outerghosthouse75 
+           , outerghosthouse76 
+           , outerghosthouse77 
+           , outerghosthouse78 
+           , outerghosthouse79 
+           , outerghosthouse80 
+           , outerghosthouse81 
+           , outerghosthouse82 
+           , outerghosthouse83 
+           , outerghosthouse84 
+           , outerghosthouse85 
+           , outerghosthouse86 
+           , outerghosthouse87 
+           , outerghosthouse88 
+           , outerghosthouse89 
+           , outerghosthouse90 
+           , outerghosthouse91 
+           , outerghosthouse92 
+           , outerghosthouse93 
+           , outerghosthouse94 
+           , outerghosthouse95 
+           , outerghosthouse96 
+           , outerghosthouse97 
+           , outerghosthouse98 
+           , outerghosthouse99 
+           , outerghosthouse100
+           ]
+  -}
 
 {--------------------------------------------------------------}

@@ -3,13 +3,17 @@ module Graphics.Map.Static.GhostHouse.InnerGhostHouse where
 
 import Graphics.Map.Static.GhostHouse.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the ghost house of the map.-}
 
-innerghosthouse :: IO Picture
+innerghosthouse :: IO (Seq ((Array S Ix2 ColorMassiv),(Int,Int)))
 innerghosthouse = do
+  return DSeq.empty
+  {-
   innerghosthouse1 <- createGhostHouse (432,632)
   innerghosthouse2 <- createGhostHouse (440,632)
   innerghosthouse3 <- createGhostHouse (448,632)
@@ -94,90 +98,91 @@ innerghosthouse = do
   innerghosthouse82 <- createGhostHouse (432,656)
   innerghosthouse83 <- createGhostHouse (432,648)
   innerghosthouse84 <- createGhostHouse (432,640)
-  return $ Pictures [ innerghosthouse1 
-                    , innerghosthouse2 
-                    , innerghosthouse3 
-                    , innerghosthouse4 
-                    , innerghosthouse5 
-                    , innerghosthouse6 
-                    , innerghosthouse7 
-                    , innerghosthouse8 
-                    , innerghosthouse9 
-                    , innerghosthouse10 
-                    , innerghosthouse11 
-                    , innerghosthouse12 
-                    , innerghosthouse13 
-                    , innerghosthouse14 
-                    , innerghosthouse15 
-                    , innerghosthouse16 
-                    , innerghosthouse17 
-                    , innerghosthouse18 
-                    , innerghosthouse19 
-                    , innerghosthouse20 
-                    , innerghosthouse21 
-                    , innerghosthouse22 
-                    , innerghosthouse23 
-                    , innerghosthouse24 
-                    , innerghosthouse25 
-                    , innerghosthouse26 
-                    , innerghosthouse27 
-                    , innerghosthouse28 
-                    , innerghosthouse29 
-                    , innerghosthouse30 
-                    , innerghosthouse31 
-                    , innerghosthouse32 
-                    , innerghosthouse33 
-                    , innerghosthouse34 
-                    , innerghosthouse35 
-                    , innerghosthouse36 
-                    , innerghosthouse37 
-                    , innerghosthouse38 
-                    , innerghosthouse39 
-                    , innerghosthouse40 
-                    , innerghosthouse41 
-                    , innerghosthouse42 
-                    , innerghosthouse43 
-                    , innerghosthouse44 
-                    , innerghosthouse45 
-                    , innerghosthouse46 
-                    , innerghosthouse47 
-                    , innerghosthouse48 
-                    , innerghosthouse49 
-                    , innerghosthouse50 
-                    , innerghosthouse51 
-                    , innerghosthouse52 
-                    , innerghosthouse53 
-                    , innerghosthouse54 
-                    , innerghosthouse55 
-                    , innerghosthouse56 
-                    , innerghosthouse57 
-                    , innerghosthouse58 
-                    , innerghosthouse59 
-                    , innerghosthouse60 
-                    , innerghosthouse61 
-                    , innerghosthouse62 
-                    , innerghosthouse63 
-                    , innerghosthouse64 
-                    , innerghosthouse65 
-                    , innerghosthouse66 
-                    , innerghosthouse67 
-                    , innerghosthouse68 
-                    , innerghosthouse69 
-                    , innerghosthouse70 
-                    , innerghosthouse71 
-                    , innerghosthouse72 
-                    , innerghosthouse73 
-                    , innerghosthouse74 
-                    , innerghosthouse75 
-                    , innerghosthouse76 
-                    , innerghosthouse77 
-                    , innerghosthouse78 
-                    , innerghosthouse79 
-                    , innerghosthouse80 
-                    , innerghosthouse81 
-                    , innerghosthouse82 
-                    , innerghosthouse83 
-                    , innerghosthouse84
-                    ]
+  return $ [ innerghosthouse1 
+           , innerghosthouse2 
+           , innerghosthouse3 
+           , innerghosthouse4 
+           , innerghosthouse5 
+           , innerghosthouse6 
+           , innerghosthouse7 
+           , innerghosthouse8 
+           , innerghosthouse9 
+           , innerghosthouse10 
+           , innerghosthouse11 
+           , innerghosthouse12 
+           , innerghosthouse13 
+           , innerghosthouse14 
+           , innerghosthouse15 
+           , innerghosthouse16 
+           , innerghosthouse17 
+           , innerghosthouse18 
+           , innerghosthouse19 
+           , innerghosthouse20 
+           , innerghosthouse21 
+           , innerghosthouse22 
+           , innerghosthouse23 
+           , innerghosthouse24 
+           , innerghosthouse25 
+           , innerghosthouse26 
+           , innerghosthouse27 
+           , innerghosthouse28 
+           , innerghosthouse29 
+           , innerghosthouse30 
+           , innerghosthouse31 
+           , innerghosthouse32 
+           , innerghosthouse33 
+           , innerghosthouse34 
+           , innerghosthouse35 
+           , innerghosthouse36 
+           , innerghosthouse37 
+           , innerghosthouse38 
+           , innerghosthouse39 
+           , innerghosthouse40 
+           , innerghosthouse41 
+           , innerghosthouse42 
+           , innerghosthouse43 
+           , innerghosthouse44 
+           , innerghosthouse45 
+           , innerghosthouse46 
+           , innerghosthouse47 
+           , innerghosthouse48 
+           , innerghosthouse49 
+           , innerghosthouse50 
+           , innerghosthouse51 
+           , innerghosthouse52 
+           , innerghosthouse53 
+           , innerghosthouse54 
+           , innerghosthouse55 
+           , innerghosthouse56 
+           , innerghosthouse57 
+           , innerghosthouse58 
+           , innerghosthouse59 
+           , innerghosthouse60 
+           , innerghosthouse61 
+           , innerghosthouse62 
+           , innerghosthouse63 
+           , innerghosthouse64 
+           , innerghosthouse65 
+           , innerghosthouse66 
+           , innerghosthouse67 
+           , innerghosthouse68 
+           , innerghosthouse69 
+           , innerghosthouse70 
+           , innerghosthouse71 
+           , innerghosthouse72 
+           , innerghosthouse73 
+           , innerghosthouse74 
+           , innerghosthouse75 
+           , innerghosthouse76 
+           , innerghosthouse77 
+           , innerghosthouse78 
+           , innerghosthouse79 
+           , innerghosthouse80 
+           , innerghosthouse81 
+           , innerghosthouse82 
+           , innerghosthouse83 
+           , innerghosthouse84
+           ]
+  -}
 
 {--------------------------------------------------------------}

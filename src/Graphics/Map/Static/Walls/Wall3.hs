@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall3 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the third wall of the map.-}
 
-wall3 :: IO Picture
+wall3 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall3 = do
+  return DSeq.empty
+  {-
   wall31 <- createWall (672,216)
   wall32 <- createWall (680,216)
   wall33 <- createWall (688,216)
@@ -62,58 +66,59 @@ wall3 = do
   wall350 <- createWall (656,240)
   wall351 <- createWall (656,232)
   wall352 <- createWall (664,224)
-  return $ Pictures [ wall31 
-                    , wall32 
-                    , wall33 
-                    , wall34 
-                    , wall35 
-                    , wall36 
-                    , wall37 
-                    , wall38 
-                    , wall39 
-                    , wall310 
-                    , wall311 
-                    , wall312 
-                    , wall313 
-                    , wall314 
-                    , wall315 
-                    , wall316 
-                    , wall317 
-                    , wall318 
-                    , wall319 
-                    , wall320 
-                    , wall321 
-                    , wall322 
-                    , wall323 
-                    , wall324 
-                    , wall325 
-                    , wall326 
-                    , wall327 
-                    , wall328 
-                    , wall329 
-                    , wall330 
-                    , wall331 
-                    , wall332 
-                    , wall333 
-                    , wall334 
-                    , wall335 
-                    , wall336 
-                    , wall337 
-                    , wall338 
-                    , wall339 
-                    , wall340 
-                    , wall341 
-                    , wall342 
-                    , wall343 
-                    , wall344 
-                    , wall345 
-                    , wall346 
-                    , wall347 
-                    , wall348 
-                    , wall349 
-                    , wall350 
-                    , wall351 
-                    , wall352
-                    ]
+  return $ [ wall31 
+           , wall32 
+           , wall33 
+           , wall34 
+           , wall35 
+           , wall36 
+           , wall37 
+           , wall38 
+           , wall39 
+           , wall310 
+           , wall311 
+           , wall312 
+           , wall313 
+           , wall314 
+           , wall315 
+           , wall316 
+           , wall317 
+           , wall318 
+           , wall319 
+           , wall320 
+           , wall321 
+           , wall322 
+           , wall323 
+           , wall324 
+           , wall325 
+           , wall326 
+           , wall327 
+           , wall328 
+           , wall329 
+           , wall330 
+           , wall331 
+           , wall332 
+           , wall333 
+           , wall334 
+           , wall335 
+           , wall336 
+           , wall337 
+           , wall338 
+           , wall339 
+           , wall340 
+           , wall341 
+           , wall342 
+           , wall343 
+           , wall344 
+           , wall345 
+           , wall346 
+           , wall347 
+           , wall348 
+           , wall349 
+           , wall350 
+           , wall351 
+           , wall352
+           ]
+  -}
 
 {-------------------------------------------------------------}

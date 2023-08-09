@@ -3,13 +3,17 @@ module Graphics.Map.Static.GhostHouseGate.GhostHouseGate where
 
 import Graphics.Map.Static.GhostHouseGate.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the ghost house of the map.-}
 
-ghosthousegate :: IO Picture
+ghosthousegate :: IO (Seq ((Array S Ix2 ColorMassiv),(Int,Int)))
 ghosthousegate = do
+  return DSeq.empty
+  {-
   ghosthousegate1 <- createGhostHouseGate (520,620)
   ghosthousegate2 <- createGhostHouseGate (520,628)
   ghosthousegate3 <- createGhostHouseGate (528,620)
@@ -30,26 +34,27 @@ ghosthousegate = do
   ghosthousegate18 <- createGhostHouseGate (584,628)
   ghosthousegate19 <- createGhostHouseGate (592,620)
   ghosthousegate20 <- createGhostHouseGate (592,628)
-  return $ Pictures [ ghosthousegate1 
-                    , ghosthousegate2 
-                    , ghosthousegate3 
-                    , ghosthousegate4 
-                    , ghosthousegate5 
-                    , ghosthousegate6 
-                    , ghosthousegate7 
-                    , ghosthousegate8 
-                    , ghosthousegate9 
-                    , ghosthousegate10 
-                    , ghosthousegate11 
-                    , ghosthousegate12 
-                    , ghosthousegate13 
-                    , ghosthousegate14 
-                    , ghosthousegate15 
-                    , ghosthousegate16 
-                    , ghosthousegate17 
-                    , ghosthousegate18 
-                    , ghosthousegate19 
-                    , ghosthousegate20
-                    ]
+  return $ [ ghosthousegate1 
+           , ghosthousegate2 
+           , ghosthousegate3 
+           , ghosthousegate4 
+           , ghosthousegate5 
+           , ghosthousegate6 
+           , ghosthousegate7 
+           , ghosthousegate8 
+           , ghosthousegate9 
+           , ghosthousegate10 
+           , ghosthousegate11 
+           , ghosthousegate12 
+           , ghosthousegate13 
+           , ghosthousegate14 
+           , ghosthousegate15 
+           , ghosthousegate16 
+           , ghosthousegate17 
+           , ghosthousegate18 
+           , ghosthousegate19 
+           , ghosthousegate20
+           ]
+  -}
 
 {--------------------------------------------------------------}

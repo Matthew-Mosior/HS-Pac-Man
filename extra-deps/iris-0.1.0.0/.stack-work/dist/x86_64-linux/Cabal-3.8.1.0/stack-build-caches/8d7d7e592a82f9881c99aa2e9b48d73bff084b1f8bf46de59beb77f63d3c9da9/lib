@@ -1,0 +1,34 @@
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/iris.cabal:
+  hash: dd6d664b87dc78b9a2f3b7316dedb5aacdaebb84083f97c50625c5d445edf288
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris.hs:
+  hash: 4ae5277bd77fd11b477912180d3fd1dfbfd9d4e0302ed4ad4b7613eabfb932d5
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/App.hs:
+  hash: 2da9b6506bd74edec3bb7d44fddbef152c5e08fade304d67bb9ac9e7679a6db9
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Browse.hs:
+  hash: c666dd99f145c4fe3b5d9b017f92b15bd4e2ed6aa5a7f9c82ff8e0b5db834e7e
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli.hs:
+  hash: e31ef0957f1e13a0ee364c6871c0eaea1492599ae335f4ef61316747fef9136c
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli/Browse.hs:
+  hash: 7bf68bc1b28455d4ddef5c1c90ce95d824fb7539579b63dc78694008720fe832
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli/Colour.hs:
+  hash: 01504d3dcd37644e6efaa4069b15c23d7e29f10b331ddc418b2ae67533992db0
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli/Interactive.hs:
+  hash: 6417d97fbf55b50688cc9d82d16c408d454b0501e6c4b4599e91b75f4fb65233
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli/Internal.hs:
+  hash: 78864dd1108546a5dd359778fb135b92f5b1a2be3e4f680b9eba00b9cd393352
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli/ParserInfo.hs:
+  hash: 1bbf4013d66f451f579a72c52da1853b834c425bfd4ca39d68d94dbd6333e9ec
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Cli/Version.hs:
+  hash: 1ad6e273a0656266f582a54758b63f39d087e156ec6310568c7e2421b4013d7c
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Colour.hs:
+  hash: 16beeec39ec15ee089819c31f1f39a512576fa0a8e5abf773f812fea327ab46b
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Colour/Formatting.hs:
+  hash: 4c31501b0ec8f1524f327c456fba12e69f543fb9ea475cc8eb659cb0559576ef
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Colour/Mode.hs:
+  hash: bc969368653cc32065d04c7ab7bc7f96b3c631d731d5a7aa23f93bd30eb5190b
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Env.hs:
+  hash: 949f52d91a267f930dca6aab3e662c59f1508462068ac90bf063f519d0c8ed56
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Settings.hs:
+  hash: 463fdafe147cd92598bd9d8c4cc1eceaacdf1d4c2049c5aeae07d4e5226c2f94
+/home/matthewmosior/Software/local/Haskell/Pac-Man/hs-pac-man/extra-deps/iris-0.1.0.0/src/Iris/Tool.hs:
+  hash: 3331d72aba49d016cb80ee982fec62da7eb7e296ab78f4c877e01b4038b419f9

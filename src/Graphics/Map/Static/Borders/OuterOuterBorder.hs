@@ -3,13 +3,820 @@ module Graphics.Map.Static.Borders.OuterOuterBorder where
 
 import Graphics.Map.Static.Borders.Common 
 
-import Graphics.Gloss.Data.Picture
-
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 {-Define the Picture that makes up the outer outer border of the map.-}
 
-outerouterborder :: IO Picture
+outerouterborder :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 outerouterborder = do
+  outerouterborder1 <- createBorder (80,80)
+  outerouterborder2 <- createBorder (80,85)
+  outerouterborder3 <- createBorder (80,90)
+  outerouterborder4 <- createBorder (80,95)
+  outerouterborder5 <- createBorder (80,100)
+  outerouterborder6 <- createBorder (80,105)
+  outerouterborder7 <- createBorder (80,110)
+  outerouterborder8 <- createBorder (80,115)
+  outerouterborder9 <- createBorder (80,120)
+  outerouterborder10 <- createBorder (80,125)
+  outerouterborder11 <- createBorder (80,130)
+  outerouterborder12 <- createBorder (80,135)
+  outerouterborder13 <- createBorder (80,140)
+  outerouterborder14 <- createBorder (80,145)
+  outerouterborder15 <- createBorder (80,150)
+  outerouterborder16 <- createBorder (80,155)
+  outerouterborder17 <- createBorder (80,160)
+  outerouterborder18 <- createBorder (80,165)
+  outerouterborder19 <- createBorder (80,170)
+  outerouterborder20 <- createBorder (80,175)
+  outerouterborder21 <- createBorder (80,180)
+  outerouterborder22 <- createBorder (80,185)
+  outerouterborder23 <- createBorder (80,190)
+  outerouterborder24 <- createBorder (80,195)
+  outerouterborder25 <- createBorder (80,200)
+  outerouterborder26 <- createBorder (80,205)
+  outerouterborder27 <- createBorder (80,210)
+  outerouterborder28 <- createBorder (80,215)
+  outerouterborder29 <- createBorder (80,220)
+  outerouterborder30 <- createBorder (80,225)
+  outerouterborder31 <- createBorder (80,230)
+  outerouterborder32 <- createBorder (80,235)
+  outerouterborder33 <- createBorder (80,240)
+  outerouterborder34 <- createBorder (80,245)
+  outerouterborder35 <- createBorder (80,250)
+  outerouterborder36 <- createBorder (80,255)
+  outerouterborder37 <- createBorder (80,260)
+  outerouterborder38 <- createBorder (80,265)
+  outerouterborder39 <- createBorder (80,270)
+  outerouterborder40 <- createBorder (80,275)
+  outerouterborder41 <- createBorder (80,280)
+  outerouterborder42 <- createBorder (80,285)
+  outerouterborder43 <- createBorder (80,290)
+  outerouterborder44 <- createBorder (80,295)
+  outerouterborder45 <- createBorder (80,300)
+  outerouterborder46 <- createBorder (80,305)
+  outerouterborder47 <- createBorder (80,310)
+  outerouterborder48 <- createBorder (80,315)
+  outerouterborder49 <- createBorder (80,320)
+  outerouterborder50 <- createBorder (80,325)
+  outerouterborder51 <- createBorder (80,330)
+  outerouterborder52 <- createBorder (80,335)
+  outerouterborder53 <- createBorder (80,340)
+  outerouterborder54 <- createBorder (80,345)
+  outerouterborder55 <- createBorder (80,350)
+  outerouterborder56 <- createBorder (80,355)
+  outerouterborder57 <- createBorder (80,360)
+  outerouterborder58 <- createBorder (80,365)
+  outerouterborder59 <- createBorder (80,370)
+  outerouterborder60 <- createBorder (80,375)
+  outerouterborder61 <- createBorder (80,380)
+  outerouterborder62 <- createBorder (80,385)
+  outerouterborder63 <- createBorder (80,390)
+  outerouterborder64 <- createBorder (80,395)
+  outerouterborder65 <- createBorder (80,400)
+  outerouterborder66 <- createBorder (80,405)
+  outerouterborder67 <- createBorder (80,410)
+  outerouterborder68 <- createBorder (80,415)
+  outerouterborder69 <- createBorder (80,420)
+  outerouterborder70 <- createBorder (80,425)
+  outerouterborder71 <- createBorder (80,430)
+  outerouterborder72 <- createBorder (80,435)
+  outerouterborder73 <- createBorder (80,440)
+  outerouterborder74 <- createBorder (80,445)
+  outerouterborder75 <- createBorder (80,450)
+  outerouterborder76 <- createBorder (80,455)
+  outerouterborder77 <- createBorder (80,460)
+  outerouterborder78 <- createBorder (80,465)
+  outerouterborder79 <- createBorder (80,470)
+  outerouterborder80 <- createBorder (80,475)
+  outerouterborder81 <- createBorder (80,480)
+  outerouterborder82 <- createBorder (80,485)
+  outerouterborder83 <- createBorder (80,490)
+  outerouterborder84 <- createBorder (80,495)
+  outerouterborder85 <- createBorder (80,500)
+  outerouterborder86 <- createBorder (80,505)
+  outerouterborder87 <- createBorder (80,510)
+  outerouterborder88 <- createBorder (80,515)
+  outerouterborder89 <- createBorder (80,520)
+  outerouterborder90 <- createBorder (80,525)
+  outerouterborder91 <- createBorder (80,530)
+  outerouterborder92 <- createBorder (80,535)
+  outerouterborder93 <- createBorder (80,540)
+  outerouterborder94 <- createBorder (80,545)
+  outerouterborder95 <- createBorder (80,550)
+  outerouterborder96 <- createBorder (80,555)
+  outerouterborder97 <- createBorder (80,560)
+  outerouterborder98 <- createBorder (80,565)
+  outerouterborder99 <- createBorder (80,570)
+  outerouterborder100 <- createBorder (80,575)
+  outerouterborder101 <- createBorder (80,580)
+  outerouterborder102 <- createBorder (80,585)
+  outerouterborder103 <- createBorder (80,590)
+  outerouterborder104 <- createBorder (80,595)
+  outerouterborder105 <- createBorder (80,600)
+  outerouterborder106 <- createBorder (80,605)
+  outerouterborder107 <- createBorder (80,610)
+  outerouterborder108 <- createBorder (80,615)
+  outerouterborder109 <- createBorder (80,620)
+  outerouterborder110 <- createBorder (80,625)
+  outerouterborder111 <- createBorder (80,630)
+  outerouterborder112 <- createBorder (80,635)
+  outerouterborder113 <- createBorder (80,640)
+  outerouterborder114 <- createBorder (80,645)
+  outerouterborder115 <- createBorder (80,650)
+  outerouterborder116 <- createBorder (80,655)
+  outerouterborder117 <- createBorder (80,660)
+  outerouterborder118 <- createBorder (80,665)
+  outerouterborder119 <- createBorder (80,670)
+  outerouterborder120 <- createBorder (80,675)
+  outerouterborder121 <- createBorder (80,680)
+  outerouterborder122 <- createBorder (80,685)
+  outerouterborder123 <- createBorder (80,690)
+  outerouterborder124 <- createBorder (80,695)
+  outerouterborder125 <- createBorder (80,700)
+  outerouterborder126 <- createBorder (80,705)
+  outerouterborder127 <- createBorder (80,710)
+  outerouterborder128 <- createBorder (80,715)
+  outerouterborder129 <- createBorder (80,720)
+  outerouterborder130 <- createBorder (80,725)
+  outerouterborder131 <- createBorder (80,730)
+  outerouterborder132 <- createBorder (80,735)
+  outerouterborder133 <- createBorder (80,740)
+  outerouterborder134 <- createBorder (80,745)
+  outerouterborder135 <- createBorder (80,750)
+  outerouterborder136 <- createBorder (80,755)
+  outerouterborder137 <- createBorder (80,760)
+  outerouterborder138 <- createBorder (80,765)
+  outerouterborder139 <- createBorder (80,770)
+  outerouterborder140 <- createBorder (80,775)
+  outerouterborder141 <- createBorder (80,780)
+  outerouterborder142 <- createBorder (80,785)
+  outerouterborder143 <- createBorder (80,790)
+  outerouterborder144 <- createBorder (80,795)
+  outerouterborder145 <- createBorder (80,800)
+  outerouterborder146 <- createBorder (80,805)
+  outerouterborder147 <- createBorder (80,810)
+  outerouterborder148 <- createBorder (80,815)
+  outerouterborder149 <- createBorder (80,820)
+  outerouterborder150 <- createBorder (80,825)
+  outerouterborder151 <- createBorder (80,830)
+  outerouterborder152 <- createBorder (80,835)
+  outerouterborder153 <- createBorder (80,840)
+  outerouterborder154 <- createBorder (80,845)
+  outerouterborder155 <- createBorder (80,850)
+  outerouterborder156 <- createBorder (80,855)
+  outerouterborder157 <- createBorder (80,860)
+  outerouterborder158 <- createBorder (80,865)
+  outerouterborder159 <- createBorder (80,870)
+  outerouterborder160 <- createBorder (80,875)
+  outerouterborder161 <- createBorder (80,880)
+  outerouterborder162 <- createBorder (80,885)
+  outerouterborder163 <- createBorder (80,890)
+  outerouterborder164 <- createBorder (80,895)
+  outerouterborder165 <- createBorder (80,900)
+  outerouterborder166 <- createBorder (80,905)
+  outerouterborder167 <- createBorder (80,910)
+  outerouterborder168 <- createBorder (80,915)
+  outerouterborder169 <- createBorder (80,920)
+  outerouterborder170 <- createBorder (80,925)
+  outerouterborder171 <- createBorder (80,930)
+  outerouterborder172 <- createBorder (80,935)
+  outerouterborder173 <- createBorder (80,940)
+  outerouterborder174 <- createBorder (80,945)
+  outerouterborder175 <- createBorder (80,950)
+  outerouterborder176 <- createBorder (80,955)
+  outerouterborder177 <- createBorder (80,960)
+  outerouterborder178 <- createBorder (80,965)
+  outerouterborder179 <- createBorder (80,970)
+  outerouterborder180 <- createBorder (80,975)
+  outerouterborder181 <- createBorder (80,980)
+  outerouterborder182 <- createBorder (80,985)
+  outerouterborder183 <- createBorder (80,990)
+  outerouterborder184 <- createBorder (80,995)
+  outerouterborder185 <- createBorder (80,1000)
+  outerouterborder186 <- createBorder (80,1005)
+  outerouterborder187 <- createBorder (80,1010)
+  outerouterborder188 <- createBorder (80,1015)
+  outerouterborder189 <- createBorder (80,1020)
+  outerouterborder190 <- createBorder (80,1025)
+  outerouterborder191 <- createBorder (80,1030)
+  outerouterborder192 <- createBorder (80,1035)
+  outerouterborder193 <- createBorder (80,1040)
+  outerouterborder194 <- createBorder (80,1045)
+  outerouterborder195 <- createBorder (80,1050)
+  outerouterborder196 <- createBorder (80,1055)
+  outerouterborder197 <- createBorder (80,1060)
+  outerouterborder198 <- createBorder (80,1065)
+  outerouterborder199 <- createBorder (80,1070)
+  outerouterborder200 <- createBorder (80,1075)
+  outerouterborder201 <- createBorder (80,1080)
+  outerouterborder202 <- createBorder (80,1085)
+  outerouterborder203 <- createBorder (80,1090)
+  outerouterborder204 <- createBorder (80,1095)
+  outerouterborder205 <- createBorder (85,1100)
+  outerouterborder206 <- createBorder (85,1105)
+  outerouterborder207 <- createBorder (90,1110)
+  outerouterborder208 <- createBorder (95,1110)
+  outerouterborder209 <- createBorder (100,1115)
+  outerouterborder210 <- createBorder (105,1115)
+  outerouterborder211 <- createBorder (110,1115)
+  outerouterborder212 <- createBorder (115,1115)
+  outerouterborder213 <- createBorder (120,1115)
+  outerouterborder214 <- createBorder (125,1115)
+  outerouterborder215 <- createBorder (130,1115)
+  outerouterborder216 <- createBorder (135,1115)
+  outerouterborder217 <- createBorder (140,1115)
+  outerouterborder218 <- createBorder (145,1115)
+  outerouterborder219 <- createBorder (150,1115)
+  outerouterborder220 <- createBorder (155,1115)
+  outerouterborder221 <- createBorder (160,1115)
+  outerouterborder222 <- createBorder (165,1115)
+  outerouterborder223 <- createBorder (170,1115)
+  outerouterborder224 <- createBorder (175,1115)
+  outerouterborder225 <- createBorder (180,1115)
+  outerouterborder226 <- createBorder (185,1115)
+  outerouterborder227 <- createBorder (190,1115)
+  outerouterborder228 <- createBorder (195,1115)
+  outerouterborder229 <- createBorder (200,1115)
+  outerouterborder230 <- createBorder (205,1115) 
+  outerouterborder231 <- createBorder (210,1115)
+  outerouterborder232 <- createBorder (215,1115)
+  outerouterborder233 <- createBorder (220,1115)
+  outerouterborder234 <- createBorder (225,1115)
+  outerouterborder235 <- createBorder (230,1115)
+  outerouterborder236 <- createBorder (235,1115)
+  outerouterborder237 <- createBorder (240,1115)
+  outerouterborder238 <- createBorder (245,1115)
+  outerouterborder239 <- createBorder (250,1115)
+  outerouterborder240 <- createBorder (255,1115)
+  outerouterborder241 <- createBorder (260,1115)
+  outerouterborder242 <- createBorder (265,1115)
+  outerouterborder243 <- createBorder (270,1115)
+  outerouterborder244 <- createBorder (275,1115)
+  outerouterborder245 <- createBorder (280,1115)
+  outerouterborder246 <- createBorder (285,1115)
+  outerouterborder247 <- createBorder (290,1115)
+  outerouterborder248 <- createBorder (295,1115)
+  outerouterborder249 <- createBorder (300,1115)
+  outerouterborder250 <- createBorder (305,1115)
+  outerouterborder251 <- createBorder (310,1115)
+  outerouterborder252 <- createBorder (315,1115)
+  outerouterborder253 <- createBorder (320,1115)
+  outerouterborder254 <- createBorder (325,1115)
+  outerouterborder255 <- createBorder (330,1115)
+  outerouterborder256 <- createBorder (335,1115)
+  outerouterborder257 <- createBorder (340,1115)
+  outerouterborder258 <- createBorder (345,1115)
+  outerouterborder259 <- createBorder (350,1115)
+  outerouterborder260 <- createBorder (355,1115)
+  outerouterborder261 <- createBorder (360,1115)
+  outerouterborder262 <- createBorder (365,1115)
+  outerouterborder263 <- createBorder (370,1115)
+  outerouterborder264 <- createBorder (375,1115)
+  outerouterborder265 <- createBorder (380,1115)
+  outerouterborder266 <- createBorder (385,1115)
+  outerouterborder267 <- createBorder (390,1115)
+  outerouterborder268 <- createBorder (395,1115)
+  outerouterborder269 <- createBorder (400,1115)
+  outerouterborder270 <- createBorder (405,1115)
+  outerouterborder271 <- createBorder (410,1115)
+  outerouterborder272 <- createBorder (415,1115)
+  outerouterborder273 <- createBorder (420,1115)
+  outerouterborder274 <- createBorder (425,1115)
+  outerouterborder275 <- createBorder (430,1115)
+  outerouterborder276 <- createBorder (435,1115)
+  outerouterborder277 <- createBorder (440,1115)
+  outerouterborder278 <- createBorder (445,1115)
+  outerouterborder279 <- createBorder (450,1115)
+  outerouterborder280 <- createBorder (455,1115)
+  outerouterborder281 <- createBorder (460,1115)
+  outerouterborder282 <- createBorder (465,1115)
+  outerouterborder283 <- createBorder (470,1115)
+  outerouterborder284 <- createBorder (475,1115)
+  outerouterborder285 <- createBorder (480,1115)
+  outerouterborder286 <- createBorder (485,1115)
+  outerouterborder287 <- createBorder (490,1115)
+  outerouterborder288 <- createBorder (495,1115)
+  outerouterborder289 <- createBorder (500,1115) 
+  outerouterborder290 <- createBorder (505,1115)
+  outerouterborder291 <- createBorder (510,1115)
+  outerouterborder292 <- createBorder (515,1115)
+  outerouterborder293 <- createBorder (520,1115)
+  outerouterborder294 <- createBorder (525,1115)
+  outerouterborder295 <- createBorder (530,1115)
+  outerouterborder296 <- createBorder (535,1115)
+  outerouterborder297 <- createBorder (540,1115)
+  outerouterborder298 <- createBorder (545,1110)
+  outerouterborder299 <- createBorder (550,1110)
+  outerouterborder300 <- createBorder (555,1105)
+  outerouterborder301 <- createBorder (555,1100)
+  outerouterborder302 <- createBorder (560,1095)
+  outerouterborder303 <- createBorder (560,1090)
+  outerouterborder304 <- createBorder (560,1085)
+  outerouterborder305 <- createBorder (560,1080)
+  outerouterborder306 <- createBorder (560,1075)
+  outerouterborder307 <- createBorder (560,1070)
+  outerouterborder308 <- createBorder (560,1065)
+  outerouterborder309 <- createBorder (560,1060)
+  outerouterborder310 <- createBorder (560,1055)
+  outerouterborder311 <- createBorder (560,1050)
+  outerouterborder312 <- createBorder (560,1045)
+  outerouterborder313 <- createBorder (560,1040)
+  outerouterborder314 <- createBorder (560,1035)
+  outerouterborder315 <- createBorder (560,1030)
+  outerouterborder316 <- createBorder (560,1025)
+  outerouterborder317 <- createBorder (560,1020)
+  outerouterborder318 <- createBorder (560,1015)
+  outerouterborder319 <- createBorder (560,1010)
+  outerouterborder320 <- createBorder (560,1005)
+  outerouterborder321 <- createBorder (560,1000)
+  outerouterborder322 <- createBorder (560,995)
+  outerouterborder323 <- createBorder (560,990)
+  outerouterborder324 <- createBorder (560,985)
+  outerouterborder325 <- createBorder (560,980)
+  outerouterborder326 <- createBorder (560,975)
+  outerouterborder327 <- createBorder (560,970)
+  outerouterborder328 <- createBorder (560,965)
+  outerouterborder329 <- createBorder (560,960)
+  outerouterborder330 <- createBorder (560,955)
+  outerouterborder331 <- createBorder (560,950)
+  outerouterborder332 <- createBorder (560,945)
+  outerouterborder333 <- createBorder (560,940)
+  outerouterborder334 <- createBorder (560,935)
+  outerouterborder335 <- createBorder (560,930)
+  outerouterborder336 <- createBorder (560,925)
+  outerouterborder337 <- createBorder (560,920)
+  outerouterborder338 <- createBorder (565,915)
+  outerouterborder339 <- createBorder (570,915)
+  outerouterborder340 <- createBorder (575,915)
+  outerouterborder341 <- createBorder (580,915)
+  outerouterborder342 <- createBorder (585,915)
+  outerouterborder343 <- createBorder (590,915)
+  outerouterborder344 <- createBorder (595,915)
+  outerouterborder345 <- createBorder (600,915)
+  outerouterborder346 <- createBorder (605,915)
+  outerouterborder347 <- createBorder (610,915)
+  outerouterborder348 <- createBorder (615,915)
+  outerouterborder349 <- createBorder (620,915)
+  outerouterborder350 <- createBorder (625,915)
+  outerouterborder351 <- createBorder (630,915)
+  outerouterborder352 <- createBorder (635,915)
+  outerouterborder353 <- createBorder (640,915)
+  outerouterborder354 <- createBorder (645,915)
+  outerouterborder355 <- createBorder (650,915)
+  outerouterborder356 <- createBorder (655,915)
+  outerouterborder357 <- createBorder (660,915)
+  outerouterborder358 <- createBorder (665,915)
+  outerouterborder359 <- createBorder (670,915)
+  outerouterborder360 <- createBorder (675,915)
+  outerouterborder361 <- createBorder (680,920)
+
+  {-
+  outerouterborder127 <- createBorder (88,1088)
+  outerouterborder128 <- createBorder (88,1096)
+  outerouterborder129 <- createBorder (96,1104)
+  outerouterborder130 <- createBorder (104,1104)
+  outerouterborder131 <- createBorder (112,1112)
+  outerouterborder132 <- createBorder (120,1112)
+  outerouterborder133 <- createBorder (128,1112)
+  outerouterborder134 <- createBorder (136,1112)
+  outerouterborder135 <- createBorder (144,1112)
+  outerouterborder136 <- createBorder (152,1112)
+  outerouterborder137 <- createBorder (160,1112)
+  outerouterborder138 <- createBorder (168,1112)
+  outerouterborder139 <- createBorder (176,1112)
+  outerouterborder140 <- createBorder (184,1112)
+  outerouterborder141 <- createBorder (192,1112)
+  outerouterborder142 <- createBorder (200,1112)
+  outerouterborder143 <- createBorder (208,1112)
+  outerouterborder144 <- createBorder (216,1112)
+  outerouterborder145 <- createBorder (224,1112)
+  outerouterborder146 <- createBorder (232,1112)
+  outerouterborder147 <- createBorder (240,1112)
+  outerouterborder148 <- createBorder (248,1112)
+  outerouterborder149 <- createBorder (256,1112)
+  outerouterborder150 <- createBorder (264,1112)
+  outerouterborder151 <- createBorder (272,1112)
+  outerouterborder152 <- createBorder (280,1112)
+  outerouterborder153 <- createBorder (288,1112)
+  outerouterborder154 <- createBorder (296,1112)
+  outerouterborder155 <- createBorder (304,1112)
+  outerouterborder156 <- createBorder (312,1112)
+  outerouterborder157 <- createBorder (320,1112)
+  outerouterborder158 <- createBorder (328,1112)
+  outerouterborder159 <- createBorder (336,1112)
+  outerouterborder160 <- createBorder (344,1112)
+  outerouterborder161 <- createBorder (352,1112)
+  outerouterborder162 <- createBorder (360,1112)
+  outerouterborder163 <- createBorder (368,1112)
+  outerouterborder164 <- createBorder (376,1112)
+  outerouterborder165 <- createBorder (384,1112)
+  outerouterborder166 <- createBorder (392,1112)
+  outerouterborder167 <- createBorder (400,1112)
+  outerouterborder168 <- createBorder (408,1112)
+  outerouterborder169 <- createBorder (416,1112)
+  outerouterborder170 <- createBorder (424,1112)
+  outerouterborder171 <- createBorder (432,1112)
+  outerouterborder172 <- createBorder (440,1112)
+  outerouterborder173 <- createBorder (448,1112)
+  outerouterborder174 <- createBorder (456,1112)
+  outerouterborder175 <- createBorder (464,1112)
+  outerouterborder176 <- createBorder (472,1112)
+  outerouterborder177 <- createBorder (480,1112)
+  outerouterborder178 <- createBorder (488,1112)
+  outerouterborder179 <- createBorder (496,1112)
+  outerouterborder180 <- createBorder (504,1112)
+  outerouterborder181 <- createBorder (512,1112)
+  outerouterborder182 <- createBorder (520,1112)
+  outerouterborder183 <- createBorder (528,1112)
+  outerouterborder184 <- createBorder (536,1104)
+  outerouterborder185 <- createBorder (544,1104)
+  outerouterborder186 <- createBorder (552,1096)
+  outerouterborder187 <- createBorder (552,1088)
+  outerouterborder188 <- createBorder (560,1080)
+  outerouterborder189 <- createBorder (560,1072)
+  outerouterborder190 <- createBorder (560,1064)
+  outerouterborder191 <- createBorder (560,1056)
+  --outerouterborder2 <- createBorder (1320,80)
+  -}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return $ (DSeq.singleton outerouterborder1)
+           |> outerouterborder2
+           |> outerouterborder3
+           |> outerouterborder4
+           |> outerouterborder5
+           |> outerouterborder6
+           |> outerouterborder7
+           |> outerouterborder8
+           |> outerouterborder9
+           |> outerouterborder10
+           |> outerouterborder11
+           |> outerouterborder12
+           |> outerouterborder13
+           |> outerouterborder14
+           |> outerouterborder15
+           |> outerouterborder16
+           |> outerouterborder17
+           |> outerouterborder18
+           |> outerouterborder19
+           |> outerouterborder20
+           |> outerouterborder21
+           |> outerouterborder22
+           |> outerouterborder23
+           |> outerouterborder24
+           |> outerouterborder25
+           |> outerouterborder26
+           |> outerouterborder27
+           |> outerouterborder28
+           |> outerouterborder29
+           |> outerouterborder30
+           |> outerouterborder31
+           |> outerouterborder32
+           |> outerouterborder33
+           |> outerouterborder34
+           |> outerouterborder35
+           |> outerouterborder36
+           |> outerouterborder37
+           |> outerouterborder38
+           |> outerouterborder39
+           |> outerouterborder40
+           |> outerouterborder41
+           |> outerouterborder42
+           |> outerouterborder43
+           |> outerouterborder44
+           |> outerouterborder45
+           |> outerouterborder46
+           |> outerouterborder47
+           |> outerouterborder48
+           |> outerouterborder49
+           |> outerouterborder50
+           |> outerouterborder51
+           |> outerouterborder52
+           |> outerouterborder53
+           |> outerouterborder54
+           |> outerouterborder55
+           |> outerouterborder56
+           |> outerouterborder57
+           |> outerouterborder58
+           |> outerouterborder59
+           |> outerouterborder60
+           |> outerouterborder61
+           |> outerouterborder62
+           |> outerouterborder63
+           |> outerouterborder64
+           |> outerouterborder65
+           |> outerouterborder66
+           |> outerouterborder67
+           |> outerouterborder68
+           |> outerouterborder69
+           |> outerouterborder70
+           |> outerouterborder71
+           |> outerouterborder72
+           |> outerouterborder73
+           |> outerouterborder74
+           |> outerouterborder75
+           |> outerouterborder76
+           |> outerouterborder77
+           |> outerouterborder78
+           |> outerouterborder79
+           |> outerouterborder80
+           |> outerouterborder81
+           |> outerouterborder82
+           |> outerouterborder83
+           |> outerouterborder84
+           |> outerouterborder85
+           |> outerouterborder86
+           |> outerouterborder87
+           |> outerouterborder88
+           |> outerouterborder89
+           |> outerouterborder90
+           |> outerouterborder91
+           |> outerouterborder92
+           |> outerouterborder93
+           |> outerouterborder94
+           |> outerouterborder95
+           |> outerouterborder96
+           |> outerouterborder97
+           |> outerouterborder98
+           |> outerouterborder99
+           |> outerouterborder100
+           |> outerouterborder101
+           |> outerouterborder102
+           |> outerouterborder103
+           |> outerouterborder104
+           |> outerouterborder105
+           |> outerouterborder106
+           |> outerouterborder107
+           |> outerouterborder108
+           |> outerouterborder109
+           |> outerouterborder110
+           |> outerouterborder111
+           |> outerouterborder112
+           |> outerouterborder113
+           |> outerouterborder114
+           |> outerouterborder115
+           |> outerouterborder116
+           |> outerouterborder117
+           |> outerouterborder118
+           |> outerouterborder119
+           |> outerouterborder120
+           |> outerouterborder121
+           |> outerouterborder122
+           |> outerouterborder123
+           |> outerouterborder124
+           |> outerouterborder125
+           |> outerouterborder126
+           |> outerouterborder127
+           |> outerouterborder128
+           |> outerouterborder129
+           |> outerouterborder130
+           |> outerouterborder131
+           |> outerouterborder132
+           |> outerouterborder133
+           |> outerouterborder134
+           |> outerouterborder135
+           |> outerouterborder136
+           |> outerouterborder137
+           |> outerouterborder138
+           |> outerouterborder139
+           |> outerouterborder140
+           |> outerouterborder141
+           |> outerouterborder142
+           |> outerouterborder143
+           |> outerouterborder144
+           |> outerouterborder145
+           |> outerouterborder146
+           |> outerouterborder147
+           |> outerouterborder148
+           |> outerouterborder149
+           |> outerouterborder150
+           |> outerouterborder151
+           |> outerouterborder152
+           |> outerouterborder153
+           |> outerouterborder154
+           |> outerouterborder155
+           |> outerouterborder156
+           |> outerouterborder157
+           |> outerouterborder158
+           |> outerouterborder159
+           |> outerouterborder160
+           |> outerouterborder161
+           |> outerouterborder162
+           |> outerouterborder163
+           |> outerouterborder164
+           |> outerouterborder165
+           |> outerouterborder166
+           |> outerouterborder167
+           |> outerouterborder168
+           |> outerouterborder169
+           |> outerouterborder170
+           |> outerouterborder171
+           |> outerouterborder172
+           |> outerouterborder173
+           |> outerouterborder174
+           |> outerouterborder175
+           |> outerouterborder176
+           |> outerouterborder177
+           |> outerouterborder178
+           |> outerouterborder179
+           |> outerouterborder180
+           |> outerouterborder181
+           |> outerouterborder182
+           |> outerouterborder183
+           |> outerouterborder184
+           |> outerouterborder185
+           |> outerouterborder186
+           |> outerouterborder187
+           |> outerouterborder188
+           |> outerouterborder189
+           |> outerouterborder190
+           |> outerouterborder191
+           |> outerouterborder192
+           |> outerouterborder193
+           |> outerouterborder194
+           |> outerouterborder195
+           |> outerouterborder196
+           |> outerouterborder197
+           |> outerouterborder198
+           |> outerouterborder199
+           |> outerouterborder200
+           |> outerouterborder201
+           |> outerouterborder202
+           |> outerouterborder203
+           |> outerouterborder204
+           |> outerouterborder205
+           |> outerouterborder206
+           |> outerouterborder207
+           |> outerouterborder208
+           |> outerouterborder209
+           |> outerouterborder210
+           |> outerouterborder211
+           |> outerouterborder212
+           |> outerouterborder213
+           |> outerouterborder214
+           |> outerouterborder215
+           |> outerouterborder216
+           |> outerouterborder217
+           |> outerouterborder218
+           |> outerouterborder219
+           |> outerouterborder220
+           |> outerouterborder221
+           |> outerouterborder222
+           |> outerouterborder223
+           |> outerouterborder224
+           |> outerouterborder225
+           |> outerouterborder226
+           |> outerouterborder227
+           |> outerouterborder228
+           |> outerouterborder229
+           |> outerouterborder230
+           |> outerouterborder231
+           |> outerouterborder232
+           |> outerouterborder233
+           |> outerouterborder234
+           |> outerouterborder235
+           |> outerouterborder236
+           |> outerouterborder237
+           |> outerouterborder238
+           |> outerouterborder239
+           |> outerouterborder240
+           |> outerouterborder241
+           |> outerouterborder242
+           |> outerouterborder243
+           |> outerouterborder244
+           |> outerouterborder245
+           |> outerouterborder246
+           |> outerouterborder247
+           |> outerouterborder248
+           |> outerouterborder249
+           |> outerouterborder250
+           |> outerouterborder251
+           |> outerouterborder252
+           |> outerouterborder253
+           |> outerouterborder254
+           |> outerouterborder255
+           |> outerouterborder256
+           |> outerouterborder257
+           |> outerouterborder258
+           |> outerouterborder259
+           |> outerouterborder260
+           |> outerouterborder261
+           |> outerouterborder262
+           |> outerouterborder263
+           |> outerouterborder264
+           |> outerouterborder265
+           |> outerouterborder266
+           |> outerouterborder267
+           |> outerouterborder268
+           |> outerouterborder269
+           |> outerouterborder270
+           |> outerouterborder271
+           |> outerouterborder272
+           |> outerouterborder273
+           |> outerouterborder274
+           |> outerouterborder275
+           |> outerouterborder276
+           |> outerouterborder277
+           |> outerouterborder278
+           |> outerouterborder279
+           |> outerouterborder280
+           |> outerouterborder281
+           |> outerouterborder282
+           |> outerouterborder283
+           |> outerouterborder284
+           |> outerouterborder285
+           |> outerouterborder286
+           |> outerouterborder287
+           |> outerouterborder288
+           |> outerouterborder289
+           |> outerouterborder290
+           |> outerouterborder291
+           |> outerouterborder292
+           |> outerouterborder293
+           |> outerouterborder294
+           |> outerouterborder295
+           |> outerouterborder296
+           |> outerouterborder297
+           |> outerouterborder298
+           |> outerouterborder299
+           |> outerouterborder300
+           |> outerouterborder301
+           |> outerouterborder302
+           |> outerouterborder303
+           |> outerouterborder304
+           |> outerouterborder305
+           |> outerouterborder306
+           |> outerouterborder307
+           |> outerouterborder308
+           |> outerouterborder309
+           |> outerouterborder310
+           |> outerouterborder311
+           |> outerouterborder312
+           |> outerouterborder313
+           |> outerouterborder314
+           |> outerouterborder315
+           |> outerouterborder316
+           |> outerouterborder317
+           |> outerouterborder318
+           |> outerouterborder319
+           |> outerouterborder320
+           |> outerouterborder321
+           |> outerouterborder322
+           |> outerouterborder323
+           |> outerouterborder324
+           |> outerouterborder325
+           |> outerouterborder326
+           |> outerouterborder327
+           |> outerouterborder328
+           |> outerouterborder329
+           |> outerouterborder330
+           |> outerouterborder331
+           |> outerouterborder332
+           |> outerouterborder333
+           |> outerouterborder334
+           |> outerouterborder335
+           |> outerouterborder336
+           |> outerouterborder337
+           |> outerouterborder338
+           |> outerouterborder339
+           |> outerouterborder340
+           |> outerouterborder341
+           |> outerouterborder342
+           |> outerouterborder343
+           |> outerouterborder344
+           |> outerouterborder345
+           |> outerouterborder346
+           |> outerouterborder347
+           |> outerouterborder348
+           |> outerouterborder349
+           |> outerouterborder350
+           |> outerouterborder351
+           |> outerouterborder352
+           |> outerouterborder353
+           |> outerouterborder354
+           |> outerouterborder355
+           |> outerouterborder356
+           |> outerouterborder357
+           |> outerouterborder358
+           |> outerouterborder359
+           |> outerouterborder360
+           |> outerouterborder361
+  {-
   outerouterborder1 <- createBorder (80,120)
   outerouterborder2 <- createBorder (88,120)
   outerouterborder3 <- createBorder (96,120)
@@ -745,741 +1552,742 @@ outerouterborder = do
   outerouterborder733 <- createBorder (56,120)
   outerouterborder734 <- createBorder (64,120)
   outerouterborder735 <- createBorder (72,120)
-  return $ Pictures [ outerouterborder1 
-                    , outerouterborder2 
-                    , outerouterborder3 
-                    , outerouterborder4 
-                    , outerouterborder5 
-                    , outerouterborder6 
-                    , outerouterborder7 
-                    , outerouterborder8 
-                    , outerouterborder9 
-                    , outerouterborder10 
-                    , outerouterborder11 
-                    , outerouterborder12 
-                    , outerouterborder13 
-                    , outerouterborder14 
-                    , outerouterborder15 
-                    , outerouterborder16 
-                    , outerouterborder17 
-                    , outerouterborder18 
-                    , outerouterborder19 
-                    , outerouterborder20 
-                    , outerouterborder21 
-                    , outerouterborder22 
-                    , outerouterborder23 
-                    , outerouterborder24 
-                    , outerouterborder25 
-                    , outerouterborder26 
-                    , outerouterborder27 
-                    , outerouterborder28 
-                    , outerouterborder29 
-                    , outerouterborder30 
-                    , outerouterborder31 
-                    , outerouterborder32 
-                    , outerouterborder33 
-                    , outerouterborder34 
-                    , outerouterborder35 
-                    , outerouterborder36 
-                    , outerouterborder37 
-                    , outerouterborder38 
-                    , outerouterborder39 
-                    , outerouterborder40 
-                    , outerouterborder41 
-                    , outerouterborder42 
-                    , outerouterborder43 
-                    , outerouterborder44 
-                    , outerouterborder45 
-                    , outerouterborder46 
-                    , outerouterborder47 
-                    , outerouterborder48 
-                    , outerouterborder49 
-                    , outerouterborder50 
-                    , outerouterborder51 
-                    , outerouterborder52 
-                    , outerouterborder53 
-                    , outerouterborder54 
-                    , outerouterborder55 
-                    , outerouterborder56 
-                    , outerouterborder57 
-                    , outerouterborder58 
-                    , outerouterborder59 
-                    , outerouterborder60 
-                    , outerouterborder61 
-                    , outerouterborder62 
-                    , outerouterborder63 
-                    , outerouterborder64 
-                    , outerouterborder65 
-                    , outerouterborder66 
-                    , outerouterborder67 
-                    , outerouterborder68 
-                    , outerouterborder69 
-                    , outerouterborder70 
-                    , outerouterborder71 
-                    , outerouterborder72 
-                    , outerouterborder73 
-                    , outerouterborder74 
-                    , outerouterborder75 
-                    , outerouterborder76 
-                    , outerouterborder77 
-                    , outerouterborder78 
-                    , outerouterborder79 
-                    , outerouterborder80 
-                    , outerouterborder81 
-                    , outerouterborder82 
-                    , outerouterborder83 
-                    , outerouterborder84 
-                    , outerouterborder85 
-                    , outerouterborder86 
-                    , outerouterborder87 
-                    , outerouterborder88 
-                    , outerouterborder89 
-                    , outerouterborder90 
-                    , outerouterborder91 
-                    , outerouterborder92 
-                    , outerouterborder93 
-                    , outerouterborder94 
-                    , outerouterborder95 
-                    , outerouterborder96 
-                    , outerouterborder97 
-                    , outerouterborder98 
-                    , outerouterborder99 
-                    , outerouterborder100 
-                    , outerouterborder101 
-                    , outerouterborder102 
-                    , outerouterborder103 
-                    , outerouterborder104 
-                    , outerouterborder105 
-                    , outerouterborder106 
-                    , outerouterborder107 
-                    , outerouterborder108 
-                    , outerouterborder109 
-                    , outerouterborder110 
-                    , outerouterborder111 
-                    , outerouterborder112 
-                    , outerouterborder113 
-                    , outerouterborder114 
-                    , outerouterborder115 
-                    , outerouterborder116 
-                    , outerouterborder117 
-                    , outerouterborder118 
-                    , outerouterborder119 
-                    , outerouterborder120 
-                    , outerouterborder121 
-                    , outerouterborder122 
-                    , outerouterborder123 
-                    , outerouterborder124 
-                    , outerouterborder125 
-                    , outerouterborder126 
-                    , outerouterborder127 
-                    , outerouterborder128 
-                    , outerouterborder129 
-                    , outerouterborder130 
-                    , outerouterborder131 
-                    , outerouterborder132 
-                    , outerouterborder133 
-                    , outerouterborder134 
-                    , outerouterborder135 
-                    , outerouterborder136 
-                    , outerouterborder137 
-                    , outerouterborder138 
-                    , outerouterborder139 
-                    , outerouterborder140 
-                    , outerouterborder141 
-                    , outerouterborder142 
-                    , outerouterborder143 
-                    , outerouterborder144 
-                    , outerouterborder145 
-                    , outerouterborder146 
-                    , outerouterborder147 
-                    , outerouterborder148 
-                    , outerouterborder149 
-                    , outerouterborder150 
-                    , outerouterborder151 
-                    , outerouterborder152 
-                    , outerouterborder153 
-                    , outerouterborder154 
-                    , outerouterborder155 
-                    , outerouterborder156 
-                    , outerouterborder157 
-                    , outerouterborder158 
-                    , outerouterborder159 
-                    , outerouterborder160 
-                    , outerouterborder161 
-                    , outerouterborder162 
-                    , outerouterborder163 
-                    , outerouterborder164 
-                    , outerouterborder165 
-                    , outerouterborder166 
-                    , outerouterborder167 
-                    , outerouterborder168 
-                    , outerouterborder169 
-                    , outerouterborder170 
-                    , outerouterborder171 
-                    , outerouterborder172 
-                    , outerouterborder173 
-                    , outerouterborder174 
-                    , outerouterborder175 
-                    , outerouterborder176 
-                    , outerouterborder177 
-                    , outerouterborder178 
-                    , outerouterborder179 
-                    , outerouterborder180 
-                    , outerouterborder181 
-                    , outerouterborder182 
-                    , outerouterborder183 
-                    , outerouterborder184 
-                    , outerouterborder185 
-                    , outerouterborder186 
-                    , outerouterborder187 
-                    , outerouterborder188 
-                    , outerouterborder189 
-                    , outerouterborder190 
-                    , outerouterborder191 
-                    , outerouterborder192 
-                    , outerouterborder193 
-                    , outerouterborder194 
-                    , outerouterborder195 
-                    , outerouterborder196 
-                    , outerouterborder197 
-                    , outerouterborder198 
-                    , outerouterborder199 
-                    , outerouterborder200 
-                    , outerouterborder201 
-                    , outerouterborder202 
-                    , outerouterborder203 
-                    , outerouterborder204 
-                    , outerouterborder205 
-                    , outerouterborder206 
-                    , outerouterborder207 
-                    , outerouterborder208 
-                    , outerouterborder209 
-                    , outerouterborder210 
-                    , outerouterborder211 
-                    , outerouterborder212 
-                    , outerouterborder213 
-                    , outerouterborder214 
-                    , outerouterborder215 
-                    , outerouterborder216 
-                    , outerouterborder217 
-                    , outerouterborder218 
-                    , outerouterborder219 
-                    , outerouterborder220 
-                    , outerouterborder221 
-                    , outerouterborder222 
-                    , outerouterborder223 
-                    , outerouterborder224 
-                    , outerouterborder225 
-                    , outerouterborder226 
-                    , outerouterborder227 
-                    , outerouterborder228 
-                    , outerouterborder229 
-                    , outerouterborder230 
-                    , outerouterborder231 
-                    , outerouterborder232 
-                    , outerouterborder233 
-                    , outerouterborder234 
-                    , outerouterborder235 
-                    , outerouterborder236 
-                    , outerouterborder237 
-                    , outerouterborder238 
-                    , outerouterborder239 
-                    , outerouterborder240 
-                    , outerouterborder241 
-                    , outerouterborder242 
-                    , outerouterborder243 
-                    , outerouterborder244 
-                    , outerouterborder245 
-                    , outerouterborder246 
-                    , outerouterborder247 
-                    , outerouterborder248 
-                    , outerouterborder249 
-                    , outerouterborder250 
-                    , outerouterborder251 
-                    , outerouterborder252 
-                    , outerouterborder253 
-                    , outerouterborder254 
-                    , outerouterborder255 
-                    , outerouterborder256 
-                    , outerouterborder257 
-                    , outerouterborder258 
-                    , outerouterborder259 
-                    , outerouterborder260 
-                    , outerouterborder261 
-                    , outerouterborder262 
-                    , outerouterborder263 
-                    , outerouterborder264 
-                    , outerouterborder265 
-                    , outerouterborder266 
-                    , outerouterborder267 
-                    , outerouterborder268 
-                    , outerouterborder269 
-                    , outerouterborder270 
-                    , outerouterborder271 
-                    , outerouterborder272 
-                    , outerouterborder273 
-                    , outerouterborder274 
-                    , outerouterborder275 
-                    , outerouterborder276 
-                    , outerouterborder277 
-                    , outerouterborder278 
-                    , outerouterborder279 
-                    , outerouterborder280 
-                    , outerouterborder281 
-                    , outerouterborder282 
-                    , outerouterborder283 
-                    , outerouterborder284 
-                    , outerouterborder285 
-                    , outerouterborder286 
-                    , outerouterborder287 
-                    , outerouterborder288 
-                    , outerouterborder289 
-                    , outerouterborder290 
-                    , outerouterborder291 
-                    , outerouterborder292 
-                    , outerouterborder293 
-                    , outerouterborder294 
-                    , outerouterborder295 
-                    , outerouterborder296 
-                    , outerouterborder297 
-                    , outerouterborder298 
-                    , outerouterborder299 
-                    , outerouterborder300 
-                    , outerouterborder301 
-                    , outerouterborder302 
-                    , outerouterborder303 
-                    , outerouterborder304 
-                    , outerouterborder305 
-                    , outerouterborder306 
-                    , outerouterborder307 
-                    , outerouterborder308 
-                    , outerouterborder309 
-                    , outerouterborder310 
-                    , outerouterborder311 
-                    , outerouterborder312 
-                    , outerouterborder313 
-                    , outerouterborder314 
-                    , outerouterborder315 
-                    , outerouterborder316 
-                    , outerouterborder317 
-                    , outerouterborder318 
-                    , outerouterborder319 
-                    , outerouterborder320 
-                    , outerouterborder321 
-                    , outerouterborder322 
-                    , outerouterborder323 
-                    , outerouterborder324 
-                    , outerouterborder325 
-                    , outerouterborder326 
-                    , outerouterborder327 
-                    , outerouterborder328 
-                    , outerouterborder329 
-                    , outerouterborder330 
-                    , outerouterborder331 
-                    , outerouterborder332 
-                    , outerouterborder333 
-                    , outerouterborder334 
-                    , outerouterborder335 
-                    , outerouterborder336 
-                    , outerouterborder337 
-                    , outerouterborder338 
-                    , outerouterborder339 
-                    , outerouterborder340 
-                    , outerouterborder341 
-                    , outerouterborder342 
-                    , outerouterborder343 
-                    , outerouterborder344 
-                    , outerouterborder345 
-                    , outerouterborder346 
-                    , outerouterborder347 
-                    , outerouterborder348 
-                    , outerouterborder349 
-                    , outerouterborder350 
-                    , outerouterborder351 
-                    , outerouterborder352 
-                    , outerouterborder353 
-                    , outerouterborder354 
-                    , outerouterborder355 
-                    , outerouterborder356 
-                    , outerouterborder357 
-                    , outerouterborder358 
-                    , outerouterborder359 
-                    , outerouterborder360 
-                    , outerouterborder361 
-                    , outerouterborder362 
-                    , outerouterborder363 
-                    , outerouterborder364 
-                    , outerouterborder365 
-                    , outerouterborder366 
-                    , outerouterborder367 
-                    , outerouterborder368 
-                    , outerouterborder369 
-                    , outerouterborder370 
-                    , outerouterborder371 
-                    , outerouterborder372 
-                    , outerouterborder373 
-                    , outerouterborder374 
-                    , outerouterborder375 
-                    , outerouterborder376 
-                    , outerouterborder377 
-                    , outerouterborder378 
-                    , outerouterborder379 
-                    , outerouterborder380 
-                    , outerouterborder381 
-                    , outerouterborder382 
-                    , outerouterborder383 
-                    , outerouterborder384 
-                    , outerouterborder385 
-                    , outerouterborder386 
-                    , outerouterborder387 
-                    , outerouterborder388 
-                    , outerouterborder389 
-                    , outerouterborder390 
-                    , outerouterborder391 
-                    , outerouterborder392 
-                    , outerouterborder393 
-                    , outerouterborder394 
-                    , outerouterborder395 
-                    , outerouterborder396 
-                    , outerouterborder397 
-                    , outerouterborder398 
-                    , outerouterborder399 
-                    , outerouterborder400 
-                    , outerouterborder401 
-                    , outerouterborder402 
-                    , outerouterborder403 
-                    , outerouterborder404 
-                    , outerouterborder405 
-                    , outerouterborder406 
-                    , outerouterborder407 
-                    , outerouterborder408 
-                    , outerouterborder409 
-                    , outerouterborder410 
-                    , outerouterborder411 
-                    , outerouterborder412 
-                    , outerouterborder413 
-                    , outerouterborder414 
-                    , outerouterborder415 
-                    , outerouterborder416 
-                    , outerouterborder417 
-                    , outerouterborder418 
-                    , outerouterborder419 
-                    , outerouterborder420 
-                    , outerouterborder421 
-                    , outerouterborder422 
-                    , outerouterborder423 
-                    , outerouterborder424 
-                    , outerouterborder425 
-                    , outerouterborder426 
-                    , outerouterborder427 
-                    , outerouterborder428 
-                    , outerouterborder429 
-                    , outerouterborder430 
-                    , outerouterborder431 
-                    , outerouterborder432 
-                    , outerouterborder433 
-                    , outerouterborder434 
-                    , outerouterborder435 
-                    , outerouterborder436 
-                    , outerouterborder437 
-                    , outerouterborder438 
-                    , outerouterborder439 
-                    , outerouterborder440 
-                    , outerouterborder441 
-                    , outerouterborder442 
-                    , outerouterborder443 
-                    , outerouterborder444 
-                    , outerouterborder445 
-                    , outerouterborder446 
-                    , outerouterborder447 
-                    , outerouterborder448 
-                    , outerouterborder449 
-                    , outerouterborder450 
-                    , outerouterborder451 
-                    , outerouterborder452 
-                    , outerouterborder453 
-                    , outerouterborder454 
-                    , outerouterborder455 
-                    , outerouterborder456 
-                    , outerouterborder457 
-                    , outerouterborder458 
-                    , outerouterborder459 
-                    , outerouterborder460 
-                    , outerouterborder461 
-                    , outerouterborder462 
-                    , outerouterborder463 
-                    , outerouterborder464 
-                    , outerouterborder465 
-                    , outerouterborder466 
-                    , outerouterborder467 
-                    , outerouterborder468 
-                    , outerouterborder469 
-                    , outerouterborder470 
-                    , outerouterborder471 
-                    , outerouterborder472 
-                    , outerouterborder473 
-                    , outerouterborder474 
-                    , outerouterborder475 
-                    , outerouterborder476 
-                    , outerouterborder477 
-                    , outerouterborder478 
-                    , outerouterborder479 
-                    , outerouterborder480 
-                    , outerouterborder481 
-                    , outerouterborder482 
-                    , outerouterborder483 
-                    , outerouterborder484 
-                    , outerouterborder485 
-                    , outerouterborder486 
-                    , outerouterborder487 
-                    , outerouterborder488 
-                    , outerouterborder489 
-                    , outerouterborder490 
-                    , outerouterborder491 
-                    , outerouterborder492 
-                    , outerouterborder493 
-                    , outerouterborder494 
-                    , outerouterborder495 
-                    , outerouterborder496 
-                    , outerouterborder497 
-                    , outerouterborder498 
-                    , outerouterborder499 
-                    , outerouterborder500 
-                    , outerouterborder501 
-                    , outerouterborder502 
-                    , outerouterborder503 
-                    , outerouterborder504 
-                    , outerouterborder505 
-                    , outerouterborder506 
-                    , outerouterborder507 
-                    , outerouterborder508 
-                    , outerouterborder509 
-                    , outerouterborder510 
-                    , outerouterborder511 
-                    , outerouterborder512 
-                    , outerouterborder513 
-                    , outerouterborder514 
-                    , outerouterborder515 
-                    , outerouterborder516 
-                    , outerouterborder517 
-                    , outerouterborder518 
-                    , outerouterborder519 
-                    , outerouterborder520 
-                    , outerouterborder521 
-                    , outerouterborder522 
-                    , outerouterborder523 
-                    , outerouterborder524 
-                    , outerouterborder525 
-                    , outerouterborder526 
-                    , outerouterborder527 
-                    , outerouterborder528 
-                    , outerouterborder529 
-                    , outerouterborder530 
-                    , outerouterborder531 
-                    , outerouterborder532 
-                    , outerouterborder533 
-                    , outerouterborder534 
-                    , outerouterborder535 
-                    , outerouterborder536 
-                    , outerouterborder537 
-                    , outerouterborder538 
-                    , outerouterborder539 
-                    , outerouterborder540 
-                    , outerouterborder541 
-                    , outerouterborder542 
-                    , outerouterborder543 
-                    , outerouterborder544 
-                    , outerouterborder545 
-                    , outerouterborder546 
-                    , outerouterborder547 
-                    , outerouterborder548 
-                    , outerouterborder549 
-                    , outerouterborder550 
-                    , outerouterborder551 
-                    , outerouterborder552 
-                    , outerouterborder553 
-                    , outerouterborder554 
-                    , outerouterborder555 
-                    , outerouterborder556 
-                    , outerouterborder557 
-                    , outerouterborder558 
-                    , outerouterborder559 
-                    , outerouterborder560 
-                    , outerouterborder561 
-                    , outerouterborder562 
-                    , outerouterborder563 
-                    , outerouterborder564 
-                    , outerouterborder565 
-                    , outerouterborder566 
-                    , outerouterborder567 
-                    , outerouterborder568 
-                    , outerouterborder569 
-                    , outerouterborder570 
-                    , outerouterborder571 
-                    , outerouterborder572 
-                    , outerouterborder573 
-                    , outerouterborder574 
-                    , outerouterborder575 
-                    , outerouterborder576 
-                    , outerouterborder577 
-                    , outerouterborder578 
-                    , outerouterborder579 
-                    , outerouterborder580 
-                    , outerouterborder581 
-                    , outerouterborder582 
-                    , outerouterborder583 
-                    , outerouterborder584 
-                    , outerouterborder585 
-                    , outerouterborder586 
-                    , outerouterborder587 
-                    , outerouterborder588 
-                    , outerouterborder589 
-                    , outerouterborder590 
-                    , outerouterborder591 
-                    , outerouterborder592 
-                    , outerouterborder593 
-                    , outerouterborder594 
-                    , outerouterborder595 
-                    , outerouterborder596 
-                    , outerouterborder597 
-                    , outerouterborder598 
-                    , outerouterborder599 
-                    , outerouterborder600 
-                    , outerouterborder601 
-                    , outerouterborder602 
-                    , outerouterborder603 
-                    , outerouterborder604 
-                    , outerouterborder605 
-                    , outerouterborder606 
-                    , outerouterborder607 
-                    , outerouterborder608 
-                    , outerouterborder609 
-                    , outerouterborder610 
-                    , outerouterborder611 
-                    , outerouterborder612 
-                    , outerouterborder613 
-                    , outerouterborder614 
-                    , outerouterborder615 
-                    , outerouterborder616 
-                    , outerouterborder617 
-                    , outerouterborder618 
-                    , outerouterborder619 
-                    , outerouterborder620 
-                    , outerouterborder621 
-                    , outerouterborder622 
-                    , outerouterborder623 
-                    , outerouterborder624 
-                    , outerouterborder625 
-                    , outerouterborder626 
-                    , outerouterborder627 
-                    , outerouterborder628 
-                    , outerouterborder629 
-                    , outerouterborder630 
-                    , outerouterborder631 
-                    , outerouterborder632 
-                    , outerouterborder633 
-                    , outerouterborder634 
-                    , outerouterborder635 
-                    , outerouterborder636 
-                    , outerouterborder637 
-                    , outerouterborder638 
-                    , outerouterborder639 
-                    , outerouterborder640 
-                    , outerouterborder641 
-                    , outerouterborder642 
-                    , outerouterborder643 
-                    , outerouterborder644 
-                    , outerouterborder645 
-                    , outerouterborder646 
-                    , outerouterborder647 
-                    , outerouterborder648 
-                    , outerouterborder649 
-                    , outerouterborder650 
-                    , outerouterborder651 
-                    , outerouterborder652 
-                    , outerouterborder653 
-                    , outerouterborder654 
-                    , outerouterborder655 
-                    , outerouterborder656 
-                    , outerouterborder657 
-                    , outerouterborder658 
-                    , outerouterborder659 
-                    , outerouterborder660 
-                    , outerouterborder661 
-                    , outerouterborder662 
-                    , outerouterborder663 
-                    , outerouterborder664 
-                    , outerouterborder665 
-                    , outerouterborder666 
-                    , outerouterborder667 
-                    , outerouterborder668 
-                    , outerouterborder669 
-                    , outerouterborder670 
-                    , outerouterborder671 
-                    , outerouterborder672 
-                    , outerouterborder673 
-                    , outerouterborder674 
-                    , outerouterborder675 
-                    , outerouterborder676 
-                    , outerouterborder677 
-                    , outerouterborder678 
-                    , outerouterborder679 
-                    , outerouterborder680 
-                    , outerouterborder681 
-                    , outerouterborder682 
-                    , outerouterborder683 
-                    , outerouterborder684 
-                    , outerouterborder685 
-                    , outerouterborder686 
-                    , outerouterborder687 
-                    , outerouterborder688 
-                    , outerouterborder689 
-                    , outerouterborder690 
-                    , outerouterborder691 
-                    , outerouterborder692 
-                    , outerouterborder693 
-                    , outerouterborder694 
-                    , outerouterborder695 
-                    , outerouterborder696 
-                    , outerouterborder697 
-                    , outerouterborder698 
-                    , outerouterborder699 
-                    , outerouterborder700 
-                    , outerouterborder701 
-                    , outerouterborder702 
-                    , outerouterborder703 
-                    , outerouterborder704 
-                    , outerouterborder705 
-                    , outerouterborder706 
-                    , outerouterborder707 
-                    , outerouterborder708 
-                    , outerouterborder709 
-                    , outerouterborder710 
-                    , outerouterborder711 
-                    , outerouterborder712 
-                    , outerouterborder713 
-                    , outerouterborder714 
-                    , outerouterborder715 
-                    , outerouterborder716 
-                    , outerouterborder717 
-                    , outerouterborder718 
-                    , outerouterborder719 
-                    , outerouterborder720 
-                    , outerouterborder721 
-                    , outerouterborder722 
-                    , outerouterborder723 
-                    , outerouterborder724 
-                    , outerouterborder725 
-                    , outerouterborder726 
-                    , outerouterborder727 
-                    , outerouterborder728 
-                    , outerouterborder729 
-                    , outerouterborder730 
-                    , outerouterborder731 
-                    , outerouterborder732 
-                    , outerouterborder733 
-                    , outerouterborder734 
-                    , outerouterborder735 
-                    ]
+  return $ [ outerouterborder1 
+           , outerouterborder2 
+           , outerouterborder3 
+           , outerouterborder4 
+           , outerouterborder5 
+           , outerouterborder6 
+           , outerouterborder7 
+           , outerouterborder8 
+           , outerouterborder9 
+           , outerouterborder10 
+           , outerouterborder11 
+           , outerouterborder12 
+           , outerouterborder13 
+           , outerouterborder14 
+           , outerouterborder15 
+           , outerouterborder16 
+           , outerouterborder17 
+           , outerouterborder18 
+           , outerouterborder19 
+           , outerouterborder20 
+           , outerouterborder21 
+           , outerouterborder22 
+           , outerouterborder23 
+           , outerouterborder24 
+           , outerouterborder25 
+           , outerouterborder26 
+           , outerouterborder27 
+           , outerouterborder28 
+           , outerouterborder29 
+           , outerouterborder30 
+           , outerouterborder31 
+           , outerouterborder32 
+           , outerouterborder33 
+           , outerouterborder34 
+           , outerouterborder35 
+           , outerouterborder36 
+           , outerouterborder37 
+           , outerouterborder38 
+           , outerouterborder39 
+           , outerouterborder40 
+           , outerouterborder41 
+           , outerouterborder42 
+           , outerouterborder43 
+           , outerouterborder44 
+           , outerouterborder45 
+           , outerouterborder46 
+           , outerouterborder47 
+           , outerouterborder48 
+           , outerouterborder49 
+           , outerouterborder50 
+           , outerouterborder51 
+           , outerouterborder52 
+           , outerouterborder53 
+           , outerouterborder54 
+           , outerouterborder55 
+           , outerouterborder56 
+           , outerouterborder57 
+           , outerouterborder58 
+           , outerouterborder59 
+           , outerouterborder60 
+           , outerouterborder61 
+           , outerouterborder62 
+           , outerouterborder63 
+           , outerouterborder64 
+           , outerouterborder65 
+           , outerouterborder66 
+           , outerouterborder67 
+           , outerouterborder68 
+           , outerouterborder69 
+           , outerouterborder70 
+           , outerouterborder71 
+           , outerouterborder72 
+           , outerouterborder73 
+           , outerouterborder74 
+           , outerouterborder75 
+           , outerouterborder76 
+           , outerouterborder77 
+           , outerouterborder78 
+           , outerouterborder79 
+           , outerouterborder80 
+           , outerouterborder81 
+           , outerouterborder82 
+           , outerouterborder83 
+           , outerouterborder84 
+           , outerouterborder85 
+           , outerouterborder86 
+           , outerouterborder87 
+           , outerouterborder88 
+           , outerouterborder89 
+           , outerouterborder90 
+           , outerouterborder91 
+           , outerouterborder92 
+           , outerouterborder93 
+           , outerouterborder94 
+           , outerouterborder95 
+           , outerouterborder96 
+           , outerouterborder97 
+           , outerouterborder98 
+           , outerouterborder99 
+           , outerouterborder100 
+           , outerouterborder101 
+           , outerouterborder102 
+           , outerouterborder103 
+           , outerouterborder104 
+           , outerouterborder105 
+           , outerouterborder106 
+           , outerouterborder107 
+           , outerouterborder108 
+           , outerouterborder109 
+           , outerouterborder110 
+           , outerouterborder111 
+           , outerouterborder112 
+           , outerouterborder113 
+           , outerouterborder114 
+           , outerouterborder115 
+           , outerouterborder116 
+           , outerouterborder117 
+           , outerouterborder118 
+           , outerouterborder119 
+           , outerouterborder120 
+           , outerouterborder121 
+           , outerouterborder122 
+           , outerouterborder123 
+           , outerouterborder124 
+           , outerouterborder125 
+           , outerouterborder126 
+           , outerouterborder127 
+           , outerouterborder128 
+           , outerouterborder129 
+           , outerouterborder130 
+           , outerouterborder131 
+           , outerouterborder132 
+           , outerouterborder133 
+           , outerouterborder134 
+           , outerouterborder135 
+           , outerouterborder136 
+           , outerouterborder137 
+           , outerouterborder138 
+           , outerouterborder139 
+           , outerouterborder140 
+           , outerouterborder141 
+           , outerouterborder142 
+           , outerouterborder143 
+           , outerouterborder144 
+           , outerouterborder145 
+           , outerouterborder146 
+           , outerouterborder147 
+           , outerouterborder148 
+           , outerouterborder149 
+           , outerouterborder150 
+           , outerouterborder151 
+           , outerouterborder152 
+           , outerouterborder153 
+           , outerouterborder154 
+           , outerouterborder155 
+           , outerouterborder156 
+           , outerouterborder157 
+           , outerouterborder158 
+           , outerouterborder159 
+           , outerouterborder160 
+           , outerouterborder161 
+           , outerouterborder162 
+           , outerouterborder163 
+           , outerouterborder164 
+           , outerouterborder165 
+           , outerouterborder166 
+           , outerouterborder167 
+           , outerouterborder168 
+           , outerouterborder169 
+           , outerouterborder170 
+           , outerouterborder171 
+           , outerouterborder172 
+           , outerouterborder173 
+           , outerouterborder174 
+           , outerouterborder175 
+           , outerouterborder176 
+           , outerouterborder177 
+           , outerouterborder178 
+           , outerouterborder179 
+           , outerouterborder180 
+           , outerouterborder181 
+           , outerouterborder182 
+           , outerouterborder183 
+           , outerouterborder184 
+           , outerouterborder185 
+           , outerouterborder186 
+           , outerouterborder187 
+           , outerouterborder188 
+           , outerouterborder189 
+           , outerouterborder190 
+           , outerouterborder191 
+           , outerouterborder192 
+           , outerouterborder193 
+           , outerouterborder194 
+           , outerouterborder195 
+           , outerouterborder196 
+           , outerouterborder197 
+           , outerouterborder198 
+           , outerouterborder199 
+           , outerouterborder200 
+           , outerouterborder201 
+           , outerouterborder202 
+           , outerouterborder203 
+           , outerouterborder204 
+           , outerouterborder205 
+           , outerouterborder206 
+           , outerouterborder207 
+           , outerouterborder208 
+           , outerouterborder209 
+           , outerouterborder210 
+           , outerouterborder211 
+           , outerouterborder212 
+           , outerouterborder213 
+           , outerouterborder214 
+           , outerouterborder215 
+           , outerouterborder216 
+           , outerouterborder217 
+           , outerouterborder218 
+           , outerouterborder219 
+           , outerouterborder220 
+           , outerouterborder221 
+           , outerouterborder222 
+           , outerouterborder223 
+           , outerouterborder224 
+           , outerouterborder225 
+           , outerouterborder226 
+           , outerouterborder227 
+           , outerouterborder228 
+           , outerouterborder229 
+           , outerouterborder230 
+           , outerouterborder231 
+           , outerouterborder232 
+           , outerouterborder233 
+           , outerouterborder234 
+           , outerouterborder235 
+           , outerouterborder236 
+           , outerouterborder237 
+           , outerouterborder238 
+           , outerouterborder239 
+           , outerouterborder240 
+           , outerouterborder241 
+           , outerouterborder242 
+           , outerouterborder243 
+           , outerouterborder244 
+           , outerouterborder245 
+           , outerouterborder246 
+           , outerouterborder247 
+           , outerouterborder248 
+           , outerouterborder249 
+           , outerouterborder250 
+           , outerouterborder251 
+           , outerouterborder252 
+           , outerouterborder253 
+           , outerouterborder254 
+           , outerouterborder255 
+           , outerouterborder256 
+           , outerouterborder257 
+           , outerouterborder258 
+           , outerouterborder259 
+           , outerouterborder260 
+           , outerouterborder261 
+           , outerouterborder262 
+           , outerouterborder263 
+           , outerouterborder264 
+           , outerouterborder265 
+           , outerouterborder266 
+           , outerouterborder267 
+           , outerouterborder268 
+           , outerouterborder269 
+           , outerouterborder270 
+           , outerouterborder271 
+           , outerouterborder272 
+           , outerouterborder273 
+           , outerouterborder274 
+           , outerouterborder275 
+           , outerouterborder276 
+           , outerouterborder277 
+           , outerouterborder278 
+           , outerouterborder279 
+           , outerouterborder280 
+           , outerouterborder281 
+           , outerouterborder282 
+           , outerouterborder283 
+           , outerouterborder284 
+           , outerouterborder285 
+           , outerouterborder286 
+           , outerouterborder287 
+           , outerouterborder288 
+           , outerouterborder289 
+           , outerouterborder290 
+           , outerouterborder291 
+           , outerouterborder292 
+           , outerouterborder293 
+           , outerouterborder294 
+           , outerouterborder295 
+           , outerouterborder296 
+           , outerouterborder297 
+           , outerouterborder298 
+           , outerouterborder299 
+           , outerouterborder300 
+           , outerouterborder301 
+           , outerouterborder302 
+           , outerouterborder303 
+           , outerouterborder304 
+           , outerouterborder305 
+           , outerouterborder306 
+           , outerouterborder307 
+           , outerouterborder308 
+           , outerouterborder309 
+           , outerouterborder310 
+           , outerouterborder311 
+           , outerouterborder312 
+           , outerouterborder313 
+           , outerouterborder314 
+           , outerouterborder315 
+           , outerouterborder316 
+           , outerouterborder317 
+           , outerouterborder318 
+           , outerouterborder319 
+           , outerouterborder320 
+           , outerouterborder321 
+           , outerouterborder322 
+           , outerouterborder323 
+           , outerouterborder324 
+           , outerouterborder325 
+           , outerouterborder326 
+           , outerouterborder327 
+           , outerouterborder328 
+           , outerouterborder329 
+           , outerouterborder330 
+           , outerouterborder331 
+           , outerouterborder332 
+           , outerouterborder333 
+           , outerouterborder334 
+           , outerouterborder335 
+           , outerouterborder336 
+           , outerouterborder337 
+           , outerouterborder338 
+           , outerouterborder339 
+           , outerouterborder340 
+           , outerouterborder341 
+           , outerouterborder342 
+           , outerouterborder343 
+           , outerouterborder344 
+           , outerouterborder345 
+           , outerouterborder346 
+           , outerouterborder347 
+           , outerouterborder348 
+           , outerouterborder349 
+           , outerouterborder350 
+           , outerouterborder351 
+           , outerouterborder352 
+           , outerouterborder353 
+           , outerouterborder354 
+           , outerouterborder355 
+           , outerouterborder356 
+           , outerouterborder357 
+           , outerouterborder358 
+           , outerouterborder359 
+           , outerouterborder360 
+           , outerouterborder361 
+           , outerouterborder362 
+           , outerouterborder363 
+           , outerouterborder364 
+           , outerouterborder365 
+           , outerouterborder366 
+           , outerouterborder367 
+           , outerouterborder368 
+           , outerouterborder369 
+           , outerouterborder370 
+           , outerouterborder371 
+           , outerouterborder372 
+           , outerouterborder373 
+           , outerouterborder374 
+           , outerouterborder375 
+           , outerouterborder376 
+           , outerouterborder377 
+           , outerouterborder378 
+           , outerouterborder379 
+           , outerouterborder380 
+           , outerouterborder381 
+           , outerouterborder382 
+           , outerouterborder383 
+           , outerouterborder384 
+           , outerouterborder385 
+           , outerouterborder386 
+           , outerouterborder387 
+           , outerouterborder388 
+           , outerouterborder389 
+           , outerouterborder390 
+           , outerouterborder391 
+           , outerouterborder392 
+           , outerouterborder393 
+           , outerouterborder394 
+           , outerouterborder395 
+           , outerouterborder396 
+           , outerouterborder397 
+           , outerouterborder398 
+           , outerouterborder399 
+           , outerouterborder400 
+           , outerouterborder401 
+           , outerouterborder402 
+           , outerouterborder403 
+           , outerouterborder404 
+           , outerouterborder405 
+           , outerouterborder406 
+           , outerouterborder407 
+           , outerouterborder408 
+           , outerouterborder409 
+           , outerouterborder410 
+           , outerouterborder411 
+           , outerouterborder412 
+           , outerouterborder413 
+           , outerouterborder414 
+           , outerouterborder415 
+           , outerouterborder416 
+           , outerouterborder417 
+           , outerouterborder418 
+           , outerouterborder419 
+           , outerouterborder420 
+           , outerouterborder421 
+           , outerouterborder422 
+           , outerouterborder423 
+           , outerouterborder424 
+           , outerouterborder425 
+           , outerouterborder426 
+           , outerouterborder427 
+           , outerouterborder428 
+           , outerouterborder429 
+           , outerouterborder430 
+           , outerouterborder431 
+           , outerouterborder432 
+           , outerouterborder433 
+           , outerouterborder434 
+           , outerouterborder435 
+           , outerouterborder436 
+           , outerouterborder437 
+           , outerouterborder438 
+           , outerouterborder439 
+           , outerouterborder440 
+           , outerouterborder441 
+           , outerouterborder442 
+           , outerouterborder443 
+           , outerouterborder444 
+           , outerouterborder445 
+           , outerouterborder446 
+           , outerouterborder447 
+           , outerouterborder448 
+           , outerouterborder449 
+           , outerouterborder450 
+           , outerouterborder451 
+           , outerouterborder452 
+           , outerouterborder453 
+           , outerouterborder454 
+           , outerouterborder455 
+           , outerouterborder456 
+           , outerouterborder457 
+           , outerouterborder458 
+           , outerouterborder459 
+           , outerouterborder460 
+           , outerouterborder461 
+           , outerouterborder462 
+           , outerouterborder463 
+           , outerouterborder464 
+           , outerouterborder465 
+           , outerouterborder466 
+           , outerouterborder467 
+           , outerouterborder468 
+           , outerouterborder469 
+           , outerouterborder470 
+           , outerouterborder471 
+           , outerouterborder472 
+           , outerouterborder473 
+           , outerouterborder474 
+           , outerouterborder475 
+           , outerouterborder476 
+           , outerouterborder477 
+           , outerouterborder478 
+           , outerouterborder479 
+           , outerouterborder480 
+           , outerouterborder481 
+           , outerouterborder482 
+           , outerouterborder483 
+           , outerouterborder484 
+           , outerouterborder485 
+           , outerouterborder486 
+           , outerouterborder487 
+           , outerouterborder488 
+           , outerouterborder489 
+           , outerouterborder490 
+           , outerouterborder491 
+           , outerouterborder492 
+           , outerouterborder493 
+           , outerouterborder494 
+           , outerouterborder495 
+           , outerouterborder496 
+           , outerouterborder497 
+           , outerouterborder498 
+           , outerouterborder499 
+           , outerouterborder500 
+           , outerouterborder501 
+           , outerouterborder502 
+           , outerouterborder503 
+           , outerouterborder504 
+           , outerouterborder505 
+           , outerouterborder506 
+           , outerouterborder507 
+           , outerouterborder508 
+           , outerouterborder509 
+           , outerouterborder510 
+           , outerouterborder511 
+           , outerouterborder512 
+           , outerouterborder513 
+           , outerouterborder514 
+           , outerouterborder515 
+           , outerouterborder516 
+           , outerouterborder517 
+           , outerouterborder518 
+           , outerouterborder519 
+           , outerouterborder520 
+           , outerouterborder521 
+           , outerouterborder522 
+           , outerouterborder523 
+           , outerouterborder524 
+           , outerouterborder525 
+           , outerouterborder526 
+           , outerouterborder527 
+           , outerouterborder528 
+           , outerouterborder529 
+           , outerouterborder530 
+           , outerouterborder531 
+           , outerouterborder532 
+           , outerouterborder533 
+           , outerouterborder534 
+           , outerouterborder535 
+           , outerouterborder536 
+           , outerouterborder537 
+           , outerouterborder538 
+           , outerouterborder539 
+           , outerouterborder540 
+           , outerouterborder541 
+           , outerouterborder542 
+           , outerouterborder543 
+           , outerouterborder544 
+           , outerouterborder545 
+           , outerouterborder546 
+           , outerouterborder547 
+           , outerouterborder548 
+           , outerouterborder549 
+           , outerouterborder550 
+           , outerouterborder551 
+           , outerouterborder552 
+           , outerouterborder553 
+           , outerouterborder554 
+           , outerouterborder555 
+           , outerouterborder556 
+           , outerouterborder557 
+           , outerouterborder558 
+           , outerouterborder559 
+           , outerouterborder560 
+           , outerouterborder561 
+           , outerouterborder562 
+           , outerouterborder563 
+           , outerouterborder564 
+           , outerouterborder565 
+           , outerouterborder566 
+           , outerouterborder567 
+           , outerouterborder568 
+           , outerouterborder569 
+           , outerouterborder570 
+           , outerouterborder571 
+           , outerouterborder572 
+           , outerouterborder573 
+           , outerouterborder574 
+           , outerouterborder575 
+           , outerouterborder576 
+           , outerouterborder577 
+           , outerouterborder578 
+           , outerouterborder579 
+           , outerouterborder580 
+           , outerouterborder581 
+           , outerouterborder582 
+           , outerouterborder583 
+           , outerouterborder584 
+           , outerouterborder585 
+           , outerouterborder586 
+           , outerouterborder587 
+           , outerouterborder588 
+           , outerouterborder589 
+           , outerouterborder590 
+           , outerouterborder591 
+           , outerouterborder592 
+           , outerouterborder593 
+           , outerouterborder594 
+           , outerouterborder595 
+           , outerouterborder596 
+           , outerouterborder597 
+           , outerouterborder598 
+           , outerouterborder599 
+           , outerouterborder600 
+           , outerouterborder601 
+           , outerouterborder602 
+           , outerouterborder603 
+           , outerouterborder604 
+           , outerouterborder605 
+           , outerouterborder606 
+           , outerouterborder607 
+           , outerouterborder608 
+           , outerouterborder609 
+           , outerouterborder610 
+           , outerouterborder611 
+           , outerouterborder612 
+           , outerouterborder613 
+           , outerouterborder614 
+           , outerouterborder615 
+           , outerouterborder616 
+           , outerouterborder617 
+           , outerouterborder618 
+           , outerouterborder619 
+           , outerouterborder620 
+           , outerouterborder621 
+           , outerouterborder622 
+           , outerouterborder623 
+           , outerouterborder624 
+           , outerouterborder625 
+           , outerouterborder626 
+           , outerouterborder627 
+           , outerouterborder628 
+           , outerouterborder629 
+           , outerouterborder630 
+           , outerouterborder631 
+           , outerouterborder632 
+           , outerouterborder633 
+           , outerouterborder634 
+           , outerouterborder635 
+           , outerouterborder636 
+           , outerouterborder637 
+           , outerouterborder638 
+           , outerouterborder639 
+           , outerouterborder640 
+           , outerouterborder641 
+           , outerouterborder642 
+           , outerouterborder643 
+           , outerouterborder644 
+           , outerouterborder645 
+           , outerouterborder646 
+           , outerouterborder647 
+           , outerouterborder648 
+           , outerouterborder649 
+           , outerouterborder650 
+           , outerouterborder651 
+           , outerouterborder652 
+           , outerouterborder653 
+           , outerouterborder654 
+           , outerouterborder655 
+           , outerouterborder656 
+           , outerouterborder657 
+           , outerouterborder658 
+           , outerouterborder659 
+           , outerouterborder660 
+           , outerouterborder661 
+           , outerouterborder662 
+           , outerouterborder663 
+           , outerouterborder664 
+           , outerouterborder665 
+           , outerouterborder666 
+           , outerouterborder667 
+           , outerouterborder668 
+           , outerouterborder669 
+           , outerouterborder670 
+           , outerouterborder671 
+           , outerouterborder672 
+           , outerouterborder673 
+           , outerouterborder674 
+           , outerouterborder675 
+           , outerouterborder676 
+           , outerouterborder677 
+           , outerouterborder678 
+           , outerouterborder679 
+           , outerouterborder680 
+           , outerouterborder681 
+           , outerouterborder682 
+           , outerouterborder683 
+           , outerouterborder684 
+           , outerouterborder685 
+           , outerouterborder686 
+           , outerouterborder687 
+           , outerouterborder688 
+           , outerouterborder689 
+           , outerouterborder690 
+           , outerouterborder691 
+           , outerouterborder692 
+           , outerouterborder693 
+           , outerouterborder694 
+           , outerouterborder695 
+           , outerouterborder696 
+           , outerouterborder697 
+           , outerouterborder698 
+           , outerouterborder699 
+           , outerouterborder700 
+           , outerouterborder701 
+           , outerouterborder702 
+           , outerouterborder703 
+           , outerouterborder704 
+           , outerouterborder705 
+           , outerouterborder706 
+           , outerouterborder707 
+           , outerouterborder708 
+           , outerouterborder709 
+           , outerouterborder710 
+           , outerouterborder711 
+           , outerouterborder712 
+           , outerouterborder713 
+           , outerouterborder714 
+           , outerouterborder715 
+           , outerouterborder716 
+           , outerouterborder717 
+           , outerouterborder718 
+           , outerouterborder719 
+           , outerouterborder720 
+           , outerouterborder721 
+           , outerouterborder722 
+           , outerouterborder723 
+           , outerouterborder724 
+           , outerouterborder725 
+           , outerouterborder726 
+           , outerouterborder727 
+           , outerouterborder728 
+           , outerouterborder729 
+           , outerouterborder730 
+           , outerouterborder731 
+           , outerouterborder732 
+           , outerouterborder733 
+           , outerouterborder734 
+           , outerouterborder735 
+           ]
+  -}
 
 {---------------------------------------------------------------------}

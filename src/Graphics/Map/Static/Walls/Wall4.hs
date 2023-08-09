@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall4 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the four wall of the map.-}
 
-wall4 :: IO Picture
+wall4 :: IO (Seq ((Array S Ix2 ColorMassiv),(Int,Int)))
 wall4 = do
+  return DSeq.empty
+  {-
   wall41 <- createWall (912,216)
   wall42 <- createWall (920,216)
   wall43 <- createWall (928,216)
@@ -52,48 +56,49 @@ wall4 = do
   wall440 <- createWall (896,240)
   wall441 <- createWall (896,232)
   wall442 <- createWall (904,224)
-  return $ Pictures [ wall41 
-                    , wall42 
-                    , wall43 
-                    , wall44 
-                    , wall45 
-                    , wall46 
-                    , wall47 
-                    , wall48 
-                    , wall49 
-                    , wall410 
-                    , wall411 
-                    , wall412 
-                    , wall413 
-                    , wall414 
-                    , wall415 
-                    , wall416 
-                    , wall417 
-                    , wall418 
-                    , wall419 
-                    , wall420 
-                    , wall421 
-                    , wall422 
-                    , wall423 
-                    , wall424 
-                    , wall425 
-                    , wall426 
-                    , wall427 
-                    , wall428 
-                    , wall429 
-                    , wall430 
-                    , wall431 
-                    , wall432 
-                    , wall433 
-                    , wall434 
-                    , wall435 
-                    , wall436 
-                    , wall437 
-                    , wall438 
-                    , wall439 
-                    , wall440 
-                    , wall441 
-                    , wall442
-                    ]
+  return $ [ wall41 
+           , wall42 
+           , wall43 
+           , wall44 
+           , wall45 
+           , wall46 
+           , wall47 
+           , wall48 
+           , wall49 
+           , wall410 
+           , wall411 
+           , wall412 
+           , wall413 
+           , wall414 
+           , wall415 
+           , wall416 
+           , wall417 
+           , wall418 
+           , wall419 
+           , wall420 
+           , wall421 
+           , wall422 
+           , wall423 
+           , wall424 
+           , wall425 
+           , wall426 
+           , wall427 
+           , wall428 
+           , wall429 
+           , wall430 
+           , wall431 
+           , wall432 
+           , wall433 
+           , wall434 
+           , wall435 
+           , wall436 
+           , wall437 
+           , wall438 
+           , wall439 
+           , wall440 
+           , wall441 
+           , wall442
+           ]
+  -}
 
 {------------------------------------------------------------}

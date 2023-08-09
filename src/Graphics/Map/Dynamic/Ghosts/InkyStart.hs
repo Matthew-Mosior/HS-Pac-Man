@@ -1,23 +1,24 @@
 module Graphics.Map.Dynamic.Ghosts.InkyStart where
 
-import Codec.BMP (parseBMP)
-import Data.ByteString.Lazy as DBL (readFile)
-import Graphics.Gloss.Data.Bitmap
-import Graphics.Gloss.Data.Picture
+import Application.LoadAssets
+
+import Data.Massiv.Array as DMA
+import Data.Massiv.Array.IO as DMAIO
+import qualified Graphics.ColorModel as CM
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
-{-Define Inky picture.-}
+{-Define Inky array.-}
 
-drawinkys :: (Int,Int)
-            -> IO Picture 
-drawinkys (xpos,ypos) = do
-  bmp <- DBL.readFile "assets/largeb_blueghost_up.bmp"
-  let parsedbmp = parseBMP bmp
-  case parsedbmp of
-    Left  _    -> return Blank
-    Right fbmp -> return                                                  $
-                  Translate ((fromIntegral xpos :: Float) - (1120/2) + 4)
-                            ((fromIntegral ypos :: Float) - (1440/2) + 3) $
-                  Bitmap (bitmapDataOfBMP fbmp)
+drawInkyS :: (Int,Int)
+          -> IO ((Array S Ix2 ColorMassiv),(Int,Int))
+drawInkyS (xpos,ypos) = do
+  inkyrgb <- loadInkyUpAsset 
+  inkyrgbf <- DMA.traversePrim (\x -> return $ rgbMassiv8w ((\(a,_,_) -> a) $ toComponents $ pixelColor x)
+                                                           ((\(_,b,_) -> b) $ toComponents $ pixelColor x)
+                                                           ((\(_,_,c) -> c) $ toComponents $ pixelColor x)
+                               )
+                inkyrgb
+  return (inkyrgbf,(xpos,ypos))
 
-{----------------------}
+{--------------------}

@@ -1,37 +1,43 @@
 module Graphics.Map.Dynamic.Cookies.Common where
 
-import Codec.BMP (parseBMP)
-import Data.ByteString.Lazy as DBL (readFile)
-import Graphics.Gloss.Data.Bitmap
-import Graphics.Gloss.Data.Picture
+import Application.LoadAssets
+
+import Data.Massiv.Array as DMA
+import Data.Massiv.Array.IO as DMAIO
+import qualified Graphics.ColorModel as CM
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Cookie constants.-}
 
-createCookie :: (Int,Int)
-             -> IO Picture
-createCookie (xpos,ypos) = do
-  bmp <- DBL.readFile "assets/largeb_cookie.bmp"
-  let parsedbmp = parseBMP bmp
-  case parsedbmp of
-    Left  _    -> return Blank
-    Right fbmp -> return                                                  $
-                  Rotate 180.0                                            $
-                  Translate ((fromIntegral xpos :: Float) - (1120/2) + 9)
-                            ((fromIntegral ypos :: Float) - (1440/2) + 8) $
-                  Bitmap (bitmapDataOfBMP fbmp)
+createCookie :: IO (Array S Ix2 ColorMassiv)
+createCookie = do
+  cookiergb <- loadCookieAsset
+  cookiergbf <- DMA.traversePrim (\x -> return $ rgbMassiv8w ((\(a,_,_) -> a) $ toComponents $ pixelColor x)
+                                                             ((\(_,b,_) -> b) $ toComponents $ pixelColor x)
+                                                             ((\(_,_,c) -> c) $ toComponents $ pixelColor x)
+                                 )
+                cookiergb
+  return cookiergbf
 
-createLargeCookie :: (Int,Int)
-                  -> IO Picture
-createLargeCookie (xpos,ypos) = do
-  bmp <- DBL.readFile "assets/largeb_largecookie.bmp"
-  let parsedbmp = parseBMP bmp
-  case parsedbmp of
-    Left  _    -> return Blank
-    Right fbmp -> return                                                  $
-                  Rotate 180.0                                            $
-                  Translate ((fromIntegral xpos :: Float) - (1120/2) + 9)
-                            ((fromIntegral ypos :: Float) - (1440/2) + 8) $
-                  Bitmap (bitmapDataOfBMP fbmp)
+createLargeCookie :: IO (Array S Ix2 ColorMassiv)
+createLargeCookie = do
+  largecookiergb <- loadLargeCookieAsset
+  largecookiergbf <- DMA.traversePrim (\x -> return $ rgbMassiv8w ((\(a,_,_) -> a) $ toComponents $ pixelColor x)
+                                                                  ((\(_,b,_) -> b) $ toComponents $ pixelColor x)
+                                                                  ((\(_,_,c) -> c) $ toComponents $ pixelColor x)
+                                      )
+                     largecookiergb
+  return largecookiergbf
 
-{-------------------}
+createPowerCookie :: IO (Array S Ix2 ColorMassiv)
+createPowerCookie = do
+  powercookiergb <- loadPowerCookieAsset
+  powercookiergbf <- DMA.traversePrim (\x -> return $ rgbMassiv8w ((\(a,_,_) -> a) $ toComponents $ pixelColor x)
+                                                                  ((\(_,b,_) -> b) $ toComponents $ pixelColor x)
+                                                                  ((\(_,_,c) -> c) $ toComponents $ pixelColor x)
+                                      )
+                     powercookiergb
+  return powercookiergbf
+
+{-----------------------}

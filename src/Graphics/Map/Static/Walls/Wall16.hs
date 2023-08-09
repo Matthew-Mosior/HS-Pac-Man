@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall16 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the sixteenth wall of the map.-}
 
-wall16 :: IO Picture
+wall16 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall16 = do
+  return DSeq.empty
+  {-
   wall161 <- createWall (912,976)
   wall162 <- createWall (920,976)
   wall163 <- createWall (928,976)
@@ -68,64 +72,65 @@ wall16 = do
   wall1656 <- createWall (896,1000)
   wall1657 <- createWall (896,992)
   wall1658 <- createWall (904,984)
-  return $ Pictures [ wall161 
-                    , wall162 
-                    , wall163 
-                    , wall164 
-                    , wall165 
-                    , wall166 
-                    , wall167 
-                    , wall168 
-                    , wall169 
-                    , wall1610 
-                    , wall1611 
-                    , wall1612 
-                    , wall1613 
-                    , wall1614 
-                    , wall1615 
-                    , wall1616 
-                    , wall1617 
-                    , wall1618 
-                    , wall1619 
-                    , wall1620 
-                    , wall1621 
-                    , wall1622 
-                    , wall1623 
-                    , wall1624 
-                    , wall1625 
-                    , wall1626 
-                    , wall1627 
-                    , wall1628 
-                    , wall1629 
-                    , wall1630 
-                    , wall1631 
-                    , wall1632 
-                    , wall1633 
-                    , wall1634 
-                    , wall1635 
-                    , wall1636 
-                    , wall1637 
-                    , wall1638 
-                    , wall1639 
-                    , wall1640 
-                    , wall1641 
-                    , wall1642 
-                    , wall1643 
-                    , wall1644 
-                    , wall1645 
-                    , wall1646 
-                    , wall1647 
-                    , wall1648 
-                    , wall1649 
-                    , wall1650 
-                    , wall1651 
-                    , wall1652 
-                    , wall1653 
-                    , wall1654 
-                    , wall1655 
-                    , wall1656 
-                    , wall1657 
-                    , wall1658
-                    ]
+  return $ [ wall161 
+           , wall162 
+           , wall163 
+           , wall164 
+           , wall165 
+           , wall166 
+           , wall167 
+           , wall168 
+           , wall169 
+           , wall1610 
+           , wall1611 
+           , wall1612 
+           , wall1613 
+           , wall1614 
+           , wall1615 
+           , wall1616 
+           , wall1617 
+           , wall1618 
+           , wall1619 
+           , wall1620 
+           , wall1621 
+           , wall1622 
+           , wall1623 
+           , wall1624 
+           , wall1625 
+           , wall1626 
+           , wall1627 
+           , wall1628 
+           , wall1629 
+           , wall1630 
+           , wall1631 
+           , wall1632 
+           , wall1633 
+           , wall1634 
+           , wall1635 
+           , wall1636 
+           , wall1637 
+           , wall1638 
+           , wall1639 
+           , wall1640 
+           , wall1641 
+           , wall1642 
+           , wall1643 
+           , wall1644 
+           , wall1645 
+           , wall1646 
+           , wall1647 
+           , wall1648 
+           , wall1649 
+           , wall1650 
+           , wall1651 
+           , wall1652 
+           , wall1653 
+           , wall1654 
+           , wall1655 
+           , wall1656 
+           , wall1657 
+           , wall1658
+           ]
+  -}
 
 {-----------------------------------------------------------------}

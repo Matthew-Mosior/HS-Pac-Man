@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall10 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the tenth wall of the map.-}
 
-wall10 :: IO Picture
+wall10 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall10 = do
+  return DSeq.empty
+  {-
   wall101 <- createWall (312,736)
   wall102 <- createWall (320,736)
   wall103 <- createWall (328,744)
@@ -52,48 +56,49 @@ wall10 = do
   wall1040 <- createWall (296,760)
   wall1041 <- createWall (296,752)
   wall1042 <- createWall (304,744)
-  return $ Pictures [ wall101 
-                    , wall102 
-                    , wall103 
-                    , wall104 
-                    , wall105 
-                    , wall106 
-                    , wall107 
-                    , wall108 
-                    , wall109 
-                    , wall1010 
-                    , wall1011 
-                    , wall1012 
-                    , wall1013 
-                    , wall1014 
-                    , wall1015 
-                    , wall1016 
-                    , wall1017 
-                    , wall1018 
-                    , wall1019 
-                    , wall1020 
-                    , wall1021 
-                    , wall1022 
-                    , wall1023 
-                    , wall1024 
-                    , wall1025 
-                    , wall1026 
-                    , wall1027 
-                    , wall1028 
-                    , wall1029 
-                    , wall1030 
-                    , wall1031 
-                    , wall1032 
-                    , wall1033 
-                    , wall1034 
-                    , wall1035 
-                    , wall1036 
-                    , wall1037 
-                    , wall1038 
-                    , wall1039 
-                    , wall1040 
-                    , wall1041 
-                    , wall1042
-                    ]
+  return $ [ wall101 
+           , wall102 
+           , wall103 
+           , wall104 
+           , wall105 
+           , wall106 
+           , wall107 
+           , wall108 
+           , wall109 
+           , wall1010 
+           , wall1011 
+           , wall1012 
+           , wall1013 
+           , wall1014 
+           , wall1015 
+           , wall1016 
+           , wall1017 
+           , wall1018 
+           , wall1019 
+           , wall1020 
+           , wall1021 
+           , wall1022 
+           , wall1023 
+           , wall1024 
+           , wall1025 
+           , wall1026 
+           , wall1027 
+           , wall1028 
+           , wall1029 
+           , wall1030 
+           , wall1031 
+           , wall1032 
+           , wall1033 
+           , wall1034 
+           , wall1035 
+           , wall1036 
+           , wall1037 
+           , wall1038 
+           , wall1039 
+           , wall1040 
+           , wall1041 
+           , wall1042
+           ]
+  -}
 
 {-------------------------------------------------------------}

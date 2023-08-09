@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall6 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the sixth wall of the map.-}
 
-wall6 :: IO Picture
+wall6 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall6 = do
+  return DSeq.empty
+  {-
   wall61 <- createWall (312,376)
   wall62 <- createWall (320,376)
   wall63 <- createWall (328,384)
@@ -104,100 +108,101 @@ wall6 = do
   wall692 <- createWall (296,400)
   wall693 <- createWall (296,392)
   wall694 <- createWall (304,384)
-  return $ Pictures [ wall61 
-                    , wall62 
-                    , wall63 
-                    , wall64 
-                    , wall65 
-                    , wall66 
-                    , wall67 
-                    , wall68 
-                    , wall69 
-                    , wall610 
-                    , wall611 
-                    , wall612 
-                    , wall613 
-                    , wall614 
-                    , wall615 
-                    , wall616 
-                    , wall617 
-                    , wall618 
-                    , wall619 
-                    , wall620 
-                    , wall621 
-                    , wall622 
-                    , wall623 
-                    , wall624 
-                    , wall625 
-                    , wall626 
-                    , wall627 
-                    , wall628 
-                    , wall629 
-                    , wall630 
-                    , wall631 
-                    , wall632 
-                    , wall633 
-                    , wall634 
-                    , wall635 
-                    , wall636 
-                    , wall637 
-                    , wall638 
-                    , wall639 
-                    , wall640 
-                    , wall641 
-                    , wall642 
-                    , wall643 
-                    , wall644 
-                    , wall645 
-                    , wall646 
-                    , wall647 
-                    , wall648 
-                    , wall649 
-                    , wall650 
-                    , wall651 
-                    , wall652 
-                    , wall653 
-                    , wall654 
-                    , wall655 
-                    , wall656 
-                    , wall657 
-                    , wall658 
-                    , wall659 
-                    , wall660 
-                    , wall661 
-                    , wall662 
-                    , wall663 
-                    , wall664 
-                    , wall665 
-                    , wall666 
-                    , wall667 
-                    , wall668 
-                    , wall669 
-                    , wall670 
-                    , wall671 
-                    , wall672 
-                    , wall673 
-                    , wall674 
-                    , wall675 
-                    , wall676 
-                    , wall677 
-                    , wall678 
-                    , wall679 
-                    , wall680 
-                    , wall681 
-                    , wall682 
-                    , wall683 
-                    , wall684 
-                    , wall685 
-                    , wall686 
-                    , wall687 
-                    , wall688 
-                    , wall689 
-                    , wall690 
-                    , wall691 
-                    , wall692 
-                    , wall693 
-                    , wall694
-                    ]
+  return $ [ wall61 
+           , wall62 
+           , wall63 
+           , wall64 
+           , wall65 
+           , wall66 
+           , wall67 
+           , wall68 
+           , wall69 
+           , wall610 
+           , wall611 
+           , wall612 
+           , wall613 
+           , wall614 
+           , wall615 
+           , wall616 
+           , wall617 
+           , wall618 
+           , wall619 
+           , wall620 
+           , wall621 
+           , wall622 
+           , wall623 
+           , wall624 
+           , wall625 
+           , wall626 
+           , wall627 
+           , wall628 
+           , wall629 
+           , wall630 
+           , wall631 
+           , wall632 
+           , wall633 
+           , wall634 
+           , wall635 
+           , wall636 
+           , wall637 
+           , wall638 
+           , wall639 
+           , wall640 
+           , wall641 
+           , wall642 
+           , wall643 
+           , wall644 
+           , wall645 
+           , wall646 
+           , wall647 
+           , wall648 
+           , wall649 
+           , wall650 
+           , wall651 
+           , wall652 
+           , wall653 
+           , wall654 
+           , wall655 
+           , wall656 
+           , wall657 
+           , wall658 
+           , wall659 
+           , wall660 
+           , wall661 
+           , wall662 
+           , wall663 
+           , wall664 
+           , wall665 
+           , wall666 
+           , wall667 
+           , wall668 
+           , wall669 
+           , wall670 
+           , wall671 
+           , wall672 
+           , wall673 
+           , wall674 
+           , wall675 
+           , wall676 
+           , wall677 
+           , wall678 
+           , wall679 
+           , wall680 
+           , wall681 
+           , wall682 
+           , wall683 
+           , wall684 
+           , wall685 
+           , wall686 
+           , wall687 
+           , wall688 
+           , wall689 
+           , wall690 
+           , wall691 
+           , wall692 
+           , wall693 
+           , wall694
+           ]
+  -}
 
 {-------------------------------------------------------------}
