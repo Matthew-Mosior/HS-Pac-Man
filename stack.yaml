@@ -19,7 +19,8 @@
 # resolver: https://example.com/snapshots/2018-01-01.yaml
 #resolver:
 #  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/20/7.yaml
-resolver: nightly-2023-01-22 
+#resolver: lts-20.22 
+resolver: lts-21.6
 
 
 # User packages to be built.
@@ -44,7 +45,10 @@ packages:
 #
 # extra-deps: []
 
-
+extra-deps:
+ - extra-deps/derive-storable-plugin-0.2.3.7
+ - extra-deps/iris-0.1.0.0
+ - extra-deps/gloss-raster-massiv-0.1.1.5
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

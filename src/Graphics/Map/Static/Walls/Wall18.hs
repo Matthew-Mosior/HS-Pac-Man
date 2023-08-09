@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall18 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the eighteenth wall of the map.-}
 
-wall18 :: IO Picture
+wall18 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall18 = do
+  return DSeq.empty
+  {-
   wall181 <- createWall (432,1096)
   wall182 <- createWall (440,1096)
   wall183 <- createWall (448,1096)
@@ -104,100 +108,101 @@ wall18 = do
   wall1892 <- createWall (416,1120)
   wall1893 <- createWall (416,1112)
   wall1894 <- createWall (424,1104)
-  return $ Pictures [ wall181 
-                    , wall182 
-                    , wall183 
-                    , wall184 
-                    , wall185 
-                    , wall186 
-                    , wall187 
-                    , wall188 
-                    , wall189 
-                    , wall1810 
-                    , wall1811 
-                    , wall1812 
-                    , wall1813 
-                    , wall1814 
-                    , wall1815 
-                    , wall1816 
-                    , wall1817 
-                    , wall1818 
-                    , wall1819 
-                    , wall1820 
-                    , wall1821 
-                    , wall1822 
-                    , wall1823 
-                    , wall1824 
-                    , wall1825 
-                    , wall1826 
-                    , wall1827 
-                    , wall1828 
-                    , wall1829 
-                    , wall1830 
-                    , wall1831 
-                    , wall1832 
-                    , wall1833 
-                    , wall1834 
-                    , wall1835 
-                    , wall1836 
-                    , wall1837 
-                    , wall1838 
-                    , wall1839 
-                    , wall1840 
-                    , wall1841 
-                    , wall1842 
-                    , wall1843 
-                    , wall1844 
-                    , wall1845 
-                    , wall1846 
-                    , wall1847 
-                    , wall1848 
-                    , wall1849 
-                    , wall1850 
-                    , wall1851 
-                    , wall1852 
-                    , wall1853 
-                    , wall1854 
-                    , wall1855 
-                    , wall1856 
-                    , wall1857 
-                    , wall1858 
-                    , wall1859 
-                    , wall1860 
-                    , wall1861 
-                    , wall1862 
-                    , wall1863 
-                    , wall1864 
-                    , wall1865 
-                    , wall1866 
-                    , wall1867 
-                    , wall1868 
-                    , wall1869 
-                    , wall1870 
-                    , wall1871 
-                    , wall1872 
-                    , wall1873 
-                    , wall1874 
-                    , wall1875 
-                    , wall1876 
-                    , wall1877 
-                    , wall1878 
-                    , wall1879 
-                    , wall1880 
-                    , wall1881 
-                    , wall1882 
-                    , wall1883 
-                    , wall1884 
-                    , wall1885 
-                    , wall1886 
-                    , wall1887 
-                    , wall1888 
-                    , wall1889 
-                    , wall1890 
-                    , wall1891 
-                    , wall1892 
-                    , wall1893 
-                    , wall1894
-                    ]
+  return $ [ wall181 
+           , wall182 
+           , wall183 
+           , wall184 
+           , wall185 
+           , wall186 
+           , wall187 
+           , wall188 
+           , wall189 
+           , wall1810 
+           , wall1811 
+           , wall1812 
+           , wall1813 
+           , wall1814 
+           , wall1815 
+           , wall1816 
+           , wall1817 
+           , wall1818 
+           , wall1819 
+           , wall1820 
+           , wall1821 
+           , wall1822 
+           , wall1823 
+           , wall1824 
+           , wall1825 
+           , wall1826 
+           , wall1827 
+           , wall1828 
+           , wall1829 
+           , wall1830 
+           , wall1831 
+           , wall1832 
+           , wall1833 
+           , wall1834 
+           , wall1835 
+           , wall1836 
+           , wall1837 
+           , wall1838 
+           , wall1839 
+           , wall1840 
+           , wall1841 
+           , wall1842 
+           , wall1843 
+           , wall1844 
+           , wall1845 
+           , wall1846 
+           , wall1847 
+           , wall1848 
+           , wall1849 
+           , wall1850 
+           , wall1851 
+           , wall1852 
+           , wall1853 
+           , wall1854 
+           , wall1855 
+           , wall1856 
+           , wall1857 
+           , wall1858 
+           , wall1859 
+           , wall1860 
+           , wall1861 
+           , wall1862 
+           , wall1863 
+           , wall1864 
+           , wall1865 
+           , wall1866 
+           , wall1867 
+           , wall1868 
+           , wall1869 
+           , wall1870 
+           , wall1871 
+           , wall1872 
+           , wall1873 
+           , wall1874 
+           , wall1875 
+           , wall1876 
+           , wall1877 
+           , wall1878 
+           , wall1879 
+           , wall1880 
+           , wall1881 
+           , wall1882 
+           , wall1883 
+           , wall1884 
+           , wall1885 
+           , wall1886 
+           , wall1887 
+           , wall1888 
+           , wall1889 
+           , wall1890 
+           , wall1891 
+           , wall1892 
+           , wall1893 
+           , wall1894
+           ]
+  -}
 
 {------------------------------------------------------------------}

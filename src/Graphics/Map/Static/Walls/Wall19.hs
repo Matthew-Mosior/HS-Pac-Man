@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall19 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the nineteenth wall of the map.-}
 
-wall19 :: IO Picture
+wall19 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall19 = do
+  return DSeq.empty
+  {-
   wall191 <- createWall (672,1216)
   wall192 <- createWall (680,1216)
   wall193 <- createWall (688,1216)
@@ -124,120 +128,121 @@ wall19 = do
   wall19112 <- createWall (656,1240)
   wall19113 <- createWall (656,1232)
   wall19114 <- createWall (664,1224)
-  return $ Pictures [ wall191 
-                    , wall192 
-                    , wall193 
-                    , wall194 
-                    , wall195 
-                    , wall196 
-                    , wall197 
-                    , wall198 
-                    , wall199 
-                    , wall1910 
-                    , wall1911 
-                    , wall1912 
-                    , wall1913 
-                    , wall1914 
-                    , wall1915 
-                    , wall1916 
-                    , wall1917 
-                    , wall1918 
-                    , wall1919 
-                    , wall1920 
-                    , wall1921 
-                    , wall1922 
-                    , wall1923 
-                    , wall1924 
-                    , wall1925 
-                    , wall1926 
-                    , wall1927 
-                    , wall1928 
-                    , wall1929 
-                    , wall1930 
-                    , wall1931 
-                    , wall1932 
-                    , wall1933 
-                    , wall1934 
-                    , wall1935 
-                    , wall1936 
-                    , wall1937 
-                    , wall1938 
-                    , wall1939 
-                    , wall1940 
-                    , wall1941 
-                    , wall1942 
-                    , wall1943 
-                    , wall1944 
-                    , wall1945 
-                    , wall1946 
-                    , wall1947 
-                    , wall1948 
-                    , wall1949 
-                    , wall1950 
-                    , wall1951 
-                    , wall1952 
-                    , wall1953 
-                    , wall1954 
-                    , wall1955 
-                    , wall1956 
-                    , wall1957 
-                    , wall1958 
-                    , wall1959 
-                    , wall1960 
-                    , wall1961 
-                    , wall1962 
-                    , wall1963 
-                    , wall1964 
-                    , wall1965 
-                    , wall1966 
-                    , wall1967 
-                    , wall1968 
-                    , wall1969 
-                    , wall1970 
-                    , wall1971 
-                    , wall1972 
-                    , wall1973 
-                    , wall1974 
-                    , wall1975 
-                    , wall1976 
-                    , wall1977 
-                    , wall1978 
-                    , wall1979 
-                    , wall1980 
-                    , wall1981 
-                    , wall1982 
-                    , wall1983 
-                    , wall1984 
-                    , wall1985 
-                    , wall1986 
-                    , wall1987 
-                    , wall1988 
-                    , wall1989 
-                    , wall1990 
-                    , wall1991 
-                    , wall1992 
-                    , wall1993 
-                    , wall1994 
-                    , wall1995 
-                    , wall1996 
-                    , wall1997 
-                    , wall1998 
-                    , wall1999 
-                    , wall19100 
-                    , wall19101 
-                    , wall19102 
-                    , wall19103 
-                    , wall19104 
-                    , wall19105 
-                    , wall19106 
-                    , wall19107 
-                    , wall19108 
-                    , wall19109 
-                    , wall19110 
-                    , wall19111 
-                    , wall19112 
-                    , wall19113 
-                    , wall19114
-                    ]
+  return $ [ wall191 
+           , wall192 
+           , wall193 
+           , wall194 
+           , wall195 
+           , wall196 
+           , wall197 
+           , wall198 
+           , wall199 
+           , wall1910 
+           , wall1911 
+           , wall1912 
+           , wall1913 
+           , wall1914 
+           , wall1915 
+           , wall1916 
+           , wall1917 
+           , wall1918 
+           , wall1919 
+           , wall1920 
+           , wall1921 
+           , wall1922 
+           , wall1923 
+           , wall1924 
+           , wall1925 
+           , wall1926 
+           , wall1927 
+           , wall1928 
+           , wall1929 
+           , wall1930 
+           , wall1931 
+           , wall1932 
+           , wall1933 
+           , wall1934 
+           , wall1935 
+           , wall1936 
+           , wall1937 
+           , wall1938 
+           , wall1939 
+           , wall1940 
+           , wall1941 
+           , wall1942 
+           , wall1943 
+           , wall1944 
+           , wall1945 
+           , wall1946 
+           , wall1947 
+           , wall1948 
+           , wall1949 
+           , wall1950 
+           , wall1951 
+           , wall1952 
+           , wall1953 
+           , wall1954 
+           , wall1955 
+           , wall1956 
+           , wall1957 
+           , wall1958 
+           , wall1959 
+           , wall1960 
+           , wall1961 
+           , wall1962 
+           , wall1963 
+           , wall1964 
+           , wall1965 
+           , wall1966 
+           , wall1967 
+           , wall1968 
+           , wall1969 
+           , wall1970 
+           , wall1971 
+           , wall1972 
+           , wall1973 
+           , wall1974 
+           , wall1975 
+           , wall1976 
+           , wall1977 
+           , wall1978 
+           , wall1979 
+           , wall1980 
+           , wall1981 
+           , wall1982 
+           , wall1983 
+           , wall1984 
+           , wall1985 
+           , wall1986 
+           , wall1987 
+           , wall1988 
+           , wall1989 
+           , wall1990 
+           , wall1991 
+           , wall1992 
+           , wall1993 
+           , wall1994 
+           , wall1995 
+           , wall1996 
+           , wall1997 
+           , wall1998 
+           , wall1999 
+           , wall19100 
+           , wall19101 
+           , wall19102 
+           , wall19103 
+           , wall19104 
+           , wall19105 
+           , wall19106 
+           , wall19107 
+           , wall19108 
+           , wall19109 
+           , wall19110 
+           , wall19111 
+           , wall19112 
+           , wall19113 
+           , wall19114
+           ]
+  -}
 
 {------------------------------------------------------------------}

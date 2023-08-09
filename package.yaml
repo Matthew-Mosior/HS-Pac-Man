@@ -21,18 +21,20 @@ description:         Please see the README on GitHub at <https://github.com/Matt
 
 dependencies:
 - base >= 4.7 && < 5
-- bmp
 - bytestring
 - containers
 - gloss
+- gloss-raster-massiv
 - iris
-- jose
+- jose-jwt
 - lens
+- massiv
+- massiv-io
 - pqueue
 - servant
 - websockets
 - wuss
-- Yampa
+- time
 
 ghc-options:
 - -Wall

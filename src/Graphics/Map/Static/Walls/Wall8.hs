@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall8 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the eigth wall of the map.-}
 
-wall8 :: IO Picture
+wall8 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall8 = do
+  return DSeq.empty
+  {-
   wall81 <- createWall (792,376)
   wall82 <- createWall (800,376)
   wall83 <- createWall (808,384)
@@ -104,100 +108,101 @@ wall8 = do
   wall892 <- createWall (776,400)
   wall893 <- createWall (776,392)
   wall894 <- createWall (784,384)
-  return $ Pictures [ wall81 
-                    , wall82 
-                    , wall83 
-                    , wall84 
-                    , wall85 
-                    , wall86 
-                    , wall87 
-                    , wall88 
-                    , wall89 
-                    , wall810 
-                    , wall811 
-                    , wall812 
-                    , wall813 
-                    , wall814 
-                    , wall815 
-                    , wall816 
-                    , wall817 
-                    , wall818 
-                    , wall819 
-                    , wall820 
-                    , wall821 
-                    , wall822 
-                    , wall823 
-                    , wall824 
-                    , wall825 
-                    , wall826 
-                    , wall827 
-                    , wall828 
-                    , wall829 
-                    , wall830 
-                    , wall831 
-                    , wall832 
-                    , wall833 
-                    , wall834 
-                    , wall835 
-                    , wall836 
-                    , wall837 
-                    , wall838 
-                    , wall839 
-                    , wall840 
-                    , wall841 
-                    , wall842 
-                    , wall843 
-                    , wall844 
-                    , wall845 
-                    , wall846 
-                    , wall847 
-                    , wall848 
-                    , wall849 
-                    , wall850 
-                    , wall851 
-                    , wall852 
-                    , wall853 
-                    , wall854 
-                    , wall855 
-                    , wall856 
-                    , wall857 
-                    , wall858 
-                    , wall859 
-                    , wall860 
-                    , wall861 
-                    , wall862 
-                    , wall863 
-                    , wall864 
-                    , wall865 
-                    , wall866 
-                    , wall867 
-                    , wall868 
-                    , wall869 
-                    , wall870 
-                    , wall871 
-                    , wall872 
-                    , wall873 
-                    , wall874 
-                    , wall875 
-                    , wall876 
-                    , wall877 
-                    , wall878 
-                    , wall879 
-                    , wall880 
-                    , wall881 
-                    , wall882 
-                    , wall883 
-                    , wall884 
-                    , wall885 
-                    , wall886 
-                    , wall887 
-                    , wall888 
-                    , wall889 
-                    , wall890 
-                    , wall891 
-                    , wall892 
-                    , wall893 
-                    , wall894
-                    ]
+  return $ [ wall81 
+           , wall82 
+           , wall83 
+           , wall84 
+           , wall85 
+           , wall86 
+           , wall87 
+           , wall88 
+           , wall89 
+           , wall810 
+           , wall811 
+           , wall812 
+           , wall813 
+           , wall814 
+           , wall815 
+           , wall816 
+           , wall817 
+           , wall818 
+           , wall819 
+           , wall820 
+           , wall821 
+           , wall822 
+           , wall823 
+           , wall824 
+           , wall825 
+           , wall826 
+           , wall827 
+           , wall828 
+           , wall829 
+           , wall830 
+           , wall831 
+           , wall832 
+           , wall833 
+           , wall834 
+           , wall835 
+           , wall836 
+           , wall837 
+           , wall838 
+           , wall839 
+           , wall840 
+           , wall841 
+           , wall842 
+           , wall843 
+           , wall844 
+           , wall845 
+           , wall846 
+           , wall847 
+           , wall848 
+           , wall849 
+           , wall850 
+           , wall851 
+           , wall852 
+           , wall853 
+           , wall854 
+           , wall855 
+           , wall856 
+           , wall857 
+           , wall858 
+           , wall859 
+           , wall860 
+           , wall861 
+           , wall862 
+           , wall863 
+           , wall864 
+           , wall865 
+           , wall866 
+           , wall867 
+           , wall868 
+           , wall869 
+           , wall870 
+           , wall871 
+           , wall872 
+           , wall873 
+           , wall874 
+           , wall875 
+           , wall876 
+           , wall877 
+           , wall878 
+           , wall879 
+           , wall880 
+           , wall881 
+           , wall882 
+           , wall883 
+           , wall884 
+           , wall885 
+           , wall886 
+           , wall887 
+           , wall888 
+           , wall889 
+           , wall890 
+           , wall891 
+           , wall892 
+           , wall893 
+           , wall894
+           ]
+  -}
 
 {-------------------------------------------------------------}

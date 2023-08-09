@@ -12,175 +12,175 @@ import Data.Sequence as Seq (filter,findIndexL,index,viewl,ViewL(..))
 
 updateInkyMovement :: InkyState
                     -> InkyState
-updateInkyMovement ps = do
+updateInkyMovement is = do
   --Get the current tile center coordinates that inky occupies.
   let inkycurrentcc = ghostCoorToCookieCoor $
-                      inkycurrentposition ps
-  let inkycurrentt  = case (inkycurrenttile ps) of
+                      inkycurrentposition is
+  let inkycurrentt  = case (inkycurrenttile is) of
                         Nothing -> defaulttileastar 
                         Just ct -> ct
   let inkyincenteroftile = case Seq.viewl (Seq.filter (\x -> inkycurrentcc == (centercoordinates $ cookiedata x)) alltiledatainit) of
                              Seq.EmptyL   -> False
                              (_ Seq.:< _) -> True
   if | inkyincenteroftile
-     -> do let inkynexttileindex = case (Seq.findIndexL (\x -> (tilenumberastar x) == (tilenumberastar inkycurrentt)) (inkytargettileseq ps)) of
+     -> do let inkynexttileindex = case (Seq.findIndexL (\x -> (tilenumberastar x) == (tilenumberastar inkycurrentt)) (inkytargettileseq is)) of
                                      Nothing -> (-1)
                                      Just i  -> i + 1
            if | ((\(a,_) -> a)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                (inkytargettileseq ps) `Seq.index` inkynexttileindex) <=
+                (inkytargettileseq is) `Seq.index` inkynexttileindex) <=
                 ((\(a,_) -> a)      $
                 (\(x:_) -> x )      $
                 tilecoordinateastar $
                 inkycurrentt)
-              -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                           , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+              -> InkyState { inkycurrentmode      = inkycurrentmode is
+                           , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                        -> GhostAltDraw
                                                        | otherwise
                                                        -> GhostRegularDraw
-                           , inkycurrentposition  = ( fst $ inkycurrentposition ps
-                                                    , (\x -> x - 1) $ fst $ inkycurrentposition ps
+                           , inkycurrentposition  = ( fst $ inkycurrentposition is
+                                                    , (\x -> x - 1) $ fst $ inkycurrentposition is
                                                     )
-                           , inkycurrenttile      = inkycurrenttile ps
-                           , inkytargettile       = inkytargettile ps
-                           , inkytargettileseq    = inkytargettileseq ps
+                           , inkycurrenttile      = inkycurrenttile is
+                           , inkytargettile       = inkytargettile is
+                           , inkytargettileseq    = inkytargettileseq is
                            , inkycurrentdirection = Game.Types.Left
-                           , inkycurrentspeed     = inkycurrentspeed ps
-                           , inkydotcounter       = inkydotcounter ps
-                           , inkyghsl             = inkyghsl ps
+                           , inkycurrentspeed     = inkycurrentspeed is
+                           , inkydotcounter       = inkydotcounter is
+                           , inkyghsl             = inkyghsl is
                            } 
               | ((\(a,_) -> a)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                (inkytargettileseq ps) `Seq.index` inkynexttileindex) >=
+                (inkytargettileseq is) `Seq.index` inkynexttileindex) >=
                 ((\(a,_) -> a)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
                 inkycurrentt)
-              -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                           , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+              -> InkyState { inkycurrentmode      = inkycurrentmode is
+                           , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                        -> GhostAltDraw
                                                        | otherwise
                                                        -> GhostRegularDraw
-                           , inkycurrentposition  = ( fst $ inkycurrentposition ps
-                                                    , (\x -> x + 1) $ fst $ inkycurrentposition ps
+                           , inkycurrentposition  = ( fst $ inkycurrentposition is
+                                                    , (\x -> x + 1) $ fst $ inkycurrentposition is
                                                     )
-                           , inkycurrenttile      = inkycurrenttile ps
-                           , inkytargettile       = inkytargettile ps
-                           , inkytargettileseq    = inkytargettileseq ps
+                           , inkycurrenttile      = inkycurrenttile is
+                           , inkytargettile       = inkytargettile is
+                           , inkytargettileseq    = inkytargettileseq is
                            , inkycurrentdirection = Game.Types.Right
-                           , inkycurrentspeed     = inkycurrentspeed ps
-                           , inkydotcounter       = inkydotcounter ps
-                           , inkyghsl             = inkyghsl ps
+                           , inkycurrentspeed     = inkycurrentspeed is
+                           , inkydotcounter       = inkydotcounter is
+                           , inkyghsl             = inkyghsl is
                            }
               | ((\(_,b) -> b)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                (inkytargettileseq ps) `Seq.index` inkynexttileindex) <=
+                (inkytargettileseq is) `Seq.index` inkynexttileindex) <=
                 ((\(_,b) -> b)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
                 inkycurrentt)
-              -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                           , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+              -> InkyState { inkycurrentmode      = inkycurrentmode is
+                           , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                        -> GhostAltDraw
                                                        | otherwise
                                                        -> GhostRegularDraw
-                           , inkycurrentposition  = ( fst $ inkycurrentposition ps
-                                                    , (\y -> y + 1) $ snd $ inkycurrentposition ps
+                           , inkycurrentposition  = ( fst $ inkycurrentposition is
+                                                    , (\y -> y + 1) $ snd $ inkycurrentposition is
                                                     )
-                           , inkycurrenttile      = inkycurrenttile ps
-                           , inkytargettile       = inkytargettile ps
-                           , inkytargettileseq    = inkytargettileseq ps
+                           , inkycurrenttile      = inkycurrenttile is
+                           , inkytargettile       = inkytargettile is
+                           , inkytargettileseq    = inkytargettileseq is
                            , inkycurrentdirection = Down
-                           , inkycurrentspeed     = inkycurrentspeed ps
-                           , inkydotcounter       = inkydotcounter ps
-                           , inkyghsl             = inkyghsl ps
+                           , inkycurrentspeed     = inkycurrentspeed is
+                           , inkydotcounter       = inkydotcounter is
+                           , inkyghsl             = inkyghsl is
                            }
               | otherwise
-              -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                           , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+              -> InkyState { inkycurrentmode      = inkycurrentmode is
+                           , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                        -> GhostAltDraw
                                                        | otherwise
                                                        -> GhostRegularDraw
-                           , inkycurrentposition  = ( fst $ inkycurrentposition ps
-                                                    , (\y -> y - 1) $ snd $ inkycurrentposition ps
+                           , inkycurrentposition  = ( fst $ inkycurrentposition is
+                                                    , (\y -> y - 1) $ snd $ inkycurrentposition is
                                                     )
-                           , inkycurrenttile      = inkycurrenttile ps
-                           , inkytargettile       = inkytargettile ps
-                           , inkytargettileseq    = inkytargettileseq ps
+                           , inkycurrenttile      = inkycurrenttile is
+                           , inkytargettile       = inkytargettile is
+                           , inkytargettileseq    = inkytargettileseq is
                            , inkycurrentdirection = Up
-                           , inkycurrentspeed     = inkycurrentspeed ps
-                           , inkydotcounter       = inkydotcounter ps
-                           , inkyghsl             = inkyghsl ps
+                           , inkycurrentspeed     = inkycurrentspeed is
+                           , inkydotcounter       = inkydotcounter is
+                           , inkyghsl             = inkyghsl is
                            }
      | otherwise
-     -> if | (inkycurrentdirection ps) == Up
-           -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                        , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+     -> if | (inkycurrentdirection is) == Up
+           -> InkyState { inkycurrentmode      = inkycurrentmode is
+                        , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                     -> GhostAltDraw
                                                     | otherwise
                                                     -> GhostRegularDraw
-                        , inkycurrentposition  = ( fst $ inkycurrentposition ps
-                                                 , (\y -> y + 1) $ snd $ inkycurrentposition ps
+                        , inkycurrentposition  = ( fst $ inkycurrentposition is
+                                                 , (\y -> y + 1) $ snd $ inkycurrentposition is
                                                  )
-                        , inkycurrenttile      = inkycurrenttile ps
-                        , inkytargettile       = inkytargettile ps
-                        , inkytargettileseq    = inkytargettileseq ps
-                        , inkycurrentdirection = inkycurrentdirection ps
-                        , inkycurrentspeed     = inkycurrentspeed ps
-                        , inkydotcounter       = inkydotcounter ps
-                        , inkyghsl             = inkyghsl ps
+                        , inkycurrenttile      = inkycurrenttile is
+                        , inkytargettile       = inkytargettile is
+                        , inkytargettileseq    = inkytargettileseq is
+                        , inkycurrentdirection = inkycurrentdirection is
+                        , inkycurrentspeed     = inkycurrentspeed is
+                        , inkydotcounter       = inkydotcounter is
+                        , inkyghsl             = inkyghsl is
                         }
-           | (inkycurrentdirection ps) == Down
-           -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                        , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+           | (inkycurrentdirection is) == Down
+           -> InkyState { inkycurrentmode      = inkycurrentmode is
+                        , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                     -> GhostAltDraw
                                                     | otherwise
                                                     -> GhostRegularDraw
-                        , inkycurrentposition  = ( fst $ inkycurrentposition ps
-                                                 , (\y -> y - 1) $ snd $ inkycurrentposition ps
+                        , inkycurrentposition  = ( fst $ inkycurrentposition is
+                                                 , (\y -> y - 1) $ snd $ inkycurrentposition is
                                                  )
-                        , inkycurrenttile      = inkycurrenttile ps
-                        , inkytargettile       = inkytargettile ps
-                        , inkytargettileseq    = inkytargettileseq ps
-                        , inkycurrentdirection = inkycurrentdirection ps
-                        , inkycurrentspeed     = inkycurrentspeed ps
-                        , inkydotcounter       = inkydotcounter ps
-                        , inkyghsl             = inkyghsl ps
+                        , inkycurrenttile      = inkycurrenttile is
+                        , inkytargettile       = inkytargettile is
+                        , inkytargettileseq    = inkytargettileseq is
+                        , inkycurrentdirection = inkycurrentdirection is
+                        , inkycurrentspeed     = inkycurrentspeed is
+                        , inkydotcounter       = inkydotcounter is
+                        , inkyghsl             = inkyghsl is
                         }
-           | (inkycurrentdirection ps) == Game.Types.Left
-           -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                        , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+           | (inkycurrentdirection is) == Game.Types.Left
+           -> InkyState { inkycurrentmode      = inkycurrentmode is
+                        , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                     -> GhostAltDraw
                                                     | otherwise
                                                     -> GhostRegularDraw
-                        , inkycurrentposition  = ( (\x -> x - 1) $ fst $ inkycurrentposition ps
-                                                 , snd $ inkycurrentposition ps
+                        , inkycurrentposition  = ( (\x -> x - 1) $ fst $ inkycurrentposition is
+                                                 , snd $ inkycurrentposition is
                                                  )
-                        , inkycurrenttile      = inkycurrenttile ps
-                        , inkytargettile       = inkytargettile ps
-                        , inkytargettileseq    = inkytargettileseq ps
-                        , inkycurrentdirection = inkycurrentdirection ps
-                        , inkycurrentspeed     = inkycurrentspeed ps
-                        , inkydotcounter       = inkydotcounter ps
-                        , inkyghsl             = inkyghsl ps 
+                        , inkycurrenttile      = inkycurrenttile is
+                        , inkytargettile       = inkytargettile is
+                        , inkytargettileseq    = inkytargettileseq is
+                        , inkycurrentdirection = inkycurrentdirection is
+                        , inkycurrentspeed     = inkycurrentspeed is
+                        , inkydotcounter       = inkydotcounter is
+                        , inkyghsl             = inkyghsl is 
                         }
            | otherwise
-           -> InkyState { inkycurrentmode      = inkycurrentmode ps
-                        , inkycurrentdrawstate = if | (inkycurrentdrawstate ps) == GhostRegularDraw
+           -> InkyState { inkycurrentmode      = inkycurrentmode is
+                        , inkycurrentdrawstate = if | (inkycurrentdrawstate is) == GhostRegularDraw
                                                     -> GhostAltDraw
                                                     | otherwise
                                                     -> GhostRegularDraw
-                        , inkycurrentposition  = ( (\x -> x + 1) $ fst $ inkycurrentposition ps
-                                                 , snd $ inkycurrentposition ps
+                        , inkycurrentposition  = ( (\x -> x + 1) $ fst $ inkycurrentposition is
+                                                 , snd $ inkycurrentposition is
                                                  )
-                        , inkycurrenttile      = inkycurrenttile ps
-                        , inkytargettile       = inkytargettile ps
-                        , inkytargettileseq    = inkytargettileseq ps
-                        , inkycurrentdirection = inkycurrentdirection ps
-                        , inkycurrentspeed     = inkycurrentspeed ps
-                        , inkydotcounter       = inkydotcounter ps
-                        , inkyghsl             = inkyghsl ps
+                        , inkycurrenttile      = inkycurrenttile is
+                        , inkytargettile       = inkytargettile is
+                        , inkytargettileseq    = inkytargettileseq is
+                        , inkycurrentdirection = inkycurrentdirection is
+                        , inkycurrentspeed     = inkycurrentspeed is
+                        , inkydotcounter       = inkydotcounter is
+                        , inkyghsl             = inkyghsl is
                         }

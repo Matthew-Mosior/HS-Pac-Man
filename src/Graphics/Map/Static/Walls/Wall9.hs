@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall9 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the ninth wall of the map.-}
 
-wall9 :: IO Picture
+wall9 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall9 = do
+  return DSeq.empty
+  {-
   wall91 <- createWall (912,376)
   wall92 <- createWall (920,376)
   wall93 <- createWall (928,376)
@@ -42,38 +46,39 @@ wall9 = do
   wall930 <- createWall (896,400)
   wall931 <- createWall (896,392)
   wall932 <- createWall (904,384)
-  return $ Pictures [ wall91 
-                    , wall92 
-                    , wall93 
-                    , wall94 
-                    , wall95 
-                    , wall96 
-                    , wall97 
-                    , wall98 
-                    , wall99 
-                    , wall910 
-                    , wall911 
-                    , wall912 
-                    , wall913 
-                    , wall914 
-                    , wall915 
-                    , wall916 
-                    , wall917 
-                    , wall918 
-                    , wall919 
-                    , wall920 
-                    , wall921 
-                    , wall922 
-                    , wall923 
-                    , wall924 
-                    , wall925 
-                    , wall926 
-                    , wall927 
-                    , wall928 
-                    , wall929 
-                    , wall930 
-                    , wall931 
-                    , wall932
-                    ]
+  return $ [ wall91 
+           , wall92 
+           , wall93 
+           , wall94 
+           , wall95 
+           , wall96 
+           , wall97 
+           , wall98 
+           , wall99 
+           , wall910 
+           , wall911 
+           , wall912 
+           , wall913 
+           , wall914 
+           , wall915 
+           , wall916 
+           , wall917 
+           , wall918 
+           , wall919 
+           , wall920 
+           , wall921 
+           , wall922 
+           , wall923 
+           , wall924 
+           , wall925 
+           , wall926 
+           , wall927 
+           , wall928 
+           , wall929 
+           , wall930 
+           , wall931 
+           , wall932
+           ]
+  -}
 
 {-------------------------------------------------------------}

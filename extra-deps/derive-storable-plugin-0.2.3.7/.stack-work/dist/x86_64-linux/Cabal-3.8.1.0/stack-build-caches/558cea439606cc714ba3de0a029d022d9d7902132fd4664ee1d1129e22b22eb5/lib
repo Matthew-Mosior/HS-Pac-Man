@@ -1,0 +1,28 @@
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/rts-1.0.2/include/ghcversion.h:
+  hash: c9b68cecb81cc4db15f76a3c4ea40203c2521a885e12fd4f77d4966e7ff2588d
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/autogen/cabal_macros.h
+: hash: 3d86e9d79106a013e2532f6062c3786057f2a644be5b64eeacaf319862026cfd
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/ChangeLog.md
+: hash: 1142d93ae4bf98091b8a72cae77435016d4c7b190a6b050740f96fc9ffb436da
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/README.md
+: hash: 7a3126b9a43d8504189dd35d8c3d84ebff8a7f8a88366fc611245c30da0fef2e
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/derive-storable-plugin.cabal
+: hash: f82b5cc67d7affbb41040d3a5812e6a587894e232e7a5d5ccb33103836e51fa6
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin.hs
+: hash: 7388e81615acba431efbf020e72b07c4b14ecf90dfbdfe73be2c5635711a3130
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal.hs
+: hash: 6b2c981d8a4d4f37f98bb8fbef112ce95b0ed57f3a4ea8b5133a0aa3ea4c99ad
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal/Compile.hs
+: hash: 2705b0e08f6f452d4e37e6c675aff079ba09e69a9eb99c2f782e9442182c1cff
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal/Error.hs
+: hash: 4738684ca367090aaa8fc2375e2fca958b300834d59560b5c1f15c4a146a61df
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal/GroupTypes.hs
+: hash: 3e5efdebcf28bac8708b3568a11cddbf1e0ba8f9bcdd080c8f168c990ea78ab7
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal/Helpers.hs
+: hash: d4b39e1c5c897dcd6db6fbbf0c8f4b5849983fc0da3d555c31f4ab8c97346363
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal/Predicates.hs
+: hash: 9543d8113b055ff49811c89f6117ae880183cb2ad3e6bf9a476701283cf465d7
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/derive-storable-plugin-0.2.3.7/src/Foreign/Storable/Generic/Plugin/Internal/Types.hs
+: hash: 9d5563e8eea7f706f05d59cbdece7072db9073cb8ce2965161fcbff049f12fe6
+/usr/include/stdc-predef.h:
+  hash: d6bcc58441a423bbb3a52171fcd3b84d8b36e332a55221a1c3e6e899bc43ccb3

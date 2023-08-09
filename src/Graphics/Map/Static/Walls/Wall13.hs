@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall13 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the thirteenth wall of the map.-}
 
-wall13 :: IO Picture
+wall13 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall13 = do
+  return DSeq.empty
+  {-
   wall131 <- createWall (312,976) 
   wall132 <- createWall (320,976)
   wall133 <- createWall (328,976)
@@ -52,48 +56,49 @@ wall13 = do
   wall1340 <- createWall (296,1000)
   wall1341 <- createWall (296,992)
   wall1342 <- createWall (304,984)
-  return $ Pictures [ wall131 
-                    , wall132 
-                    , wall133 
-                    , wall134 
-                    , wall135 
-                    , wall136 
-                    , wall137 
-                    , wall138 
-                    , wall139 
-                    , wall1310 
-                    , wall1311 
-                    , wall1312 
-                    , wall1313 
-                    , wall1314 
-                    , wall1315 
-                    , wall1316 
-                    , wall1317 
-                    , wall1318 
-                    , wall1319 
-                    , wall1320 
-                    , wall1321 
-                    , wall1322 
-                    , wall1323 
-                    , wall1324 
-                    , wall1325 
-                    , wall1326 
-                    , wall1327 
-                    , wall1328 
-                    , wall1329 
-                    , wall1330 
-                    , wall1331 
-                    , wall1332 
-                    , wall1333 
-                    , wall1334 
-                    , wall1335 
-                    , wall1336 
-                    , wall1337 
-                    , wall1338 
-                    , wall1339 
-                    , wall1340 
-                    , wall1341 
-                    , wall1342
-                    ]
+  return $ [ wall131 
+           , wall132 
+           , wall133 
+           , wall134 
+           , wall135 
+           , wall136 
+           , wall137 
+           , wall138 
+           , wall139 
+           , wall1310 
+           , wall1311 
+           , wall1312 
+           , wall1313 
+           , wall1314 
+           , wall1315 
+           , wall1316 
+           , wall1317 
+           , wall1318 
+           , wall1319 
+           , wall1320 
+           , wall1321 
+           , wall1322 
+           , wall1323 
+           , wall1324 
+           , wall1325 
+           , wall1326 
+           , wall1327 
+           , wall1328 
+           , wall1329 
+           , wall1330 
+           , wall1331 
+           , wall1332 
+           , wall1333 
+           , wall1334 
+           , wall1335 
+           , wall1336 
+           , wall1337 
+           , wall1338 
+           , wall1339 
+           , wall1340 
+           , wall1341 
+           , wall1342
+           ]
+  -}
 
 {------------------------------------------------------------------}

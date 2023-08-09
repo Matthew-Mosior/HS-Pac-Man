@@ -4,9 +4,11 @@ import Game.Ghosts.Algo.AStar.Tiles.Definition
 import Graphics.Map.Static.Tiles.Definition
 import Rendering.GhostHouse.StartingLoop.Definition
 
-import Data.IORef
-import Data.Sequence (Seq(..))
-import FRP.Yampa (DTime)
+import Data.Massiv.Array as DMA
+import Data.Sequence (Seq(..),(><))
+import Data.Time.Clock
+import Graphics.Gloss.Interface.IO.Game (SpecialKey)
+import Graphics.Gloss.Raster.Massiv.Internal
 import GHC.Generics
 
 
@@ -29,6 +31,7 @@ data PacmanMode = Normal
 
 data PacmanDrawState = PacmanRegularDraw
                      | PacmanAltDraw
+                     | PacmanStartDraw
   deriving (Show,Eq,Generic)
 
 data GhostMode = Scatter
@@ -109,15 +112,17 @@ data Ghosts = Blinky
             | Clyde
   deriving (Show,Eq,Generic)
 
-data GameData = GameData { gamestate       :: IORef GameState
-                         , tilestate       :: IORef (Seq TileData)
-                         , currentlevel    :: IORef Int
-                         , currentscore    :: IORef Int
-                         , pacmanstate     :: IORef PacmanState
-                         , blinkystate     :: IORef BlinkyState
-                         , pinkystate      :: IORef PinkyState
-                         , inkystate       :: IORef InkyState
-                         , clydestate      :: IORef ClydeState
-                         , doteatentimer   :: IORef Double
+data GameData = GameData { gamestate       :: GameState
+                         , tilestate       :: Seq TileData
+                         , currentlevel    :: Int
+                         , currentscore    :: Int
+                         , pacmanstate     :: PacmanState
+                         , blinkystate     :: BlinkyState
+                         , pinkystate      :: PinkyState
+                         , inkystate       :: InkyState
+                         , clydestate      :: ClydeState
+                         , doteatentimer   :: Double
+                         , staticmapassets :: Seq (Array DMA.S Ix2 ColorMassiv,(Int,Int))
+                         , lastkeypressed  :: Maybe Char
                          }
   deriving (Generic)

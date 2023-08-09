@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall12 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the twelvth wall of the map.-}
 
-wall12 :: IO Picture
+wall12 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall12 = do
+  return DSeq.empty
+  {-
   wall121 <- createWall (112,976) 
   wall122 <- createWall (120,976)
   wall123 <- createWall (128,976)
@@ -68,64 +72,65 @@ wall12 = do
   wall1256 <- createWall (96,1000)
   wall1257 <- createWall (96,992)
   wall1258 <- createWall (104,984)
-  return $ Pictures [ wall121 
-                    , wall122 
-                    , wall123 
-                    , wall124 
-                    , wall125 
-                    , wall126 
-                    , wall127 
-                    , wall128 
-                    , wall129 
-                    , wall1210 
-                    , wall1211 
-                    , wall1212 
-                    , wall1213 
-                    , wall1214 
-                    , wall1215 
-                    , wall1216 
-                    , wall1217 
-                    , wall1218 
-                    , wall1219 
-                    , wall1220 
-                    , wall1221 
-                    , wall1222 
-                    , wall1223 
-                    , wall1224 
-                    , wall1225 
-                    , wall1226 
-                    , wall1227 
-                    , wall1228 
-                    , wall1229 
-                    , wall1230 
-                    , wall1231 
-                    , wall1232 
-                    , wall1233 
-                    , wall1234 
-                    , wall1235 
-                    , wall1236 
-                    , wall1237 
-                    , wall1238 
-                    , wall1239 
-                    , wall1240 
-                    , wall1241 
-                    , wall1242 
-                    , wall1243 
-                    , wall1244 
-                    , wall1245 
-                    , wall1246 
-                    , wall1247 
-                    , wall1248 
-                    , wall1249 
-                    , wall1250 
-                    , wall1251 
-                    , wall1252 
-                    , wall1253 
-                    , wall1254 
-                    , wall1255 
-                    , wall1256 
-                    , wall1257 
-                    , wall1258
-                    ]
+  return $ [ wall121 
+           , wall122 
+           , wall123 
+           , wall124 
+           , wall125 
+           , wall126 
+           , wall127 
+           , wall128 
+           , wall129 
+           , wall1210 
+           , wall1211 
+           , wall1212 
+           , wall1213 
+           , wall1214 
+           , wall1215 
+           , wall1216 
+           , wall1217 
+           , wall1218 
+           , wall1219 
+           , wall1220 
+           , wall1221 
+           , wall1222 
+           , wall1223 
+           , wall1224 
+           , wall1225 
+           , wall1226 
+           , wall1227 
+           , wall1228 
+           , wall1229 
+           , wall1230 
+           , wall1231 
+           , wall1232 
+           , wall1233 
+           , wall1234 
+           , wall1235 
+           , wall1236 
+           , wall1237 
+           , wall1238 
+           , wall1239 
+           , wall1240 
+           , wall1241 
+           , wall1242 
+           , wall1243 
+           , wall1244 
+           , wall1245 
+           , wall1246 
+           , wall1247 
+           , wall1248 
+           , wall1249 
+           , wall1250 
+           , wall1251 
+           , wall1252 
+           , wall1253 
+           , wall1254 
+           , wall1255 
+           , wall1256 
+           , wall1257 
+           , wall1258
+           ]
+  -}
 
 {---------------------------------------------------------------}

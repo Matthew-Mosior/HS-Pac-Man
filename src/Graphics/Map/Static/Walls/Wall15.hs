@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall15 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the fifteenth wall of the map.-}
 
-wall15 :: IO Picture
+wall15 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall15 = do
+  return DSeq.empty
+  {-
   wall151 <- createWall (672,976)
   wall152 <- createWall (680,976)
   wall153 <- createWall (688,976)
@@ -52,48 +56,49 @@ wall15 = do
   wall1540 <- createWall (656,1000)
   wall1541 <- createWall (656,992)
   wall1542 <- createWall (664,984)
-  return $ Pictures [ wall151 
-                    , wall152 
-                    , wall153 
-                    , wall154 
-                    , wall155 
-                    , wall156 
-                    , wall157 
-                    , wall158 
-                    , wall159 
-                    , wall1510 
-                    , wall1511 
-                    , wall1512 
-                    , wall1513 
-                    , wall1514 
-                    , wall1515 
-                    , wall1516 
-                    , wall1517 
-                    , wall1518 
-                    , wall1519 
-                    , wall1520 
-                    , wall1521 
-                    , wall1522 
-                    , wall1523 
-                    , wall1524 
-                    , wall1525 
-                    , wall1526 
-                    , wall1527 
-                    , wall1528 
-                    , wall1529 
-                    , wall1530 
-                    , wall1531 
-                    , wall1532 
-                    , wall1533 
-                    , wall1534 
-                    , wall1535 
-                    , wall1536 
-                    , wall1537 
-                    , wall1538 
-                    , wall1539 
-                    , wall1540 
-                    , wall1541 
-                    , wall1542
-                    ]
+  return $ [ wall151 
+           , wall152 
+           , wall153 
+           , wall154 
+           , wall155 
+           , wall156 
+           , wall157 
+           , wall158 
+           , wall159 
+           , wall1510 
+           , wall1511 
+           , wall1512 
+           , wall1513 
+           , wall1514 
+           , wall1515 
+           , wall1516 
+           , wall1517 
+           , wall1518 
+           , wall1519 
+           , wall1520 
+           , wall1521 
+           , wall1522 
+           , wall1523 
+           , wall1524 
+           , wall1525 
+           , wall1526 
+           , wall1527 
+           , wall1528 
+           , wall1529 
+           , wall1530 
+           , wall1531 
+           , wall1532 
+           , wall1533 
+           , wall1534 
+           , wall1535 
+           , wall1536 
+           , wall1537 
+           , wall1538 
+           , wall1539 
+           , wall1540 
+           , wall1541 
+           , wall1542
+           ]
+  -}
 
 {-----------------------------------------------------------------}

@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall11 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the eleventh wall of the map.-}
 
-wall11 :: IO Picture
+wall11 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall11 = do
+  return DSeq.empty
+  {-
   wall111 <- createWall (792,736)
   wall112 <- createWall (800,736)
   wall113 <- createWall (808,744)
@@ -52,48 +56,49 @@ wall11 = do
   wall1140 <- createWall (776,760)
   wall1141 <- createWall (776,752)
   wall1142 <- createWall (784,744)
-  return $ Pictures [ wall111 
-                    , wall112 
-                    , wall113 
-                    , wall114 
-                    , wall115 
-                    , wall116 
-                    , wall117 
-                    , wall118 
-                    , wall119 
-                    , wall1110 
-                    , wall1111 
-                    , wall1112 
-                    , wall1113 
-                    , wall1114 
-                    , wall1115 
-                    , wall1116 
-                    , wall1117 
-                    , wall1118 
-                    , wall1119 
-                    , wall1120 
-                    , wall1121 
-                    , wall1122 
-                    , wall1123 
-                    , wall1124 
-                    , wall1125 
-                    , wall1126 
-                    , wall1127 
-                    , wall1128 
-                    , wall1129 
-                    , wall1130 
-                    , wall1131 
-                    , wall1132 
-                    , wall1133 
-                    , wall1134 
-                    , wall1135 
-                    , wall1136 
-                    , wall1137 
-                    , wall1138 
-                    , wall1139 
-                    , wall1140 
-                    , wall1141 
-                    , wall1142
-                    ]
+  return $ [ wall111 
+           , wall112 
+           , wall113 
+           , wall114 
+           , wall115 
+           , wall116 
+           , wall117 
+           , wall118 
+           , wall119 
+           , wall1110 
+           , wall1111 
+           , wall1112 
+           , wall1113 
+           , wall1114 
+           , wall1115 
+           , wall1116 
+           , wall1117 
+           , wall1118 
+           , wall1119 
+           , wall1120 
+           , wall1121 
+           , wall1122 
+           , wall1123 
+           , wall1124 
+           , wall1125 
+           , wall1126 
+           , wall1127 
+           , wall1128 
+           , wall1129 
+           , wall1130 
+           , wall1131 
+           , wall1132 
+           , wall1133 
+           , wall1134 
+           , wall1135 
+           , wall1136 
+           , wall1137 
+           , wall1138 
+           , wall1139 
+           , wall1140 
+           , wall1141 
+           , wall1142
+           ]
+  -}
 
 {----------------------------------------------------------------}

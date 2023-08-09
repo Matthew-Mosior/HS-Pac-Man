@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall17 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the seveteenth wall of the map.-}
 
-wall17 :: IO Picture
+wall17 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall17 = do
+  return DSeq.empty
+  {-
   wall171 <- createWall (112,1216)
   wall172 <- createWall (120,1216)
   wall173 <- createWall (128,1216)
@@ -124,120 +128,121 @@ wall17 = do
   wall17112 <- createWall (96,1240)
   wall17113 <- createWall (96,1232)
   wall17114 <- createWall (104,1224)
-  return $ Pictures [ wall171 
-                    , wall172 
-                    , wall173 
-                    , wall174 
-                    , wall175 
-                    , wall176 
-                    , wall177 
-                    , wall178 
-                    , wall179 
-                    , wall1710 
-                    , wall1711 
-                    , wall1712 
-                    , wall1713 
-                    , wall1714 
-                    , wall1715 
-                    , wall1716 
-                    , wall1717 
-                    , wall1718 
-                    , wall1719 
-                    , wall1720 
-                    , wall1721 
-                    , wall1722 
-                    , wall1723 
-                    , wall1724 
-                    , wall1725 
-                    , wall1726 
-                    , wall1727 
-                    , wall1728 
-                    , wall1729 
-                    , wall1730 
-                    , wall1731 
-                    , wall1732 
-                    , wall1733 
-                    , wall1734 
-                    , wall1735 
-                    , wall1736 
-                    , wall1737 
-                    , wall1738 
-                    , wall1739 
-                    , wall1740 
-                    , wall1741 
-                    , wall1742 
-                    , wall1743 
-                    , wall1744 
-                    , wall1745 
-                    , wall1746 
-                    , wall1747 
-                    , wall1748 
-                    , wall1749 
-                    , wall1750 
-                    , wall1751 
-                    , wall1752 
-                    , wall1753 
-                    , wall1754 
-                    , wall1755 
-                    , wall1756 
-                    , wall1757 
-                    , wall1758 
-                    , wall1759 
-                    , wall1760 
-                    , wall1761 
-                    , wall1762 
-                    , wall1763 
-                    , wall1764 
-                    , wall1765 
-                    , wall1766 
-                    , wall1767 
-                    , wall1768 
-                    , wall1769 
-                    , wall1770 
-                    , wall1771 
-                    , wall1772 
-                    , wall1773 
-                    , wall1774 
-                    , wall1775 
-                    , wall1776 
-                    , wall1777 
-                    , wall1778 
-                    , wall1779 
-                    , wall1780 
-                    , wall1781 
-                    , wall1782 
-                    , wall1783 
-                    , wall1784 
-                    , wall1785 
-                    , wall1786 
-                    , wall1787 
-                    , wall1788 
-                    , wall1789 
-                    , wall1790 
-                    , wall1791 
-                    , wall1792 
-                    , wall1793 
-                    , wall1794 
-                    , wall1795 
-                    , wall1796 
-                    , wall1797 
-                    , wall1798 
-                    , wall1799 
-                    , wall17100 
-                    , wall17101 
-                    , wall17102 
-                    , wall17103 
-                    , wall17104 
-                    , wall17105 
-                    , wall17106 
-                    , wall17107 
-                    , wall17108 
-                    , wall17109 
-                    , wall17110 
-                    , wall17111 
-                    , wall17112 
-                    , wall17113 
-                    , wall17114
-                    ]
+  return $ [ wall171 
+           , wall172 
+           , wall173 
+           , wall174 
+           , wall175 
+           , wall176 
+           , wall177 
+           , wall178 
+           , wall179 
+           , wall1710 
+           , wall1711 
+           , wall1712 
+           , wall1713 
+           , wall1714 
+           , wall1715 
+           , wall1716 
+           , wall1717 
+           , wall1718 
+           , wall1719 
+           , wall1720 
+           , wall1721 
+           , wall1722 
+           , wall1723 
+           , wall1724 
+           , wall1725 
+           , wall1726 
+           , wall1727 
+           , wall1728 
+           , wall1729 
+           , wall1730 
+           , wall1731 
+           , wall1732 
+           , wall1733 
+           , wall1734 
+           , wall1735 
+           , wall1736 
+           , wall1737 
+           , wall1738 
+           , wall1739 
+           , wall1740 
+           , wall1741 
+           , wall1742 
+           , wall1743 
+           , wall1744 
+           , wall1745 
+           , wall1746 
+           , wall1747 
+           , wall1748 
+           , wall1749 
+           , wall1750 
+           , wall1751 
+           , wall1752 
+           , wall1753 
+           , wall1754 
+           , wall1755 
+           , wall1756 
+           , wall1757 
+           , wall1758 
+           , wall1759 
+           , wall1760 
+           , wall1761 
+           , wall1762 
+           , wall1763 
+           , wall1764 
+           , wall1765 
+           , wall1766 
+           , wall1767 
+           , wall1768 
+           , wall1769 
+           , wall1770 
+           , wall1771 
+           , wall1772 
+           , wall1773 
+           , wall1774 
+           , wall1775 
+           , wall1776 
+           , wall1777 
+           , wall1778 
+           , wall1779 
+           , wall1780 
+           , wall1781 
+           , wall1782 
+           , wall1783 
+           , wall1784 
+           , wall1785 
+           , wall1786 
+           , wall1787 
+           , wall1788 
+           , wall1789 
+           , wall1790 
+           , wall1791 
+           , wall1792 
+           , wall1793 
+           , wall1794 
+           , wall1795 
+           , wall1796 
+           , wall1797 
+           , wall1798 
+           , wall1799 
+           , wall17100 
+           , wall17101 
+           , wall17102 
+           , wall17103 
+           , wall17104 
+           , wall17105 
+           , wall17106 
+           , wall17107 
+           , wall17108 
+           , wall17109 
+           , wall17110 
+           , wall17111 
+           , wall17112 
+           , wall17113 
+           , wall17114
+           ]
+  -}
 
 {------------------------------------------------------------------}

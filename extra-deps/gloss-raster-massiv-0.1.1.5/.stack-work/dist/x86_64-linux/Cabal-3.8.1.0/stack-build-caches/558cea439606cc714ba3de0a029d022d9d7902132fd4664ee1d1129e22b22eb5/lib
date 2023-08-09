@@ -1,0 +1,64 @@
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSarray-0.5.4.0-ghc9.4.5.so:
+  hash: 00392cf2013ae206eef416b7777d49b0546e17bdf79d00eb82fb467f52f9e569
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSbase-4.17.1.0-ghc9.4.5.so:
+  hash: 8ff8c9a4f365ad43612e0074cd5a891ef77c76c6166f3cdc22fbd3796d04198b
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSbinary-0.8.9.1-ghc9.4.5.so:
+  hash: ef5c0c29fd56cdd83f17d145c25a30a92774b9bbd5c34a76ab18e603729b1d7f
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSbytestring-0.11.4.0-ghc9.4.5.so:
+  hash: 0b8aeb5e99f9e233fc4547dd96ed24776229d1752424a22781baa21f79fb9493
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHScontainers-0.6.7-ghc9.4.5.so:
+  hash: 19d7fbc58a375c21808c5d2a67db487d7230732149a6ae94f133de8740528f92
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSdeepseq-1.4.8.0-ghc9.4.5.so:
+  hash: 9372164ad2e7c3232dee92340d5b6d899acebc02d4fd133db58a4b7802e6c99b
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSdirectory-1.3.7.1-ghc9.4.5.so:
+  hash: ee404fcc4cd7a23c6b4ccf5b2e68ddc22aef1d921b1ce3b3147b9268357a4951
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSexceptions-0.10.5-ghc9.4.5.so:
+  hash: 3e4f3674086f46e73c513de2714988c63428f977bae8a906bf8a55de7dcc238a
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSfilepath-1.4.2.2-ghc9.4.5.so:
+  hash: 33a58ab28947d445c0706d34afa2762800368bba7d697fe15511dee44e24dd52
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghc-9.4.5-ghc9.4.5.so:
+  hash: 9c34c66f5077c0daeaebf2d15a985576ab12c9888d5d51117a131ba3054c3f8e
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghc-bignum-1.3-ghc9.4.5.so:
+  hash: 49f2e6faa3541ab29b09f0fa203bf5c927f37c3605600ef146c08a35c18973f6
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghc-boot-9.4.5-ghc9.4.5.so:
+  hash: a118804e5f07d04436acb60af025ae1db2ffb15d9093a3e087453ec65faa3e92
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghc-boot-th-9.4.5-ghc9.4.5.so:
+  hash: 0ea8c448856b27f84ef147600bff711c12fd5bc4ca9aaa21f622170dcd5242c6
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghc-heap-9.4.5-ghc9.4.5.so:
+  hash: 200752879a1ea0a638f1fdb974c7a24d6ace73ad32526984613d5edacbcb46d2
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghc-prim-0.9.0-ghc9.4.5.so:
+  hash: 3e0e9c2cd88986ff54979f21f78ed658b4dde29df624f84e1a211d2fbb4aec7c
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSghci-9.4.5-ghc9.4.5.so:
+  hash: d9f701f12c0c3c81a9df4f5849a3f5d70018ca564306e79c59a257f64b6daac2
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHShpc-0.6.1.0-ghc9.4.5.so:
+  hash: 74fd626ecdf9284c25ef704a8b0003e671172c2712844b3522a9fde20157e8b1
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSmtl-2.2.2-ghc9.4.5.so:
+  hash: d49129b6ef8fde6febd1d36176c074c3b495d8bfec14f11e2bdedc19895bf1b2
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSpretty-1.1.3.6-ghc9.4.5.so:
+  hash: 97ebe983e6c7d4805a8e9d14bd096df7efceca9cb61bc256160ae9556793b8b5
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSprocess-1.6.16.0-ghc9.4.5.so:
+  hash: fd629651dd0b15afe9510d271cc1c7eb06be7e4212d6e8f32284a89926236302
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSstm-2.5.1.0-ghc9.4.5.so:
+  hash: 877b1634fd7b29ab3731ec151e11e058911c823f21efab7c4475d6fc26e49743
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHStemplate-haskell-2.19.0.0-ghc9.4.5.so:
+  hash: bcef983cf6fb40645dd5ef75b44ee77273436893e9d006a3126e346afcb40364
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSterminfo-0.4.1.5-ghc9.4.5.so:
+  hash: 64712ed4e7b4b0a69cdafd1e0dc4bd973794532770251e8659c0e689a908c368
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHStime-1.12.2-ghc9.4.5.so:
+  hash: 4f440a7720e2ff02ac4ad3240ee4ae98e05ecb4965f455d6de006bf5256a585a
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHStransformers-0.5.6.2-ghc9.4.5.so:
+  hash: 7b65a81029b76051b4728d39766306c5f6182a36c76f61e2fa3560a50ab94c1f
+/home/matthewmosior/.ghcup/ghc/9.4.5/lib/ghc-9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSunix-2.7.3-ghc9.4.5.so:
+  hash: c646d5a653bbe707a914b34e48ee79ea95375a4b682dba764b7565f5b414e7a9
+? /home/matthewmosior/.stack/snapshots/x86_64-linux/32e3dfb905f03b5b302f79994361bd9d947f1aa8c8acf4ca1a882f4b1d24f870/9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSderive-storable-0.3.1.0-HnUVgAwsIVz2N70Mf0Bmsi-ghc9.4.5.so
+: hash: af24af40a4c9bcb6ab10af2e6ff0ec185ac3e41326e35e0d7132966b534e4b9e
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/.stack-work/install/x86_64-linux/558cea439606cc714ba3de0a029d022d9d7902132fd4664ee1d1129e22b22eb5/9.4.5/lib/x86_64-linux-ghc-9.4.5/libHSderive-storable-plugin-0.2.3.7-G6w38gbyeOhChYGTdUAUDL-ghc9.4.5.so
+: hash: 2340b7510a97fa6cbcbeaae8b499da685975ece557bb006795b1c905bd99a0f8
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/gloss-raster-massiv-0.1.1.5/gloss-raster-massiv.cabal
+: hash: beb83234e5f39bacb62fd27f517e5af7acc9437a0d27c08b5787a0575efbbca3
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/gloss-raster-massiv-0.1.1.5/src/Graphics/Gloss/Raster/Array.hs
+: hash: 4fd14c675dda177ed0befd81d236811c781e253a9be590c5c36e94c9fd27992b
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/gloss-raster-massiv-0.1.1.5/src/Graphics/Gloss/Raster/Field.hs
+: hash: 8e4a1146960ae79fbdb7aa5ac26d632a31f852b8b586ac3d1536a40b9db11c49
+? /home/matthewmosior/Software/local/Haskell/Pac-Man/From-ThinkPad/Pac-Man/gloss-implementation/hs-pac-man/extra-deps/gloss-raster-massiv-0.1.1.5/src/Graphics/Gloss/Raster/Massiv/Internal.hs
+: hash: 57f6e81dab294f3b8bed859d4704eaf11a62c0f9c075e93afcbcc8d1d3136549

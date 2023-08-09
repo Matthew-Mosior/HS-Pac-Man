@@ -11,164 +11,164 @@ import Data.Sequence as Seq (filter,findIndexL,index,viewl,ViewL(..))
 
 updateBlinkyMovement :: BlinkyState
                      -> BlinkyState
-updateBlinkyMovement ps = do
+updateBlinkyMovement bs = do
   --Get the current tile center coordinates that blinky occupies.
   let blinkycurrentcc = ghostCoorToCookieCoor $
-                        blinkycurrentposition ps
+                        blinkycurrentposition bs
   let blinkyincenteroftile = case Seq.viewl (Seq.filter (\x -> blinkycurrentcc == (centercoordinates $ cookiedata x)) alltiledatainit) of
                                Seq.EmptyL   -> False
                                (_ Seq.:< _) -> True
   if | blinkyincenteroftile
-     -> do let blinkynexttileindex = case (Seq.findIndexL (\x -> (tilenumberastar x) == (tilenumberastar $ blinkycurrenttile ps)) (blinkytargettileseq ps)) of
+     -> do let blinkynexttileindex = case (Seq.findIndexL (\x -> (tilenumberastar x) == (tilenumberastar $ blinkycurrenttile bs)) (blinkytargettileseq bs)) of
                                        Nothing -> (-1)
                                        Just i  -> i + 1
            if | ((\(a,_) -> a)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                (blinkytargettileseq ps) `Seq.index` blinkynexttileindex) <=
+                (blinkytargettileseq bs) `Seq.index` blinkynexttileindex) <=
                 ((\(a,_) -> a)      $
                 (\(x:_) -> x )      $
                 tilecoordinateastar $
-                blinkycurrenttile ps)
-              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+                blinkycurrenttile bs)
+              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                            -> GhostAltDraw
                                                            | otherwise
                                                            -> GhostRegularDraw
-                             , blinkycurrentposition  = ( fst $ blinkycurrentposition ps
-                                                        , (\x -> x - 1) $ fst $ blinkycurrentposition ps
+                             , blinkycurrentposition  = ( fst $ blinkycurrentposition bs
+                                                        , (\x -> x - 1) $ fst $ blinkycurrentposition bs
                                                         )
-                             , blinkycurrenttile      = blinkycurrenttile ps
-                             , blinkytargettile       = blinkytargettile ps
-                             , blinkytargettileseq    = blinkytargettileseq ps
+                             , blinkycurrenttile      = blinkycurrenttile bs
+                             , blinkytargettile       = blinkytargettile bs
+                             , blinkytargettileseq    = blinkytargettileseq bs
                              , blinkycurrentdirection = Game.Types.Left
-                             , blinkycurrentspeed     = blinkycurrentspeed ps
-                             , blinkydotcounter       = blinkydotcounter ps
+                             , blinkycurrentspeed     = blinkycurrentspeed bs
+                             , blinkydotcounter       = blinkydotcounter bs
                              } 
               | ((\(a,_) -> a)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                (blinkytargettileseq ps) `Seq.index` blinkynexttileindex) >=
+                (blinkytargettileseq bs) `Seq.index` blinkynexttileindex) >=
                 ((\(a,_) -> a)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                blinkycurrenttile ps)
-              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+                blinkycurrenttile bs)
+              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                            -> GhostAltDraw
                                                            | otherwise
                                                            -> GhostRegularDraw
-                             , blinkycurrentposition  = ( fst $ blinkycurrentposition ps
-                                                        , (\x -> x + 1) $ fst $ blinkycurrentposition ps
+                             , blinkycurrentposition  = ( fst $ blinkycurrentposition bs
+                                                        , (\x -> x + 1) $ fst $ blinkycurrentposition bs
                                                         )
-                             , blinkycurrenttile      = blinkycurrenttile ps
-                             , blinkytargettile       = blinkytargettile ps
-                             , blinkytargettileseq    = blinkytargettileseq ps
+                             , blinkycurrenttile      = blinkycurrenttile bs
+                             , blinkytargettile       = blinkytargettile bs
+                             , blinkytargettileseq    = blinkytargettileseq bs
                              , blinkycurrentdirection = Game.Types.Right
-                             , blinkycurrentspeed     = blinkycurrentspeed ps
-                             , blinkydotcounter       = blinkydotcounter ps
+                             , blinkycurrentspeed     = blinkycurrentspeed bs
+                             , blinkydotcounter       = blinkydotcounter bs
                              }
               | ((\(_,b) -> b)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                (blinkytargettileseq ps) `Seq.index` blinkynexttileindex) <=
+                (blinkytargettileseq bs) `Seq.index` blinkynexttileindex) <=
                 ((\(_,b) -> b)      $
                 (\(x:_) -> x)       $
                 tilecoordinateastar $
-                blinkycurrenttile ps)
-              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+                blinkycurrenttile bs)
+              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                            -> GhostAltDraw
                                                            | otherwise
                                                            -> GhostRegularDraw
-                             , blinkycurrentposition  = ( fst $ blinkycurrentposition ps
-                                                        , (\y -> y + 1) $ snd $ blinkycurrentposition ps
+                             , blinkycurrentposition  = ( fst $ blinkycurrentposition bs
+                                                        , (\y -> y + 1) $ snd $ blinkycurrentposition bs
                                                         )
-                             , blinkycurrenttile      = blinkycurrenttile ps
-                             , blinkytargettile       = blinkytargettile ps
-                             , blinkytargettileseq    = blinkytargettileseq ps
+                             , blinkycurrenttile      = blinkycurrenttile bs
+                             , blinkytargettile       = blinkytargettile bs
+                             , blinkytargettileseq    = blinkytargettileseq bs
                              , blinkycurrentdirection = Down
-                             , blinkycurrentspeed     = blinkycurrentspeed ps
-                             , blinkydotcounter       = blinkydotcounter ps
+                             , blinkycurrentspeed     = blinkycurrentspeed bs
+                             , blinkydotcounter       = blinkydotcounter bs
                              }
               | otherwise
-              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+              -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                             , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                            -> GhostAltDraw
                                                            | otherwise
                                                            -> GhostRegularDraw
-                             , blinkycurrentposition  = ( fst $ blinkycurrentposition ps
-                                                        , (\y -> y - 1) $ snd $ blinkycurrentposition ps
+                             , blinkycurrentposition  = ( fst $ blinkycurrentposition bs
+                                                        , (\y -> y - 1) $ snd $ blinkycurrentposition bs
                                                         )
-                             , blinkycurrenttile      = blinkycurrenttile ps
-                             , blinkytargettile       = blinkytargettile ps
-                             , blinkytargettileseq    = blinkytargettileseq ps
+                             , blinkycurrenttile      = blinkycurrenttile bs
+                             , blinkytargettile       = blinkytargettile bs
+                             , blinkytargettileseq    = blinkytargettileseq bs
                              , blinkycurrentdirection = Up
-                             , blinkycurrentspeed     = blinkycurrentspeed ps
-                             , blinkydotcounter       = blinkydotcounter ps
+                             , blinkycurrentspeed     = blinkycurrentspeed bs
+                             , blinkydotcounter       = blinkydotcounter bs
                              }
      | otherwise
-     -> if | (blinkycurrentdirection ps) == Up
-           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+     -> if | (blinkycurrentdirection bs) == Up
+           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                         -> GhostAltDraw
                                                         | otherwise
                                                         -> GhostRegularDraw
-                          , blinkycurrentposition  = ( fst $ blinkycurrentposition ps
-                                                     , (\y -> y + 1) $ snd $ blinkycurrentposition ps
+                          , blinkycurrentposition  = ( fst $ blinkycurrentposition bs
+                                                     , (\y -> y + 1) $ snd $ blinkycurrentposition bs
                                                      )
-                          , blinkycurrenttile      = blinkycurrenttile ps
-                          , blinkytargettile       = blinkytargettile ps
-                          , blinkytargettileseq    = blinkytargettileseq ps
-                          , blinkycurrentdirection = blinkycurrentdirection ps
-                          , blinkycurrentspeed     = blinkycurrentspeed ps
-                          , blinkydotcounter       = blinkydotcounter ps
+                          , blinkycurrenttile      = blinkycurrenttile bs
+                          , blinkytargettile       = blinkytargettile bs
+                          , blinkytargettileseq    = blinkytargettileseq bs
+                          , blinkycurrentdirection = blinkycurrentdirection bs
+                          , blinkycurrentspeed     = blinkycurrentspeed bs
+                          , blinkydotcounter       = blinkydotcounter bs
                           }
-           | (blinkycurrentdirection ps) == Down
-           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+           | (blinkycurrentdirection bs) == Down
+           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                         -> GhostAltDraw
                                                         | otherwise
                                                         -> GhostRegularDraw
-                          , blinkycurrentposition  = ( fst $ blinkycurrentposition ps
-                                                     , (\y -> y - 1) $ snd $ blinkycurrentposition ps
+                          , blinkycurrentposition  = ( fst $ blinkycurrentposition bs
+                                                     , (\y -> y - 1) $ snd $ blinkycurrentposition bs
                                                      )
-                          , blinkycurrenttile      = blinkycurrenttile ps
-                          , blinkytargettile       = blinkytargettile ps
-                          , blinkytargettileseq    = blinkytargettileseq ps
-                          , blinkycurrentdirection = blinkycurrentdirection ps
-                          , blinkycurrentspeed     = blinkycurrentspeed ps
-                          , blinkydotcounter       = blinkydotcounter ps
+                          , blinkycurrenttile      = blinkycurrenttile bs
+                          , blinkytargettile       = blinkytargettile bs
+                          , blinkytargettileseq    = blinkytargettileseq bs
+                          , blinkycurrentdirection = blinkycurrentdirection bs
+                          , blinkycurrentspeed     = blinkycurrentspeed bs
+                          , blinkydotcounter       = blinkydotcounter bs
                           }
-           | (blinkycurrentdirection ps) == Game.Types.Left
-           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+           | (blinkycurrentdirection bs) == Game.Types.Left
+           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                         -> GhostAltDraw
                                                         | otherwise
                                                         -> GhostRegularDraw
-                          , blinkycurrentposition  = ( (\x -> x - 1) $ fst $ blinkycurrentposition ps
-                                                     , snd $ blinkycurrentposition ps
+                          , blinkycurrentposition  = ( (\x -> x - 1) $ fst $ blinkycurrentposition bs
+                                                     , snd $ blinkycurrentposition bs
                                                      )
-                          , blinkycurrenttile      = blinkycurrenttile ps
-                          , blinkytargettile       = blinkytargettile ps
-                          , blinkytargettileseq    = blinkytargettileseq ps
-                          , blinkycurrentdirection = blinkycurrentdirection ps
-                          , blinkycurrentspeed     = blinkycurrentspeed ps
-                          , blinkydotcounter       = blinkydotcounter ps
+                          , blinkycurrenttile      = blinkycurrenttile bs
+                          , blinkytargettile       = blinkytargettile bs
+                          , blinkytargettileseq    = blinkytargettileseq bs
+                          , blinkycurrentdirection = blinkycurrentdirection bs
+                          , blinkycurrentspeed     = blinkycurrentspeed bs
+                          , blinkydotcounter       = blinkydotcounter bs
                           }
            | otherwise
-           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode ps
-                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate ps) == GhostRegularDraw
+           -> BlinkyState { blinkycurrentmode      = blinkycurrentmode bs
+                          , blinkycurrentdrawstate = if | (blinkycurrentdrawstate bs) == GhostRegularDraw
                                                         -> GhostAltDraw
                                                         | otherwise
                                                         -> GhostRegularDraw
-                          , blinkycurrentposition  = ( (\x -> x + 1) $ fst $ blinkycurrentposition ps
-                                                     , snd $ blinkycurrentposition ps
+                          , blinkycurrentposition  = ( (\x -> x + 1) $ fst $ blinkycurrentposition bs
+                                                     , snd $ blinkycurrentposition bs
                                                      )
-                          , blinkycurrenttile      = blinkycurrenttile ps
-                          , blinkytargettile       = blinkytargettile ps
-                          , blinkytargettileseq    = blinkytargettileseq ps
-                          , blinkycurrentdirection = blinkycurrentdirection ps
-                          , blinkycurrentspeed     = blinkycurrentspeed ps
-                          , blinkydotcounter       = blinkydotcounter ps
+                          , blinkycurrenttile      = blinkycurrenttile bs
+                          , blinkytargettile       = blinkytargettile bs
+                          , blinkytargettileseq    = blinkytargettileseq bs
+                          , blinkycurrentdirection = blinkycurrentdirection bs
+                          , blinkycurrentspeed     = blinkycurrentspeed bs
+                          , blinkydotcounter       = blinkydotcounter bs
                           }

@@ -3,13 +3,17 @@ module Graphics.Map.Static.Walls.Wall5 where
 
 import Graphics.Map.Static.Walls.Common
 
-import Graphics.Gloss.Data.Picture
+import Data.Massiv.Array
+import Data.Sequence as DSeq
+import Graphics.Gloss.Raster.Massiv.Internal
 
 
 {-Define the Picture that makes up the fifth wall of the map.-}
 
-wall5 :: IO Picture
+wall5 :: IO (Seq (Array S Ix2 ColorMassiv,(Int,Int)))
 wall5 = do
+  return DSeq.empty
+  {-
   wall51 <- createWall (112,376) 
   wall52 <- createWall (120,376)
   wall53 <- createWall (128,376)
@@ -42,38 +46,39 @@ wall5 = do
   wall530 <- createWall (96,400)
   wall531 <- createWall (96,392)
   wall532 <- createWall (104,384)
-  return $ Pictures [ wall51 
-                    , wall52 
-                    , wall53 
-                    , wall54 
-                    , wall55 
-                    , wall56 
-                    , wall57 
-                    , wall58 
-                    , wall59 
-                    , wall510 
-                    , wall511 
-                    , wall512 
-                    , wall513 
-                    , wall514 
-                    , wall515 
-                    , wall516 
-                    , wall517 
-                    , wall518 
-                    , wall519 
-                    , wall520 
-                    , wall521 
-                    , wall522 
-                    , wall523 
-                    , wall524 
-                    , wall525 
-                    , wall526 
-                    , wall527 
-                    , wall528 
-                    , wall529 
-                    , wall530 
-                    , wall531 
-                    , wall532
-                    ]
+  return $ [ wall51 
+           , wall52 
+           , wall53 
+           , wall54 
+           , wall55 
+           , wall56 
+           , wall57 
+           , wall58 
+           , wall59 
+           , wall510 
+           , wall511 
+           , wall512 
+           , wall513 
+           , wall514 
+           , wall515 
+           , wall516 
+           , wall517 
+           , wall518 
+           , wall519 
+           , wall520 
+           , wall521 
+           , wall522 
+           , wall523 
+           , wall524 
+           , wall525 
+           , wall526 
+           , wall527 
+           , wall528 
+           , wall529 
+           , wall530 
+           , wall531 
+           , wall532
+           ]
+  -}
 
 {-------------------------------------------------------------}
